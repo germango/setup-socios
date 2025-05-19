@@ -3069,8 +3069,6 @@ else
     echo -e "\e[33mLos datos ingresados\e[91m NO están funcionando correctamente.\e[33m Por favor, verifique los datos e intente nuevamente.\e[0m"
 fi
 
-fi
-
 creditos_msg
 
 read -p "¿Desea instalar otra aplicación? (S/N): " choice
