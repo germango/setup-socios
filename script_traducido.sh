@@ -314,7 +314,7 @@ echo -e "$branco                                                                
 
 ## Título Prueba de Email [0]
 
-nombre_pruebaemail() {
+nome_testeemail() {
   clear
   echo ""
   echo -e "$branco ██████  ██████  ██    ██ ███████ ██████   █████      ██████  ███████ \e[0m"
@@ -867,7 +867,7 @@ echo -e "$branco  ██████  ██      ██       █████  
 
 ## Título Affine [34]
 
-nombre_affine(){
+nome_affine(){
     clear
     echo ""
     echo -e "$branco  █████  ███████ ███████ ██ ███    ██ ███████ \e[0m"
@@ -881,7 +881,7 @@ nombre_affine(){
 
 ## Título Directus [35]
 
-nombre_directus(){
+nome_directus(){
 clear
 echo ""
 echo -e "$branco ██████  ██ ██████  ███████  ██████ ████████ ██    ██ ███████ \e[0m"
@@ -895,7 +895,7 @@ echo ""
 
 ## Título VaultWarden [36]
 
-nombre_vaultwarden() {
+nome_vaultwarden() {
     clear
     echo ""
     echo -e "$branco ██    ██  █████  ██    ██ ██      ████████ ██     ██  █████  ██████  ██████  ███████ ███    ██ \e[0m"
@@ -1008,7 +1008,7 @@ nome_langflow() {
 
 ## Título OpenProject [44]
 
-nombre_openproject() {
+nome_openproject() {
     clear
     echo ""
     echo -e "$branco  ██████  ██████  ███████ ███    ██ ██████  ██████   ██████       ██ ███████  ██████ ████████ \e[0m"
@@ -1022,7 +1022,7 @@ nombre_openproject() {
 
 ## Título Zep [45]
 
-nombre_zep() {
+nome_zep() {
     clear
     echo ""
     echo -e "$branco ███████ ███████ ██████  \e[0m"
@@ -1036,7 +1036,7 @@ nombre_zep() {
 
 ## Título HumHub [46]
 
-nombre_humhub() {
+nome_humhub() {
     clear
     echo ""
     echo -e "$branco ██   ██ ██    ██ ███    ███ ██   ██ ██    ██ ██████  \e[0m"
@@ -1050,7 +1050,7 @@ nombre_humhub() {
 
 ## Título Yourls [47]
 
-nombre_yourls() {
+nome_yourls() {
 clear
 echo ""
 echo -e "$branco ██    ██  ██████  ██    ██ ██████  ██      ███████ \e[0m"
@@ -1065,7 +1065,7 @@ echo ""
 
 ## Título TwentyCRM [48]
 
-nombre_twentycrm() {
+nome_twentycrm() {
 clear
 echo ""
 echo -e "$branco ████████ ██     ██ ███████ ███    ██ ████████ ██    ██  ██████ ██████  ███    ███ \e[0m"
@@ -1079,7 +1079,7 @@ echo ""
 
 ## Título Mattermost [49]
 
-nombre_mattermost() {
+nome_mattermost() {
 clear
 echo ""
 echo -e "$branco ███    ███  █████  ████████ ████████ ███████ ██████  ███    ███  ██████  ███████ ████████ \e[0m"
@@ -1093,7 +1093,7 @@ echo ""
 
 ## Título Outline [50]
 
-nombre_outline() {
+nome_outline() {
 clear
 echo ""
 echo -e "$branco  ██████  ██    ██ ████████ ██      ██ ███    ██ ███████ \e[0m"
@@ -1107,7 +1107,7 @@ echo ""
 
 ## Título FocalBoard [51]
 
-nombre_focalboard() {
+nome_focalboard() {
 
 clear
     echo ""
@@ -1167,7 +1167,7 @@ echo ""
 
 ## Título Excalidraw [55]
 
-nombre_easyappointments() {
+nome_easyappointments() {
 clear
 echo ""
 echo ""
@@ -1188,7 +1188,7 @@ echo ""
 
 ## Título Documentos [56]
 
-nombre_documenso() {
+nome_documenso() {
 clear
 echo ""
 echo ""
@@ -1203,7 +1203,7 @@ echo ""
 
 ## Título Moodle [57]
 
-nombre_moodle() {
+nome_moodle() {
 clear
 echo ""
 echo ""
@@ -1371,7 +1371,7 @@ echo -e "$branco ██ ███ ██ ██      ██      ██      █
 
 ## Título Browserless [68]
 
-nombre_browserless() {
+nome_browserless() {
     clear
     echo ""
     echo ""
@@ -1386,7 +1386,7 @@ nombre_browserless() {
 
 ## Título Frappe [69]
 
-nombre_frappe() {
+nome_frappe() {
     clear
     echo ""
     echo ""
@@ -1401,7 +1401,7 @@ nombre_frappe() {
 
 ## Título Bolt [70]
 
-nombre_bolt() {
+nome_bolt() {
     clear
     echo ""
     echo ""
@@ -1475,7 +1475,7 @@ echo ""
     echo ""
 }
 
-nombre_transcribe_zap(){
+nome_transcribe_zap(){
     clear
     echo ""
     echo ""
@@ -1499,7 +1499,7 @@ nombre_transcribe_zap(){
 
 ## Título Saliendo del setup
 
-nombre_saliendo() {
+nome_saliendo() {
     clear
     echo ""
     echo -e "$branco ███████  █████  ██      ██ ███████ ███    ██ ██████   ██████          \e[0m"
@@ -1582,7 +1582,7 @@ echo ""
     echo ""
 }
 
-nombre_expurgando() {
+nome_expurgando() {
 clear
 echo ""
 echo ""
@@ -1608,7 +1608,7 @@ echo ""
 
 ## Defasados
 
-nombre_cambiar_logos() {
+nome_cambiar_logos() {
     clear
     echo ""
     echo -e "$branco  ██████  █████  ███    ███ ██████  ██  █████  ██████      ██       ██████   ██████   ██████  ███████ \e[0m"
@@ -2984,7 +2984,7 @@ ferramenta_testeemail() {
 clear
 dados
 nome_testeemail
-preencha_as_info
+preencha_asnome_testeemail
 
 while true; do
 
@@ -3012,7 +3012,7 @@ echo ""
 
 clear
 nome_testeemail
-conferindo_as_info
+conferindo_asnome_testeemail
 
 echo -e "\e[33mEmail:\e[97m $email_teste\e[0m"
 
@@ -3038,7 +3038,7 @@ if [ "$confirmacao" = "Y" ] || [ "$confirmacao" = "y" ]; then
 else
     clear
     nome_testeemail
-    preencha_as_info
+    preencha_asnome_testeemail
 fi
 done
 
@@ -3107,7 +3107,7 @@ clear
 nome_traefik_e_portainer
 
 ## Mostra mensagem para preencher informações
-preencha_as_info
+preencha_asnome_testeemail
 
 ## Inicia um Loop até os dados estarem certos
 while true; do
@@ -3160,7 +3160,7 @@ while true; do
     nome_traefik_e_portainer
 
     ## Muestra mensaje para verificar la información
-    conferindo_as_info
+    conferindo_asnome_testeemail
 
     ## Información sobre URL
     echo -e "\e[33mEnlace de Portainer:\e[97m $url_portainer\e[0m"
@@ -3212,7 +3212,7 @@ while true; do
         nome_traefik_e_portainer
 
         ## Muestra mensaje para completar información
-        preencha_as_info
+        preencha_asnome_testeemail
 
     ## Vuelve al inicio del loop con las preguntas
     fi
@@ -3348,7 +3348,7 @@ echo -e "\e[97m• INSTALANDO DOCKER SWARM \e[33m[3/9]\e[0m"
 echo ""
 sleep 1
 
-telemetría Docker iniciado
+telemetria Docker iniciado
 
 ## En este paso instalaremos docker en modo swarm
 
@@ -4386,7 +4386,7 @@ cd
 ## Espera 30 segundos
 wait_stack "redis_redis"
 
-Telemetría Redis finalizada
+telemetria Redis finalizada
 echo ""
 }
 
@@ -4421,7 +4421,7 @@ echo -e "\e[97m• INICIANDO LA INSTALACIÓN DE REDIS \e[33m[1/3]\e[0m"
 echo ""
 sleep 1
 
-Telemetría Redis iniciada
+telemetria Redis iniciada
 
 ## Mensaje de Paso
 echo -e "\e[97m• INSTALANDO REDIS \e[33m[2/3]\e[0m"
@@ -4562,7 +4562,7 @@ herramienta_mysql() {
 ## Activa la función datos para obtener los datos de la vps
 dados
 
-telemetría MySQL iniciado
+telemetria MySQL iniciado
 
 ## Generando una contraseña aleatoria para Mysql
 senha_mysql=$(openssl rand -hex 16)
@@ -4855,7 +4855,7 @@ dados
 nome_chatwoot
 
 ## Muestra mensaje para completar información
-preencha_as_info
+preencha_asnome_testeemail
 
 ## Inicia un bucle hasta que los datos estén correctos
 while true; do
@@ -4913,7 +4913,7 @@ echo -en "\e[33mIngrese el Usuario para SMTP (ej: oriondesign o contato@oriondes
     nome_chatwoot
     
     ## Muestra mensaje para verificar la información
-    conferindo_as_info
+    conferindo_asnome_testeemail
     
     ## Información sobre URL
     echo -e "\e[33mDominio del Chatwoot:\e[97m $url_chatwoot\e[0m"
@@ -4966,10 +4966,10 @@ echo -en "\e[33mIngrese el Usuario para SMTP (ej: oriondesign o contato@oriondes
         clear
 
         ## Muestra el nombre de la herramienta
-        nombre_chatwoot
+        nome_chatwoot
 
         ## Muestra mensaje para completar información
-        preencha_as_info
+        preencha_asnome_testeemail
 
     ## Vuelve al inicio del loop con las preguntas
     fi
@@ -4981,7 +4981,7 @@ echo -e "\e[97m• INICIANDO LA INSTALACIÓN DE CHATWOOT \e[33m[1/7]\e[0m"
 echo ""
 sleep 1
 
-telemetría Chatwoot iniciada
+telemetria Chatwoot iniciada
 
 ## Activa la función datos para obtener los datos de la vps
 dados
@@ -5294,7 +5294,7 @@ pull chatwoot/chatwoot:latest
 ## Usa el servicio wait_chatwoot para verificar si el servicio está online
 wait_stack chatwoot${1:+_$1}_chatwoot${1:+_$1}_app chatwoot${1:+_$1}_chatwoot${1:+_$1}_sidekiq
 
-telemetría Chatwoot finalizado
+telemetria Chatwoot finalizado
 ## Mensaje de Paso
 echo -e "\e[97m• MIGRANDO BASE DE DATOS \e[33m[6/7]\e[0m"
 echo ""
@@ -5423,7 +5423,7 @@ dados
 nome_evolution
 
 ## Muestra mensaje para completar información
-preencha_as_info
+preencha_asnome_testeemail
 
 ## Inicia un bucle hasta que los datos sean correctos
 while true; do
@@ -5440,7 +5440,7 @@ while true; do
     nome_evolution
     
     ## Mostrar mensaje para verificar la información
-    conferindo_as_info
+    conferindo_asnome_testeemail
 
     ## Información sobre URL
     echo -e "\e[33mDominio de Evolution API:\e[97m $url_evolution\e[0m"
@@ -5622,7 +5622,7 @@ services:
 - WA_BUSINESS_VERSION=v20.0
 - WA_BUSINESS_LANGUAGE=pt_BR
 
-## 📊 Telemetría
+## 📊 telemetria
 - TELEMETRY=false
 - TELEMETRY_URL=
 
@@ -6022,7 +6022,7 @@ services:
       - WA_BUSINESS_VERSION=v20.0
       - WA_BUSINESS_LANGUAGE=pt_BR
 
-      ## 📊 Telemetría
+      ## 📊 telemetria
       - TELEMETRY=false
       - TELEMETRY_URL=
 
@@ -7124,7 +7124,7 @@ pull quay.io/minio/minio:latest
 ## Usa el servicio wait_minio para verificar si el servicio está online
 wait_stack minio${1:+_$1}_minio${1:+_$1}
 
-telemetría MinIO finalizado
+telemetria MinIO finalizado
 
 cd datos_vps
 
@@ -7337,7 +7337,7 @@ while true; do
         clear
 
         ## Muestra el nombre de la herramienta
-        nombre_typebot
+        nome_typebot
 
         ## Muestra mensaje para completar información
         preencha_as_info
@@ -7657,7 +7657,7 @@ clear
 dados
 
 ## Muestra el nombre de la aplicación
-nombre_n8n
+nome_n8n
 
 ## Muestra mensaje para completar información
 preencha_as_info
@@ -8426,7 +8426,7 @@ pull flowiseai/flowise:latest
 ## Usa el servicio wait_flowise para verificar si el servicio está online
 wait_stack flowise${1:+_$1}_flowise${1:+_$1}
 
-telemetría Flowise finalizado
+telemetria Flowise finalizado
 
 cd datos_vps
 
@@ -9713,7 +9713,7 @@ echo -e "\e[33mEmail del SMTP:\e[97m $mail_baserow\e[0m"
         clear
 
         ## Muestra el nombre de la herramienta
-        nombre_baserow
+        nome_baserow
 
         ## Muestra mensaje para completar información
         preencha_as_info
@@ -9990,7 +9990,7 @@ clear
         clear
 
         ## Muestra el nombre de la herramienta
-        nombre_mongodb
+        nome_mongodb
 
         ## Muestra mensaje para completar información
         preencha_as_info
@@ -10072,7 +10072,7 @@ pull mongo:latest
 ## Usa el servicio wait_stack "mongodb" para verificar si el servicio está online
 wait_stack mongodb${1:+_$1}_mongodb${1:+_$1}
 
-telemetría MongoDB finalizado
+telemetria MongoDB finalizado
 
 cd datos_vps
 
@@ -10313,7 +10313,7 @@ pull rabbitmq:management
 ## Usa el servicio wait_stack "pgadmin_4" para verificar si el servicio está online
 wait_stack rabbitmq${1:+_$1}_rabbitmq${1:+_$1}
 
-telemetría RabbitMQ finalizado
+telemetria RabbitMQ finalizado
 
 cd datos_vps
 
@@ -10995,7 +10995,7 @@ while true; do
         clear
 
         ## Muestra el nombre de la herramienta
-        nombre_mautic
+        nome_mautic
 
         ## Muestra mensaje para completar información
         preencha_as_info
@@ -11391,7 +11391,7 @@ pull appsmith/appsmith-ee:latest
 ## Usa el servicio wait_stack "nocobase" para verificar si el servicio está online
 wait_stack appsmith${1:+_$1}_appsmith${1:+_$1}
 
-telemetría Appsmith finalizado
+telemetria Appsmith finalizado
 
 cd datos_vps
 
@@ -12625,7 +12625,7 @@ services:
       ## Datos Postgres
       - NC_DB=pg://postgres:5432?u=postgres&p=$senha_postgres&d=nocodb${1:+_$1}
 
-      ## Desactivar Telemetría
+      ## Desactivar telemetria
       - NC_DISABLE_TELE=true  
 
     deploy:
@@ -12687,7 +12687,7 @@ pull nocodb/nocodb:latest
 ## Usa el servicio wait_nocodb para verificar si el servicio está online
 wait_stack nocodb${1:+_$1}_nocodb${1:+_$1}
 
-telemetría NocoDB finalizado
+telemetria NocoDB finalizado
 
 cd dados_vps
 
@@ -12983,7 +12983,7 @@ services:
       - LANGFUSE_S3_MEDIA_UPLOAD_FORCE_PATH_STYLE=true
       - LANGFUSE_S3_MEDIA_UPLOAD_PREFIX=media/
 
-      ## Activar Telemetría
+      ## Activar telemetria
       - TELEMETRY_ENABLED=false
 
       ## Funcionalidades experimentales
@@ -13065,7 +13065,7 @@ mode: replicated
       - LANGFUSE_S3_MEDIA_UPLOAD_FORCE_PATH_STYLE=true
       - LANGFUSE_S3_MEDIA_UPLOAD_PREFIX=media/
 
-      ## Activar Telemetría
+      ## Activar telemetria
       - TELEMETRY_ENABLED=false
 
       ## Características experimentales
@@ -15647,7 +15647,7 @@ echo ""
         clear
 
         ## Mostrar el nombre de la herramienta
-        nombre_docuseal
+        nome_docuseal
 
         ## Mostrar mensaje para completar información
         preencha_as_info
@@ -15794,7 +15794,7 @@ pull docuseal/docuseal:latest
 ## Usa el servicio wait_docuseal para verificar si el servicio está online
 wait_stack docuseal${1:+_$1}_docuseal${1:+_$1}
 
-telemetría Docuseal finalizado
+telemetria Docuseal finalizado
 
 cd datos_vps
 
@@ -16152,7 +16152,7 @@ pull prom/prometheus:latest grafana/grafana:latest prom/node-exporter:latest gcr
 
 wait_stack monitor_prometheus monitor_grafana monitor_node-exporter monitor_cadvisor
 
-Telemetría Grafana finalizada
+telemetria Grafana finalizada
 
 cd dados_vps
 
@@ -16818,7 +16818,7 @@ No veo ningún mensaje (`echo`) en portugués que necesite traducción en este f
     ## Configuraciones del Cluster
       - CLUSTER_HOSTNAME=node1
 
-    ## Telemetría
+    ## telemetria
       - DISABLE_TELEMETRY=true
 
     ## Módulos
@@ -17412,7 +17412,7 @@ pull ghcr.io/toeverything/affine-graphql:stable-39476d1
 ## Usa el servicio wait_stack "affine" para verificar si el servicio está online
 wait_stack affine${1:+_$1}_affine${1:+_$1}
 
-telemetría Affine finalizado
+telemetria Affine finalizado
 
 cd datos_vps
 
@@ -17623,7 +17623,7 @@ echo ""
         clear
 
         ## Muestra el nombre de la herramienta
-        nombre_directus
+        nome_directus
 
         ## Muestra mensaje para completar información
         preencha_as_info
@@ -17802,7 +17802,7 @@ pull directus/directus:latest
 ## Usa el servicio wait_stack "directus" para verificar si el servicio está online
 wait_stack directus${1:+_$1}_directus${1:+_$1}
 
-telemetría Directus finalizado
+telemetria Directus finalizado
 
 cd datos_vps
 
@@ -18042,7 +18042,7 @@ pull vaultwarden/server:latest
 ## Usa el servicio wait_vaultwarden para verificar si el servicio está online
 wait_stack vaultwarden${1:+_$1}_vaultwarden${1:+_$1}
 
-telemetría VaultWarden finalizado
+telemetria VaultWarden finalizado
 
 cd datos_vps
 
@@ -18349,7 +18349,7 @@ pull nextcloud:latest
 ## Usa el servicio wait_nextcloud para verificar si el servicio está online
 wait_stack nextcloud${1:+_$1}_nextcloud${1:+_$1} nextcloud${1:+_$1}_nextcloud${1:+_$1}_cron
 
-telemetría NextCloud finalizado
+telemetria NextCloud finalizado
 
 cd dados_vps
 
@@ -18741,7 +18741,7 @@ while true; do
         clear
 
         ## Muestra el nombre de la herramienta
-        nombre_phpmyadmin
+        nome_phpmyadmin
 
         ## Muestra mensaje para completar información
         preencha_as_info
@@ -18842,7 +18842,7 @@ pull phpmyadmin/phpmyadmin:latest
 ## Usa el servicio wait_stack "phpmyadmin" para verificar si el servicio está online
 wait_stack phpmyadmin${1:+_$1}_phpmyadmin${1:+_$1}
 
-telemetría PhpMyAdmin finalizado
+telemetria PhpMyAdmin finalizado
 
 cd
 cd dados_vps
@@ -19175,7 +19175,7 @@ while true; do
         clear
 
         ## Mostrar nombre de la herramienta
-        nombre_supabase
+        nome_supabase
 
         ## Mostrar mensaje para completar información
         preencha_as_info
@@ -19568,7 +19568,7 @@ replicas: 1
     command: "postgrest"
     
     networks:
-      - $nombre_red_interna ## Nombre de la red interna
+      - $nome_red_interna ## Nombre de la red interna
 
     environment:
     ## Configuración de la Base de Datos
@@ -19919,7 +19919,7 @@ pull supabase/studio:20241014-c083b3b kong:2.8.1 supabase/gotrue:v2.158.1 postgr
 ## Usa el servicio wait_stack "supabase" para verificar si el servicio está online
 wait_stack supabase${1:+_$1}_studio${1:+_$1} supabase${1:+_$1}_kong${1:+_$1} supabase${1:+_$1}_auth${1:+_$1} supabase${1:+_$1}_rest${1:+_$1} supabase${1:+_$1}_realtime${1:+_$1} supabase${1:+_$1}_storage${1:+_$1} supabase${1:+_$1}_imgproxy${1:+_$1} supabase${1:+_$1}_meta${1:+_$1} supabase${1:+_$1}_functions${1:+_$1} supabase${1:+_$1}_analytics${1:+_$1} supabase${1:+_$1}_db${1:+_$1} supabase${1:+_$1}_vector${1:+_$1} supabase${1:+_$1}_supavisor${1:+_$1} 
 
-telemetría Supabase finalizado
+telemetria Supabase finalizado
 
 cd dados_vps
 
@@ -20144,7 +20144,7 @@ pull binwiederhier/ntfy:latest
 ## Usa el servicio wait_ntfy para verificar si el servicio está online
 wait_stack ntfy${1:+_$1}_ntfy${1:+_$1}
 
-telemetría Ntfy finalizado
+telemetria Ntfy finalizado
 
 cd datos_vps
 
@@ -20786,7 +20786,7 @@ pull langflowai/langflow:1.1.3
 ## Usa el servicio wait_stack "langflow" para verificar si el servicio está online
 wait_stack langflow${1:+_$1}_langflow${1:+_$1}
 
-telemetría Langflow finalizado
+telemetria Langflow finalizado
 
 cd datos_vps
 
@@ -20899,7 +20899,7 @@ while true; do
         clear
 
         ## Mostrar el nombre de la herramienta
-        nombre_minio
+        nome_minio
 
         ## Mostrar mensaje para completar información
         preencha_as_info
@@ -21069,7 +21069,7 @@ wait_stack openproject${1:+_$1}_openproject${1:+_$1}
 wait_30_sec
 wait_30_sec
 
-telemetría OpenProject finalizado
+telemetria OpenProject finalizado
 
 cd dados_vps
 
@@ -21348,7 +21348,7 @@ pull ghcr.io/getzep/zep-nlp-server:latest ghcr.io/getzep/zep:latest
 ## Usa el servicio wait_zep para verificar si el servicio está online
 wait_stack zep${1:+_$1}_zep${1:+_$1}_nlp zep${1:+_$1}_zep${1:+_$1}_app
 
-telemetría Zep finalizado
+telemetria Zep finalizado
 
 wait_30_sec
 
@@ -21702,7 +21702,7 @@ pull mriedmann/humhub:latest
 ## Usa el servicio wait_calcom para verificar si el servicio está online
 wait_stack humhub${1:+_$1}_humhub${1:+_$1}
 
-telemetría HumHub finalizado
+telemetria HumHub finalizado
 
 cd dados_vps
 
@@ -21968,7 +21968,7 @@ pull yourls:latest
 ## Usa el servicio wait_stack "yourls" para verificar si el servicio está online
 wait_stack yourls${1:+_$1}_yourls${1:+_$1}
 
-telemetría Yourls finalizado
+telemetria Yourls finalizado
 
 cd dados_vps
 
@@ -22890,7 +22890,7 @@ pull outlinewiki/outline:latest
 ## Usa el servicio wait_stack "outline" para verificar si el servicio está online
 wait_stack outline${1:+_$1}_outline${1:+_$1}_app
 
-telemetría Outline finalizado
+telemetria Outline finalizado
 
 cd dados_vps
 
@@ -23340,7 +23340,7 @@ pull diouxx/glpi:latest
 ## Usa el servicio wait_stack "glpi" para verificar si el servicio está online
 wait_stack glpi${1:+_$1}_glpi${1:+_$1}
 
-telemetría GLPI finalizado
+telemetria GLPI finalizado
 
 cd dados_vps
 
@@ -23816,7 +23816,7 @@ pull excalidraw/excalidraw:latest
 ## Usa el servicio wait_stack "excalidraw" para verificar si el servicio está online
 wait_stack excalidraw${1:+_$1}_excalidraw${1:+_$1}
 
-telemetría Excalidraw finalizado
+telemetria Excalidraw finalizado
 
 cd dados_vps
 
@@ -24478,7 +24478,7 @@ pull documenso/documenso:latest
 ## Usa el servicio wait_stack "documenso" para verificar si el servicio está online
 wait_stack documenso${1:+_$1}_documenso${1:+_$1}
 
-telemetría Documenso finalizado
+telemetria Documenso finalizado
 
 cd datos_vps
 
@@ -24684,7 +24684,7 @@ while true; do
         clear
 
         ## Mostrar el nombre de la herramienta
-        nombre_moodle
+        nome_moodle
 
         ## Mostrar mensaje para completar información
         preencha_as_info
@@ -25371,7 +25371,7 @@ echo -e "\e[97m• INICIANDO LA INSTALACIÓN DE STIRLING PDF \e[33m[1/3]\e[0m"
 echo ""
 sleep 1
 
-telemetría StirlingPDF iniciada
+telemetria StirlingPDF iniciada
 
 ## Nadaaaaa
 
@@ -25481,7 +25481,7 @@ pull frooodle/s-pdf:latest
 ## Usa el servicio wait_stirlingpdf para verificar si el servicio está online
 wait_stack stirlingpdf${1:+_$1}_stirlingpdf${1:+_$1}
 
-telemetría StirlingPDF finalizada
+telemetria StirlingPDF finalizada
 
 cd datos_vps
 
@@ -25721,7 +25721,7 @@ pull clickhouse/clickhouse-server:23.8.8.20-alpine
 ## Usa el servicio wait_clickhouse para verificar si el servicio está online
 wait_stack clickhouse${1:+_$1}_clickhouse${1:+_$1}
 
-telemetría ClickHouse finalizado
+telemetria ClickHouse finalizado
 
 cd dados_vps
 
@@ -25950,7 +25950,7 @@ pull redislabs/redisinsight:latest
 ## Usa el servicio wait_redisinsight para verificar si el servicio está online
 wait_stack redisinsight${1:+_$1}_redisinsight${1:+_$1}
 
-telemetría RedisInsight finalizado
+telemetria RedisInsight finalizado
 
 cd dados_vps
 
@@ -26291,7 +26291,7 @@ while true; do
 clear
 
         ## Mostra o nome da ferramenta
-        nombre_firecrawl
+        nome_firecrawl
 
         ## Mostra mensagem para preencher informações
         complete_las_info
@@ -27998,7 +27998,7 @@ pull browserless/chrome:latest
 ## Usa el servicio wait_browserless para verificar si el servicio está online
 wait_stack browserless${1:+_$1}_browserless${1:+_$1}
 
-telemetría Browserless finalizado
+telemetria Browserless finalizado
 
 cd dados_vps
 
@@ -28259,7 +28259,7 @@ pull quay.io/keycloak/keycloak:latest
 ## Usa el servicio wait_keycloak para verificar si el servicio está online
 wait_stack keycloak${1:+_$1}_keycloak${1:+_$1}
 
-telemetría Keycloak finalizado
+telemetria Keycloak finalizado
 
 cd dados_vps
 
@@ -28782,7 +28782,7 @@ echo ""
 
 sleep 1
 
-telemetría Bolt iniciada
+telemetria Bolt iniciada
 
 ## Nadaaaaa
 
@@ -28887,7 +28887,7 @@ pull docker.io/hipnologo/bolt.diy:latest
 ## Usa el servicio wait_bolt para verificar si el servicio está online
 wait_stack bolt${1:+_$1}_bolt${1:+_$1}
 
-telemetría Bolt finalizada
+telemetria Bolt finalizada
 
 cd datos_vps
 
@@ -29083,7 +29083,7 @@ pull wisemapping/wisemapping:latest
 ## Usa el servicio wait_wisemapping para verificar si el servicio está online
 wait_stack wisemapping${1:+_$1}_wisemapping${1:+_$1}
 
-telemetría WiseMapping finalizado
+telemetria WiseMapping finalizado
 
 cd dados_vps
 
@@ -29676,7 +29676,7 @@ else
     clear
 
     ## Muestra el nombre de la herramienta
-    nombre_passbolt
+    nome_passbolt
 
     ## Muestra mensaje para completar información
     preencha_as_info
@@ -29978,7 +29978,7 @@ else
     clear
 
     ## Mostrar el nombre de la herramienta
-    nombre_transcrevezap
+    nome_transcrevezap
 
     ## Mostrar mensaje para completar información
     preencha_as_info
