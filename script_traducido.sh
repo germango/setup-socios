@@ -334,7 +334,7 @@ nombre_pruebaemail() {
 
 ## Título Traefik y Portainer [1]
 
-nome_traefik_y_portainer() {
+nome_traefik_e_portainer() {
     clear
     echo ""
     echo -e "$branco ████████ ██████   █████  ███████ ███████ ██ ██   ██     ██    ██       \e[0m"
