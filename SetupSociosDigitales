@@ -184,7 +184,7 @@ guarde_os_dados_msg() {
 ## Mensagem de Instalando
 
 instalando_msg() {
-  echo""
+  echo ""
   echo -e "$amarelo===================================================================================================\e[0m"
   echo -e "$amarelo=                                                                                                 =\e[0m"
   echo -e "$amarelo=      $branco ██ ███    ██ ███████ ████████  █████  ██       █████  ███    ██ ██████   ██████  $amarelo      = \e[0m" 
@@ -1522,7 +1522,7 @@ nome_remover_stack() {
     echo ""
     echo ""
     echo -e "$amarelo===================================================================================================\e[0m"
-    echo""                                                                                             
+    echo ""                                                                                             
 }
 nome_portainer.reset() {
     clear
@@ -1650,7 +1650,7 @@ nome_finalizado() {
 #    echo -e "${amarelo}[ 18 ]${reset} - ${branco}Appsmith                                ${verde}| ${reset}  ${amarelo}[ 41 ]${reset} - ${branco}Ntfy ${verde}[NOVO]${reset}"
 #    echo -e "${amarelo}[ 19 ]${reset} - ${branco}Qdrant                                  ${verde}| ${reset}  ${amarelo}[ 42 ]${reset} - ${branco}REMOVER STACK${reset}"
 #    echo -e "${amarelo}[ 20 ]${reset} - ${branco}Woofed CRM                              ${verde}| ${reset}  ${amarelo}[ 43 ]${reset} - ${branco}Sair do instalador${reset}"
-#    echo""
+#    echo ""
 #}
 
 menu_instalador() {

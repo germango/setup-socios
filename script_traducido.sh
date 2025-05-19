@@ -98,8 +98,7 @@ direitos_instalador() {
                 echo ""
                 echo "Por favor, escriba solo Y o N."
                 sleep 2
-
-clear
+                clear
                 nome_instalador
                 direitos_setup
                 ;;
@@ -186,7 +185,7 @@ guarde_os_dados_msg() {
 ## Mensaje de Instalando
 
 instalando_msg() {
-  echo""
+  echo ""
   echo -e "$amarelo===================================================================================================\e[0m"
   echo -e "$amarelo=                                                                                                 =\e[0m"
   echo -e "$amarelo=      $branco ██ ███    ██ ███████ ████████  █████  ██       █████  ███    ██ ██████   ██████  $amarelo      = \e[0m" 
@@ -250,8 +249,7 @@ nome_credenciais() {
     echo ""
     echo -e "$branco  ██████ ██████  ███████ ██████  ███████ ███    ██  ██████ ██  █████  ██      ███████ ███████     \e[0m"
     echo -e "$branco ██      ██   ██ ██      ██   ██ ██      ████   ██ ██      ██ ██   ██ ██      ██      ██          \e[0m"
-
-echo -e "$branco ██      ██████  █████   ██   ██ █████   ██ ██  ██ ██      ██ ███████ ██      █████   ███████     \e[0m"
+    echo -e "$branco ██      ██████  █████   ██   ██ █████   ██ ██  ██ ██      ██ ███████ ██      █████   ███████     \e[0m"
     echo -e "$branco ██      ██   ██ ██      ██   ██ ██      ██  ██ ██ ██      ██ ██   ██ ██      ██           ██     \e[0m"
     echo -e "$branco  ██████ ██   ██ ███████ ██████  ███████ ██   ████  ██████ ██ ██   ██ ███████ ███████ ███████     \e[0m"
     echo -e "$branco                                                                                               \e[0m"
@@ -336,7 +334,7 @@ nombre_pruebaemail() {
 
 ## Título Traefik y Portainer [1]
 
-nombre_traefik_y_portainer() {
+nombre_traefik_e_portainer() {
     clear
     echo ""
     echo -e "$branco ████████ ██████   █████  ███████ ███████ ██ ██   ██     ██    ██       \e[0m"
@@ -352,6 +350,7 @@ nombre_traefik_y_portainer() {
     echo -e "$branco ██       ██████  ██   ██    ██    ██   ██ ██ ██   ████ ███████ ██   ██ \e[0m"
     echo ""
     echo ""
+}
 
 ## Título Chatwoot [2]
 
@@ -1539,7 +1538,7 @@ nome_remover_stack() {
     echo ""
     echo ""
     echo -e "$amarelo===================================================================================================\e[0m"
-    echo""                                                                                             
+    echo ""                                                                                             
 }
 nome_portainer.reset() {
     clear
@@ -1670,7 +1669,7 @@ nome_finalizado() {
 
 #    echo -e "${amarelo}[ 19 ]${reset} - ${branco}Qdrant                                  ${verde}| ${reset}  ${amarelo}[ 42 ]${reset} - ${branco}ELIMINAR STACK${reset}"
 #    echo -e "${amarelo}[ 20 ]${reset} - ${branco}Woofed CRM                              ${verde}| ${reset}  ${amarelo}[ 43 ]${reset} - ${branco}Salir del instalador${reset}"
-#    echo""
+#    echo ""
 #}
 
 menu_instalador() {
@@ -30633,82 +30632,82 @@ fi
 }
 
 n8n.workflows(){
-while true; do
-    if docker ps -q --filter "name=n8n_quepasa_n8n_quepasa_editor" | grep -q .; then
-        # Capturar el ID del contenedor
-        container_id=$(docker ps --filter "name=n8n_quepasa_n8n_quepasa_editor" --format "{{.ID}}")
+    while true; do
+        if docker ps -q --filter "name=n8n_quepasa_n8n_quepasa_editor" | grep -q .; then
+            # Capturar el ID del contenedor
+            container_id=$(docker ps --filter "name=n8n_quepasa_n8n_quepasa_editor" --format "{{.ID}}")
 
-        # Verificar si el ID del contenedor fue capturado correctamente
-        if [ -z "$container_id" ]; then
-            echo "Error: No se pudo encontrar el ID del contenedor."
-            exit 1
-        fi
+            # Verificar si el ID del contenedor fue capturado correctamente
+            if [ -z "$container_id" ]; then
+                echo "Error: No se pudo encontrar el ID del contenedor."
+                exit 1
+            fi
 
-        # Ejecutar el código en el contenedor solo si está en ejecución
-        docker exec "$container_id" /bin/sh -c '
-            # Creando directorio temporal
-            temp_dir=$(mktemp -d)
+            # Ejecutar el código en el contenedor solo si está en ejecución
+            docker exec "$container_id" /bin/sh -c '
+                # Creando directorio temporal
+                temp_dir=$(mktemp -d)
 
-            # Entrando al directorio temporal
-            cd "$temp_dir"
+                # Entrando al directorio temporal
+                cd "$temp_dir"
 
-# Descargando workflows
+    # Descargando workflows
 
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/ChatwootExtra.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/ChatwootProfileUpdate.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/ChatwootToQuepasa.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/GetChatwootContacts.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/GetValidConversation.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/MsgRejectCall.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/PostToChatwoot.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/PostToWebCallBack.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaAutomatic.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaChatControl.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaContactsImport.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaInboxControl.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaInboxControl+soc.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaInboxControl+typebot.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaInboxControl+webhook.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaQrcode.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaToChatwoot.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/ToChatwootTranscriptViaOpenAI.json"
-wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/ToTypeBot.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/ChatwootExtra.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/ChatwootProfileUpdate.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/ChatwootToQuepasa.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/GetChatwootContacts.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/GetValidConversation.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/MsgRejectCall.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/PostToChatwoot.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/PostToWebCallBack.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaAutomatic.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaChatControl.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaContactsImport.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaInboxControl.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaInboxControl+soc.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaInboxControl+typebot.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaInboxControl+webhook.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaQrcode.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/QuepasaToChatwoot.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/ToChatwootTranscriptViaOpenAI.json"
+    wget "https://raw.githubusercontent.com/DeividMs/QP_Setup_Orion/main/workflows/latest/ToTypeBot.json"
 
-# Subiendo workflows
-n8n import:workflow --input="$temp_dir" --separate
+    # Subiendo workflows
+    n8n import:workflow --input="$temp_dir" --separate
 
-# Verificando si los workflows fueron importados correctamente
-if [ $? -eq 0 ]; then
-    echo "Workflows importados correctamente"
-else
-    echo "Error al importar workflows"
-    exit 1
-fi
-
-# Activando los workflows
-
-n8n update:workflow --id 1008 --active=true && echo "Flujo ChatwootToQuepasa activado" || echo "Error al activar flujo ChatwootToQuepasa"
-n8n update:workflow --id 1009 --active=true && echo "Flujo QuepasaToChatwoot activado" || echo "Error al activar flujo QuepasaToChatwoot"
-n8n update:workflow --id 1011 --active=true && echo "Flujo QuepasaAutomatic activado" || echo "Error al activar QuepasaAutomatic 1011"
-n8n update:workflow --id z7iqKYC8r5nPRRHt --active=true && echo "Flujo QuepasaQrcode activado" || echo "Error al activar flujo QuepasaQrcode"
-n8n update:workflow --id GIPTrjgdT9vuOSlN --active=true && echo "Flujo MsgRejectCall activado" || echo "Error al activar flujo MsgRejectCall"
-
-
-'
-break
-else
-clear
-erro_msg
-echo ""
-echo -e "Vaya, parece que no instalaste la opción \e[32m[28] N8N + Nodes Quepasa${reset} ${branco}de nuestro instalador.${reset}"
-
-echo "Instala antes de intentar instalar esta aplicación."
-        echo ""
-        echo "Presiona CTRL C para salir del instalador."
-        sleep 5
-        exit
+    # Verificando si los workflows fueron importados correctamente
+    if [ $? -eq 0 ]; then
+        echo "Workflows importados correctamente"
+    else
+        echo "Error al importar workflows"
+        exit 1
     fi
-done
+
+    # Activando los workflows
+
+    n8n update:workflow --id 1008 --active=true && echo "Flujo ChatwootToQuepasa activado" || echo "Error al activar flujo ChatwootToQuepasa"
+    n8n update:workflow --id 1009 --active=true && echo "Flujo QuepasaToChatwoot activado" || echo "Error al activar flujo QuepasaToChatwoot"
+    n8n update:workflow --id 1011 --active=true && echo "Flujo QuepasaAutomatic activado" || echo "Error al activar QuepasaAutomatic 1011"
+    n8n update:workflow --id z7iqKYC8r5nPRRHt --active=true && echo "Flujo QuepasaQrcode activado" || echo "Error al activar flujo QuepasaQrcode"
+    n8n update:workflow --id GIPTrjgdT9vuOSlN --active=true && echo "Flujo MsgRejectCall activado" || echo "Error al activar flujo MsgRejectCall"
+
+
+    '
+    break
+    else
+    clear
+    erro_msg
+    echo ""
+    echo -e "Vaya, parece que no instalaste la opción \e[32m[28] N8N + Nodes Quepasa${reset} ${branco}de nuestro instalador.${reset}"
+
+    echo "Instala antes de intentar instalar esta aplicación."
+            echo ""
+            echo "Presiona CTRL C para salir del instalador."
+            sleep 5
+            exit
+        fi
+    done
 
 }
 
@@ -30972,13 +30971,13 @@ direitos_instalador
 
 ## Después de presionar Y y confirmar continuar..
 
-## Menu de opções (backend)
+## Menú de opciones (backend)
 while true; do
 
     nome_menu
     menu_instalador
 
-    read -p "Digite o NÚMERO da opção desejada ou COMANDO oculto: " opcao
+    read -p "Ingrese el NÚMERO de la opción deseada o COMANDO oculto: " opcao
 
     set -- $opcao
     opcao1=$1
@@ -32196,7 +32195,7 @@ while true; do
         ##    fi   
         ##    ;;
 
-        sair|fechar|exit|close|x)
+        salir|cerrar|exit|close|x)
             clear
             nome_saindo
             echo ""
@@ -32292,8 +32291,6 @@ while true; do
             fi
             ;;
             
-
-
         evolution.v1)
 
             verificar_stack "evolution_v1${opcao2:+_$opcao2}" && continue || echo ""
@@ -32403,39 +32400,37 @@ while true; do
             fi   
             ;;
 
-
-
         ## Reiniciar portainer
         portainer.restart)
             portainer.restart
             ;;
 
-        ## Redefinir senha do portainer
+        ## Redefinir contraseña del portainer
         portainer.reset)
             portainer.reset
             ;;
         
-        ## Atualizar portainer
+        ## Actualizar portainer
         portainer.update)
             portainer.update
             ;;
 
-        ## Traduzir emails do Chatwoot
+        ## Traducir emails del Chatwoot
         chatwoot.mail)
             chatwoot.mail
             ;;
 
-        ## Traduzir emails do Chatwoot N
+        ## Traducir emails del Chatwoot N
         chatwoot.n.mail)
             chatwoot.n.mail
             ;;
 
-        ## Importar Workflows do Quepasa no N8N
+        ## Importar Workflows del Quepasa en N8N
         n8n.workflows)
             n8n.workflows
             ;;
 
-        ## Corrigir imagem da stack do traefik para 2.11.2
+        ## Corregir imagen de la stack del traefik para 2.11.2
         traefik.fix)
             traefik.fix    
             ;;
@@ -32450,7 +32445,7 @@ while true; do
             htop
             ;;
 
-        ## Corrigir credenciais do portainer (para instalações)
+        ## Corregir credenciales del portainer (para instalaciones)
         credencial.reset)
             criar_arquivo
             ;;
@@ -32472,11 +32467,9 @@ while true; do
         comando|COMANDO|comandos|COMANDOS) menu_instalador="3"
             ;;
         
-        limpar|clean|LIMPAR|CLEAN|expurgar|EXPURGAR)
+        limpiar|clean|LIMPIAR|CLEAN|expurgar|EXPURGAR)
             limpar
             ;;
-
-
 
         *)
 
