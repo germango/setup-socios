@@ -552,6 +552,7 @@ nome_baserow() {
     echo -e "$branco ██████  ██   ██ ███████ ███████ ██   ██  ██████   ███ ███  \e[0m"
     echo ""
     echo ""
+}
 
 ## Título MongoDB [13]
 
