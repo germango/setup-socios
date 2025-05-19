@@ -1,3 +1,5 @@
+<img src="https://github.com/sociosdigitalespro/setup-socios/blob/main/assets/banner.jpg" alt="SetupOrion">
+
 <p align="center">
   Este autoinstalador es una solución <b>100% gratuita</b>, con el objetivo de ayudar a toda la comunidad a instalar las principales herramientas del mercado de Automatizaciones/Marketing en su servidor.
   <b>No necesitas instalar todos los programas incluidos, ya que podrás elegir qué herramientas deseas instalar.</b>
