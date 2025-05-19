@@ -2675,10 +2675,6 @@ pull() {
 requisitar_outra_instalacao(){
     read -p "¿Desea instalar otra aplicación? (Y/N): " choice
     if [ "$choice" = "Y" ] || [ "$choice" = "y" ]; then
-
-Aquí está la traducción del script, manteniendo todas las variables en portugués, los colores y la lógica intacta, solo traduciendo los mensajes al español:
-
-```bash
         return
     else
         cd
@@ -30947,10 +30943,6 @@ limpar() {
     # Calcular espacio liberado
     space_freed=$((used_before - used_after))
     echo -e "Se liberó: \e[33m${space_freed}Gb\e[0m de su servidor"
-
-Aquí está la traducción solicitada, manteniendo intactas todas las variables, lógica y colores, solo traduciendo los mensajes en portugués:
-
-```bash
     echo ""
     echo -e "\e[97mVolviendo al menú principal en 10 segundos...\e[0m"
     sleep 10
