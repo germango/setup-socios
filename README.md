@@ -1,4 +1,3 @@
-
 <p align="center">
   Este autoinstalador es una solución <b>100% gratuita</b>, con el objetivo de ayudar a toda la comunidad a instalar las principales herramientas del mercado de Automatizaciones/Marketing en su servidor.
   <b>No necesitas instalar todos los programas incluidos, ya que podrás elegir qué herramientas deseas instalar.</b>
@@ -6,9 +5,12 @@
 </p>
  
 <p align="center">
-  <a href="https://oriondesign.art.br/whatsapp1"><img src="https://github.com/user-attachments/assets/d0f7867f-5890-4fbc-a76a-47e22bdfed0c" alt="SetupOrion WhatsApp 1"></a>     
-  <a href="https://www.youtube.com/@OrionDesignOficial/playlists"><img src="https://github.com/user-attachments/assets/f2e217a1-ffc5-4c7d-98a9-bab5e98bb0c3" alt="SetupOrion Youtube"></a>     
-  <a href="https://oriondesign.art.br/whatsapp2"><img src="https://github.com/user-attachments/assets/1609b3ef-4b35-4daa-9124-24d74edab49a" alt="SetupOrion WhatsApp 2"></a>
+  <a href="https://chat.sociosdigitales.pro/grupowa-e-templates">
+    <img src="./assets/whatsapp.png" alt="Whatsapp Socios Digitales">
+  </a>     
+  <a href="https://sociosdigitales.pro/setup-socios/">
+    <img src="./assets/imagen2.png" alt="Socios Digitales Playlist">
+  </a>     
 </p>
 
 ---
@@ -29,6 +31,7 @@
 ```
 bash <(curl -sSL setup.oriondesign.art.br)
 ```
+
 <p>Después, espera unos momentos mientras el script se inicia y finalmente instala las herramientas que desees.</p>
 
 ---
