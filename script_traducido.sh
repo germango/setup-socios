@@ -30972,13 +30972,13 @@ direitos_instalador
 
 ## Después de presionar Y y confirmar continuar..
 
-## Menú de opciones (backend)
+## Menu de opções (backend)
 while true; do
 
     nome_menu
     menu_instalador
 
-    read -p "Ingrese el NÚMERO de la opción deseada o COMANDO oculto: " opcao
+    read -p "Digite o NÚMERO da opção desejada ou COMANDO oculto: " opcao
 
     set -- $opcao
     opcao1=$1
@@ -32196,7 +32196,7 @@ while true; do
         ##    fi   
         ##    ;;
 
-        salir|cerrar|exit|close|x)
+        sair|fechar|exit|close|x)
             clear
             nome_saindo
             echo ""
@@ -32204,9 +32204,6 @@ while true; do
             ;;
 
 
-## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
-## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
         postgres)
 
@@ -32296,10 +32293,7 @@ while true; do
             ;;
             
 
-## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
-## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-        
+
         evolution.v1)
 
             verificar_stack "evolution_v1${opcao2:+_$opcao2}" && continue || echo ""
@@ -32410,41 +32404,38 @@ while true; do
             ;;
 
 
-## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
-## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
         ## Reiniciar portainer
         portainer.restart)
             portainer.restart
             ;;
 
-        ## Redefinir contraseña del portainer
+        ## Redefinir senha do portainer
         portainer.reset)
             portainer.reset
             ;;
         
-        ## Actualizar portainer
+        ## Atualizar portainer
         portainer.update)
             portainer.update
             ;;
 
-        ## Traducir emails del Chatwoot
+        ## Traduzir emails do Chatwoot
         chatwoot.mail)
             chatwoot.mail
             ;;
 
-        ## Traducir emails del Chatwoot N
+        ## Traduzir emails do Chatwoot N
         chatwoot.n.mail)
             chatwoot.n.mail
             ;;
 
-        ## Importar Workflows del Quepasa en N8N
+        ## Importar Workflows do Quepasa no N8N
         n8n.workflows)
             n8n.workflows
             ;;
 
-        ## Corregir imagen de la stack del traefik para 2.11.2
+        ## Corrigir imagem da stack do traefik para 2.11.2
         traefik.fix)
             traefik.fix    
             ;;
@@ -32459,7 +32450,7 @@ while true; do
             htop
             ;;
 
-        ## Corregir credenciales del portainer (para instalaciones)
+        ## Corrigir credenciais do portainer (para instalações)
         credencial.reset)
             criar_arquivo
             ;;
@@ -32481,13 +32472,10 @@ while true; do
         comando|COMANDO|comandos|COMANDOS) menu_instalador="3"
             ;;
         
-        limpiar|clean|LIMPIAR|CLEAN|expurgar|EXPURGAR)
+        limpar|clean|LIMPAR|CLEAN|expurgar|EXPURGAR)
             limpar
             ;;
 
-## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
-## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 
         *)
