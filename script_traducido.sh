@@ -2695,7 +2695,26 @@ esconder_senha() {
   fi
 }
 
-done
+pegar_senha_postgres() {
+    while :; do
+        if [ -f /root/postgres.yaml ]; then
+            senha_postgres=$(grep "POSTGRES_PASSWORD" /root/postgres.yaml | awk -F '=' '{print $2}')
+            break
+        else
+            sleep 5
+        fi
+    done
+}
+
+pegar_senha_pgvector() {
+    while :; do
+        if [ -f /root/pgvector.yaml ]; then
+            senha_pgvector=$(grep "POSTGRES_PASSWORD" /root/pgvector.yaml | awk -F '=' '{print $2}')
+            break
+        else
+            sleep 5
+        fi
+    done
 }
 
 pegar_user_senha_rabbitmq() {
