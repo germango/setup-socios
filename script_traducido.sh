@@ -27557,7 +27557,6 @@ else
     echo "No fue posible crear la stack de planka"
 fi
 
-fi
 STACK_NAME="planka${1:+_$1}"
 stack_editavel # > /dev/null 2>&1
 #docker stack deploy --prune --resolve-image always -c planka.yaml planka > /dev/null 2>&1
