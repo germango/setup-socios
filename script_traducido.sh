@@ -10052,7 +10052,6 @@ else
     echo "No fue posible crear la stack de MongoDB"
 fi
 
-fi
 STACK_NAME="mongodb${1:+_$1}"
 stack_editavel # > /dev/null 2>&1
 #docker stack deploy --prune --resolve-image always -c mongodb.yaml mongodb > /dev/null 2>&1
