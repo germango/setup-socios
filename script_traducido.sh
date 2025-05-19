@@ -2022,7 +2022,7 @@ ENDPOINT_ID=$(curl -k -s -X GET -H "Authorization: Bearer $TOKEN" https://$PORTA
     else
         echo "10/10 - [ OFF ] - Error al realizar el despliegue. Respuesta HTTP: $http_code"
 
-echo "Mensaje de error: $(cat "$erro_output")"
+        echo "Mensaje de error: $(cat "$erro_output")"
         echo "Detalles: $(echo "$response_body" | jq .)"
     fi
 
@@ -2190,8 +2190,8 @@ verificar_token() {
 
                 echo ""
                 echo ""
-                echo "                         Ha alcanzado el límite máximo de intentos ($TENTATIVAS/$MAX_TENTATIVAS)."
-                echo "                         ¡Intente nuevamente cuando recuerde sus credenciales!"
+                echo " Ha alcanzado el límite máximo de intentos ($TENTATIVAS/$MAX_TENTATIVAS)."
+                echo " ¡Intente nuevamente cuando recuerde sus credenciales!"
                 echo 5
                 clear
                 break
@@ -2865,8 +2865,7 @@ criar_banco_mysql_da_stack() {
 
             # Verificar se o banco de dados já existe
             docker exec -e MYSQL_PWD="$senha_mysql" "$CONTAINER_ID" mysql -u root \
-
--e "SHOW DATABASES LIKE '$1';" | grep -qw "$1"
+                -e "SHOW DATABASES LIKE '$1';" | grep -qw "$1"
 
             if [ $? -eq 0 ]; then
                 echo ""
