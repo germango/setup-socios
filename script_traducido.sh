@@ -8922,7 +8922,6 @@ else
     echo "No fue posible crear la stack de Nocobase"
 fi
 
-fi
 STACK_NAME="nocobase${1:+_$1}"
 stack_editavel # > /dev/null 2>&1
 #docker stack deploy --prune --resolve-image always -c nocobase.yaml nocobase > /dev/null 2>&1
