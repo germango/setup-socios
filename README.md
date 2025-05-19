@@ -6,10 +6,10 @@
  
 <p align="center">
   <a href="https://chat.sociosdigitales.pro/grupowa-e-templates">
-    <img src="./assets/whatsapp.png" alt="Whatsapp Socios Digitales">
+    <img src="https://github.com/sociosdigitalespro/setup-socios/blob/main/assets/whatsapp.jpg" alt="Whatsapp Socios Digitales">
   </a>     
   <a href="https://sociosdigitales.pro/setup-socios/">
-    <img src="./assets/imagen2.png" alt="Socios Digitales Playlist">
+    <img src="https://github.com/sociosdigitalespro/setup-socios/blob/main/assets/instalation.jpg" alt="Socios Digitales Playlist">
   </a>     
 </p>
 
