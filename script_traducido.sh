@@ -10509,7 +10509,6 @@ else
     echo "No fue posible crear la stack de Uptime Kuma"
 fi
 
-fi
 STACK_NAME="uptimekuma${1:+_$1}"
 stack_editavel # > /dev/null 2>&1
 #docker stack deploy --prune --resolve-image always -c uptimekuma.yaml uptimekuma #> /dev/null 2>&1
