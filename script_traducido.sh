@@ -13350,7 +13350,6 @@ else
     echo "No fue posible crear la stack de metabase"
 fi
 
-fi
 STACK_NAME="metabase${1:+_$1}"
 stack_editavel # > /dev/null 2>&1
 #docker stack deploy --prune --resolve-image always -c metabase.yaml metabase > /dev/null 2>&1
