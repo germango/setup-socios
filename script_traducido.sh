@@ -23206,7 +23206,7 @@ while true; do
 
         ## Mostrar mensagem de Instalando
 
-instalando_msg
+        instalando_msg
 
         ## Sale del bucle
         break
@@ -23218,7 +23218,7 @@ instalando_msg
         clear
 
         ## Muestra el nombre de la herramienta
-        nombre_glpi
+        nome_glpi
 
         ## Muestra mensaje para completar información
         preencha_as_info
