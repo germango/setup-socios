@@ -5335,8 +5335,6 @@ else
     echo "No fue posible migrar la base de datos"
 fi
 
-fi
-
 echo ""
 ## Mensaje de Paso
 echo -e "\e[97m• ACTIVANDO FUNCIONES DEL SUPER ADMIN \e[33m[7/7]\e[0m"
