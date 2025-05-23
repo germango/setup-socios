@@ -32576,20 +32576,12 @@ while true; do
         p1|P1)
             menu_instalador="1"
             ;;
-
-        p2|P2) menu_instalador="2"
-            ;;
         comando|COMANDO|comandos|COMANDOS) menu_instalador="3"
             ;;
-        
         limpar|clean|LIMPAR|CLEAN|expurgar|EXPURGAR)
             limpar
             ;;
-
-
-
         *)
-
             ;;
     esac
     echo ""
