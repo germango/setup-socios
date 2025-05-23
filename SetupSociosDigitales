@@ -1732,11 +1732,11 @@ verificar_stack() {
 
     if docker stack ls --format "{{.Name}}" | grep -q "^${nome_stack}$"; then
         nome_verificar_stack
-        echo -e "A stack '$amarelo${nome_stack}\e[0m' existe."
-        echo -e "Caso deseje refazer a instalação, por favor, remova a stack $amarelo${nome_stack}\e[0m do"
-        echo -e "seu Portainer e tente novamente..."
+        echo -e "La stack '$amarelo${nome_stack}\e[0m' existe."
+        echo -e "Si desea reinstalarla, por favor elimine la stack $amarelo${nome_stack}\e[0m de"
+        echo -e "su Portainer e intente nuevamente..."
         echo -e ""
-        echo -e "Voltando ao menu principal em 10 segundos"
+        echo -e "Volviendo al menú principal en 10 segundos"
         sleep 10
 
         clear 
@@ -1983,23 +1983,23 @@ verificar_arquivo() {
 criar_arquivo() {
     if [ -f "/root/dados_vps/dados_portainer" ]; then
         rm "/root/dados_vps/dados_portainer"
-        echo "Arquivo existente removido."
+        echo "Archivo existente eliminado."
     fi
 
     ## Caso não exista o arquivo ele vai pedir os dados para criar.
     nome_credenciais
-    echo -e "\e[97mPasso$amarelo 1/3\e[0m"
+    echo -e "\e[97mPaso$amarelo 1/3\e[0m"
     #echo -e "\e[97mObs: Coloque o https:// antes do link do portainer\e[0m"
-    read -p "Digite a Url do Portainer (ex: portainer.oriondesign.art.br): " PORTAINER_URL
+    read -p "Ingrese la URL de Portainer (ej: portainer.oriondesign.art.br): " PORTAINER_URL
     echo ""
 
-    echo -e "\e[97mPasso$amarelo 2/3\e[0m"
-    read -p "Digite seu Usuario (ex: admin): " USUARIO
+    echo -e "\e[97mPaso$amarelo 2/3\e[0m"
+    read -p "Ingrese su Usuario (ej: admin): " USUARIO
     echo ""
 
-    echo -e "\e[97mPasso$amarelo 3/3\e[0m"
-    echo -e "\e[97mObs: A Senha não aparecera ao digitar\e[0m"
-    read -s -p "Digite a Senha (ex: @Senha123_): " SENHA
+    echo -e "\e[97mPaso$amarelo 3/3\e[0m"
+    echo -e "\e[97mNota: La contraseña no se mostrará al escribir\e[0m"
+    read -s -p "Ingrese la Contraseña (ej: @Contraseña123_): " SENHA
     echo ""
 
     verificar_token "$PORTAINER_URL" "$USUARIO" "$SENHA" true
@@ -2012,42 +2012,43 @@ verificar_campos() {
     USUARIO=$(grep -oP '(?<=Usuario: ).*' /root/dados_vps/dados_portainer)
     SENHA=$(grep -oP '(?<=Senha: ).*' /root/dados_vps/dados_portainer)
 
-    ## se por acaso não tiver login nem senha lá vem para ca
+    ## Si no hay usuario o contraseña
     if [ -z "$USUARIO" ] || [ -z "$SENHA" ]; then
         
         nome_credenciais
-        echo -e "\e[97mPasso$amarelo 1/3\e[0m"
-        #echo -e "\e[97mObs: Coloque o https:// antes do link do portainer\e[0m"
-        read -p "Digite a Url do Portainer (ex: portainer.oriondesign.art.br): " PORTAINER_URL
+        echo -e "\e[97mPaso$amarelo 1/3\e[0m"
+        #echo -e "\e[97mNota: Coloque https:// antes del enlace de Portainer\e[0m"
+        read -p "Ingrese la URL de Portainer (ej: portainer.oriondesign.art.br): " PORTAINER_URL
         echo ""
     
-        echo -e "\e[97mPasso$amarelo 2/3\e[0m"
-        read -p "Digite seu Usuario (ex: admin): " USUARIO
+        echo -e "\e[97mPaso$amarelo 2/3\e[0m"
+        read -p "Ingrese su Usuario (ej: admin): " USUARIO
         echo ""
     
-        echo -e "\e[97mPasso$amarelo 3/3\e[0m"
-        echo -e "\e[97mObs: A Senha não aparecera ao digitar\e[0m"
-        read -s -p "Digite a Senha (ex: @Senha123_): " SENHA
+        echo -e "\e[97mPaso$amarelo 3/3\e[0m"
+        echo -e "\e[97mNota: La contraseña no se mostrará al escribir\e[0m"
+        read -s -p "Ingrese la Contraseña (ej: @Contraseña123_): " SENHA
         echo ""
 
-        ATUALIZAR="true" ## Verificar se já existe TOKEN no arquivo
+        ATUALIZAR="true" ## Verificar si ya existe TOKEN en el archivo
         verificar_token "$PORTAINER_URL" "$USUARIO" "$SENHA" true
-    ## Caso o usuario e senha estiver como "Precisa criar dentro do portainer" como o arquivo oficial vem para ca
+    
+    ## Si el usuario o contraseña es "Precisa criar dentro do portainer"
     elif [ "$USUARIO" == "Precisa criar dentro do portainer" ] || [ "$SENHA" == "Precisa criar dentro do portainer" ]; then
         
         nome_credenciais
-        echo -e "\e[97mPasso$amarelo 1/3\e[0m"
-        #echo -e "\e[97mObs: Coloque o https:// antes do link do portainer\e[0m"
-        read -p "Digite a Url do Portainer (ex: portainer.oriondesign.art.br): " PORTAINER_URL
+        echo -e "\e[97mPaso$amarelo 1/3\e[0m"
+        #echo -e "\e[97mNota: Coloque https:// antes del enlace de Portainer\e[0m"
+        read -p "Ingrese la URL de Portainer (ej: portainer.oriondesign.art.br): " PORTAINER_URL
         echo ""
     
-        echo -e "\e[97mPasso$amarelo 2/3\e[0m"
-        read -p "Digite seu Usuario (ex: admin): " USUARIO
+        echo -e "\e[97mPaso$amarelo 2/3\e[0m"
+        read -p "Ingrese su Usuario (ej: admin): " USUARIO
         echo ""
     
-        echo -e "\e[97mPasso$amarelo 3/3\e[0m"
-        echo -e "\e[97mObs: A Senha não aparecera ao digitar\e[0m"
-        read -s -p "Digite a Senha (ex: @Senha123_): " NOVA_SENHA
+        echo -e "\e[97mPaso$amarelo 3/3\e[0m"
+        echo -e "\e[97mNota: La contraseña no se mostrará al escribir\e[0m"
+        read -s -p "Ingrese la Contraseña (ej: @Contraseña123_): " NOVA_SENHA
         echo ""
 
         verificar_token "$PORTAINER_URL" "$NOVO_USUARIO" "$NOVA_SENHA" true
@@ -2167,15 +2168,15 @@ telemetria() {
 
 ## Verifica se existe Docker, Portainer e Traefik na VPS
 verificar_docker_e_portainer_traefik() {
-    ## Verifica se o Docker está instalado
+    ## Verifica si Docker está instalado
     if ! command -v docker &> /dev/null; then
         clear
         erro_msg
-        echo -e "Ops, parece que você não instalou a opção \e[32m[1] Traefik e Portainer${reset} ${branco}do nosso instalador.${reset}"
-        echo "Instale antes de tentar instalar esta aplicação."
+        echo -e "Ops, parece que no has instalado la opción \e[32m[1] Traefik y Portainer${reset} ${branco}de nuestro instalador.${reset}"
+        echo "Instálalo antes de intentar instalar esta aplicación."
 
         echo ""
-        echo "Voltando ao menu em 5 segundos."
+        echo "Volviendo al menú en 5 segundos."
         sleep 5
 
         nome_menu
@@ -2184,15 +2185,15 @@ verificar_docker_e_portainer_traefik() {
         return 1
     fi
 
-    ## Verifica se o Portainer está instalado
+    ## Verifica si Portainer está instalado
     if ! docker ps -a --format "{{.Names}}" | grep -q "portainer"; then
         clear
         erro_msg
-        echo -e "Ops, parece que você não instalou a opção \e[32m[1] Traefik e Portainer${reset} ${branco}do nosso instalador.${reset}"
-        echo "Instale antes de tentar instalar esta aplicação."
+        echo -e "Ops, parece que no has instalado la opción \e[32m[1] Traefik y Portainer${reset} ${branco}de nuestro instalador.${reset}"
+        echo "Instálalo antes de intentar instalar esta aplicación."
 
         echo ""
-        echo "Voltando ao menu em 5 segundos."
+        echo "Volviendo al menú en 5 segundos."
         sleep 5
 
         nome_menu
@@ -2201,15 +2202,15 @@ verificar_docker_e_portainer_traefik() {
         return 1
     fi
 
-    ## Verificar se o Traefik está instalado
+    ## Verifica si Traefik está instalado
     if ! docker ps -a --format "{{.Names}}" | grep -q "traefik"; then
         clear
         erro_msg
-        echo -e "Ops, parece que você não instalou a opção \e[32m[1] Traefik e Portainer${reset} ${branco}do nosso instalador.${reset}"
-        echo "Instale antes de tentar instalar esta aplicação."
+        echo -e "Ops, parece que no has instalado la opción \e[32m[1] Traefik y Portainer${reset} ${branco}de nuestro instalador.${reset}"
+        echo "Instálalo antes de intentar instalar esta aplicación."
 
         echo ""
-        echo "Voltando ao menu em 5 segundos."
+        echo "Volviendo al menú en 5 segundos."
         sleep 5
 
         nome_menu
@@ -3053,21 +3054,21 @@ preencha_as_info
 while true; do
 
     ##Pergunta o Dominio para aplicação
-    echo -e "\e[97mPasso$amarelo 1/6\e[0m"
-    echo -en "\e[33mDigite o Dominio para o Portainer (ex: portainer.oriondesign.art.br): \e[0m" && read -r url_portainer
+    echo -e "\e[97mPaso$amarelo 1/6\e[0m"
+    echo -en "\e[33mIngrese el dominio para Portainer (ej: portainer.oriondesign.art.br): \e[0m" && read -r url_portainer
     echo ""
 
     ##Pergunta o Dominio para aplicação
-    echo -e "\e[97mPasso$amarelo 2/6\e[0m"
-    echo -en "\e[33mDigite um usuario para o Portainer (ex: admin): \e[0m" && read -r user_portainer
+    echo -e "\e[97mPaso$amarelo 2/6\e[0m"
+    echo -en "\e[33mIngrese un usuario para Portainer (ej: admin): \e[0m" && read -r user_portainer
     echo ""
 
     ##Pergunta o Dominio para aplicação
     while true; do
-      echo -e "\e[97mPasso$amarelo 3/6\e[0m"
-      echo -e "$amarelo--> Minimo 12 caracteres. Use Letras MAIUSCULAS e minusculas, numero e um caractere especial @ ou _"
-      echo -e "$amarelo--> Evite os caracteres especiais como: \!#$"
-      echo -en "\e[33mDigite uma senha para o Portainer (ex: @Senha123456_): \e[0m" && read -r pass_portainer
+      echo -e "\e[97mPaso$amarelo 3/6\e[0m"
+      echo -e "$amarelo--> Mínimo 12 caracteres. Use letras MAYÚSCULAS y minúsculas, números y un carácter especial @ o _"
+      echo -e "$amarelo--> Evite caracteres especiales como: \!#$"
+      echo -en "\e[33mIngrese una contraseña para Portainer (ej: @Contraseña123456_): \e[0m" && read -r pass_portainer
       echo ""
 
       if validar_senha "$pass_portainer" 12; then
@@ -3077,20 +3078,20 @@ while true; do
     done
 
     ## Pergunta o Nome do Servidor
-    echo -e "\e[97mPasso$amarelo 4/6\e[0m"
-    echo -e "$amarelo--> Não pode conter Espaços e/ou cartacteres especiais"
-    echo -en "\e[33mEscolha um nome para o seu servidor (ex: OrionDesign): \e[0m" && read -r nome_servidor
+    echo -e "\e[97mPaso$amarelo 4/6\e[0m"
+    echo -e "$amarelo--> No puede contener espacios y/o caracteres especiales"
+    echo -en "\e[33mElija un nombre para su servidor (ej: OrionDesign): \e[0m" && read -r nome_servidor
     echo ""
     
     ## Pergunta o nome da Rede Interna
-    echo -e "\e[97mPasso$amarelo 5/6\e[0m"
-    echo -e "$amarelo--> Não pode conter Espaços e/ou cartacteres especiais."
-    echo -en "\e[33mDigite um nome para sua rede interna (ex: OrionNet): \e[0m" && read -r nome_rede_interna
+    echo -e "\e[97mPaso$amarelo 5/6\e[0m"
+    echo -e "$amarelo--> No puede contener espacios y/o caracteres especiales."
+    echo -en "\e[33mIngrese un nombre para su red interna (ej: OrionNet): \e[0m" && read -r nome_rede_interna
     echo ""
     
     ## Pergunta o Email para informações sobre o certificado
-    echo -e "\e[97mPasso$amarelo 6/6\e[0m"
-    echo -en "\e[33mDigite um endereço de Email válido (ex: contato@oriondesign.art.br): \e[0m" && read -r email_ssl
+    echo -e "\e[97mPaso$amarelo 6/6\e[0m"
+    echo -en "\e[33mIngrese una dirección de correo válida (ej: contacto@oriondesign.art.br): \e[0m" && read -r email_ssl
     echo ""
 
     ## Limpa o termianl
@@ -3103,32 +3104,32 @@ while true; do
     conferindo_as_info
 
     ## Informação sobre URL
-    echo -e "\e[33mLink do Portainer:\e[97m $url_portainer\e[0m"
+    echo -e "\e[33mEnlace de Portainer:\e[97m $url_portainer\e[0m"
     echo ""
 
     ## Informação sobre URL
-    echo -e "\e[33mUsuario do Portainer:\e[97m $user_portainer\e[0m"
+    echo -e "\e[33mUsuario de Portainer:\e[97m $user_portainer\e[0m"
     echo ""
 
     ## Informação sobre URL
-    echo -e "\e[33mSenha do Portainer:\e[97m $pass_portainer\e[0m"
+    echo -e "\e[33mContraseña de Portainer:\e[97m $pass_portainer\e[0m"
     echo ""
 
     ## Informação sobre Nome do Servidor
-    echo -e "\e[33mNome do Servidor:\e[97m $nome_servidor\e[0m"
+    echo -e "\e[33mNombre del Servidor:\e[97m $nome_servidor\e[0m"
     echo ""
 
     ## Informação sobre Nome da Rede interna
-    echo -e "\e[33mRede interna:\e[97m $nome_rede_interna\e[0m"
+    echo -e "\e[33mRed interna:\e[97m $nome_rede_interna\e[0m"
     echo ""
 
     ## Informação sobre Email
-    echo -e "\e[33mEmail:\e[97m $email_ssl\e[0m"
+    echo -e "\e[33mCorreo electrónico:\e[97m $email_ssl\e[0m"
     echo ""
     echo ""
 
     ## Pergunta se as respostas estão corretas
-    read -p "As respostas estão corretas? (Y/N): " confirmacao
+    read -p "¿Las respuestas son correctas? (Y/N): " confirmacao
     if [ "$confirmacao" = "Y" ] || [ "$confirmacao" = "y" ]; then
 
         ## Digitou Y para confirmar que as informações estão corretas
@@ -3159,7 +3160,7 @@ while true; do
 done
 
 ## Mensagem de Passo
-echo -e "\e[97m• INICIANDO A INSTALAÇÃO DO TRAEFIK \e[33m[1/9]\e[0m"
+echo -e "\e[97m• INICIANDO LA INSTALACIÓN DE TRAEFIK \e[33m[1/9]\e[0m"
 echo ""
 sleep 1
 
@@ -3185,23 +3186,17 @@ cd dados_vps
 cat > dados_vps << EOL
 [DADOS DA VPS]
 
-Estes dados foram preenchidos na hora que você foi instalar o Traefik e Portainer e
-serão utilizados para realizar as instalações no do SetupOrion v.2
+Estos datos fueron ingresados cuando instaló Traefik y Portainer y
+serán utilizados para realizar las instalaciones en el SetupOrion v.2
 
-Nome do Servidor: $nome_servidor
+Nombre del Servidor: $nome_servidor
 
-Rede interna: $nome_rede_interna
+Red interna: $nome_rede_interna
 
-Email para SSL: $email_ssl
+Correo para SSL: $email_ssl
 
-Link do Portainer: $url_portainer
+Enlace de Portainer: $url_portainer
 
-Obrigado por utilizar nosso AutoInstalador.
-Caso esse conteudo foi util, não deixe de apoiar nosso projeto.
-
-pix@oriondesign.art.br
-
-Bebam água!
 EOL
 
 ## Volta para /root/
@@ -3212,7 +3207,7 @@ cd
 dados
 
 ## Mensagem de Passo
-echo -e "\e[97m• ATUALIZANDO E CONFIGURANDO A VPS \e[33m[2/9]\e[0m"
+echo -e "\e[97m• ACTUALIZANDO Y CONFIGURANDO LA VPS \e[33m[2/9]\e[0m"
 echo ""
 sleep 1
 
@@ -3226,21 +3221,21 @@ sleep 1
 
 sudo apt-get update > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "1/9 - [ OK ] - Update"
+    echo "1/9 - [ OK ] - Actualización"
 else
-    echo "1/9 - [ OFF ] - Update"
+    echo "1/9 - [ OFF ] - Actualización"
 fi
 sudo apt upgrade -y > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "2/9 - [ OK ] - Upgrade"
+    echo "2/9 - [ OK ] - Actualización de paquetes"
 else
-    echo "2/9 - [ OFF ] - Upgrade"
+    echo "2/9 - [ OFF ] - Actualización de paquetes"
 fi
 sudo timedatectl set-timezone America/Sao_Paulo > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "3/9 - [ OK ] - Timezone"
+    echo "3/9 - [ OK ] - Zona horaria"
 else
-    echo "3/9 - [ OFF ] - Timezone"
+    echo "3/9 - [ OFF ] - Zona horaria"
 fi
 sudo apt-get install -y apt-utils > /dev/null 2>&1
 if [ $? -eq 0 ]; then
@@ -3250,27 +3245,27 @@ else
 fi
 sudo apt-get update > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "5/9 - [ OK ] - Update"
+    echo "5/9 - [ OK ] - Actualización"
 else
-    echo "5/9 - [ OFF ] - Update"
+    echo "5/9 - [ OFF ] - Actualización"
 fi
 hostnamectl set-hostname $nome_servidor > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "6/9 - [ OK ] - Set Hostname"
+    echo "6/9 - [ OK ] - Configurar nombre del host"
 else
-    echo "6/9 - [ OFF ] - Set Hostname"
+    echo "6/9 - [ OFF ] - Configurar nombre del host"
 fi
 sudo sed -i "s/127.0.0.1[[:space:]]localhost/127.0.0.1 $nome_servidor/g" /etc/hosts > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "7/9 - [ OK ] - Adicionando nome do servidor em etc/hosts"
+    echo "7/9 - [ OK ] - Agregando nombre del servidor en etc/hosts"
 else
-    echo "7/9 - [ OFF ] - Adicionando nome do servidor em etc/hosts"
+    echo "7/9 - [ OFF ] - Agregando nombre del servidor en etc/hosts"
 fi
 sudo apt-get update > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "8/9 - [ OK ] - Update"
+    echo "8/9 - [ OK ] - Actualización"
 else
-    echo "8/9 - [ OFF ] - Update"
+    echo "8/9 - [ OFF ] - Actualización"
 fi
 sudo apt-get install -y apparmor-utils > /dev/null 2>&1
 if [ $? -eq 0 ]; then
@@ -3293,17 +3288,17 @@ telemetria Docker iniciado
 #ip=$(curl -s ifconfig.me)
 read -r ip _ <<<$(hostname -I | tr ' ' '\n' | grep -v '^127\.0\.0\.1' | grep -v '^10\.0\.0\.' | tr '\n' ' ')
 if [ $? -eq 0 ]; then
-    echo "1/3 - [ OK ] - Pegando IP $ip"
+    echo "1/3 - [ OK ] - Obteniendo IP $ip"
 else
-    echo "1/3 - [ OFF ] - Pegando IP $ip"
+    echo "1/3 - [ OFF ] - Obteniendo IP $ip"
 fi
 curl -fsSL https://get.docker.com | bash > /dev/null 2>&1
 systemctl enable docker > /dev/null 2>&1
 systemctl start docker > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "2/3 - [ OK ] - Baixando e Instalando Docker"
+    echo "2/3 - [ OK ] - Descargando e instalando Docker"
 else
-    echo "2/3 - [ OFF ] - Baixando e Instalando Docker"
+    echo "2/3 - [ OFF ] - Descargando e instalando Docker"
 fi
 sleep 5
 
@@ -3317,16 +3312,16 @@ while [ $attempt -le $max_attempts ]; do
         break
     else
         echo "3/3 - [ OFF ] - Iniciando Swarm"
-        echo "Ops não foi possivel iniciar o swarm, tentativa $attempt de $max_attempts"
+        echo "No fue posible iniciar el swarm, intento $attempt de $max_attempts"
         attempt=$((attempt + 1))
         sleep 5
     fi
 done
 
 if [ $attempt -gt $max_attempts ]; then
-    echo "Não foi possível iniciar o Swarm após $max_attempts tentativas..."
-    echo "Recomendo formatar a VPS e tentar novamente"
-    echo "Lembre-se que o primeiro requisito é estar usando uma VPS Vazia."
+    echo "No se pudo iniciar el Swarm después de $max_attempts intentos..."
+    echo "Se recomienda formatear la VPS e intentar nuevamente"
+    echo "Recuerde que el primer requisito es usar una VPS vacía."
     sleep 10
     exit 1
 fi
@@ -3335,7 +3330,7 @@ echo ""
 telemetria Docker finalizado
 
 ## Mensagem de Passo
-echo -e "\e[97m• CRIANDO REDE INTERNA \e[33m[4/9]\e[0m"
+echo -e "\e[97m• CREANDO RED INTERNA \e[33m[4/9]\e[0m"
 echo ""
 sleep 1
 
@@ -3343,9 +3338,9 @@ sleep 1
 
 docker network create --driver=overlay $nome_rede_interna > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "1/1 - [ OK ] - Rede Interna"
+    echo "1/1 - [ OK ] - Red Interna"
 else
-    echo "1/1 - [ OFF ] - Rede Interna"
+    echo "1/1 - [ OFF ] - Red Interna"
 fi
 echo ""
 
@@ -3437,23 +3432,23 @@ networks:
     name: $nome_rede_interna ## Nome da rede interna
 EOL
 if [ $? -eq 0 ]; then
-    echo "1/2 - [ OK ] - Criando Stack"
+    echo "1/2 - [ OK ] - Creando Stack"
 else
-    echo "1/2 - [ OFF ] - Criando Stack"
-    echo "Ops, não foi possivel criar a stack do Traefik"
+    echo "1/2 - [ OFF ] - Creando Stack"
+    echo "Error: No se pudo crear la stack de Traefik"
 fi
 
 docker stack deploy --prune --resolve-image always -c traefik.yaml traefik > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "2/2 - [ OK ] - Deploy Stack"
+    echo "2/2 - [ OK ] - Desplegando Stack"
 else
-    echo "2/2 - [ OFF ] - Deploy Stack"
-    echo "Ops, não foi possivel subir o Traefik."
+    echo "2/2 - [ OFF ] - Desplegando Stack"
+    echo "Error: No se pudo iniciar Traefik."
 fi
 
 echo ""
 ## Mensagem de Passo
-echo -e "\e[97m• ESPERANDO O TRAEFIK ESTAR ONLINE \e[33m[6/9]\e[0m"
+echo -e "\e[97m• ESPERANDO QUE TRAEFIK ESTÉ EN LÍNEA \e[33m[6/9]\e[0m"
 echo ""
 sleep 1
 
@@ -3540,23 +3535,23 @@ networks:
     name: $nome_rede_interna ## Nome da rede interna
 EOL
 if [ $? -eq 0 ]; then
-    echo "1/2 - [ OK ] - Criando Stack"
+    echo "1/2 - [ OK ] - Creando Stack"
 else
-    echo "1/2 - [ OFF ] - Criando Stack"
-    echo "Ops, não foi possivel criar a stack do Portainer"
+    echo "1/2 - [ OFF ] - Creando Stack"
+    echo "Error: No se pudo crear la stack de Portainer"
 fi
 
 docker stack deploy --prune --resolve-image always -c portainer.yaml portainer > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "2/2 - [ OK ] - Deploy Stack"
+    echo "2/2 - [ OK ] - Desplegando Stack"
 else
-    echo "2/2 - [ OFF ] - Deploy Stack"
-    echo "Ops, não foi possivel Subir a stack do Portainer"
+    echo "2/2 - [ OFF ] - Desplegando Stack"
+    echo "Error: No se pudo iniciar la stack de Portainer"
 fi
 
 echo ""
 ## Mensagem de Passo
-echo -e "\e[97m• ESPERANDO O PORTAINER ESTAR ONLINE \e[33m[8/9]\e[0m"
+echo -e "\e[97m• ESPERANDO QUE PORTAINER ESTÉ EN LÍNEA \e[33m[8/9]\e[0m"
 echo ""
 sleep 1
 
@@ -3569,7 +3564,7 @@ telemetria Portainer finalizado
 
 echo ""
 ## Mensagem de Passo
-echo -e "\e[97m• CRIANDO CONTA NO PORTAINER \e[33m[9/9]\e[0m"
+echo -e "\e[97m• CREANDO CUENTA EN PORTAINER \e[33m[9/9]\e[0m"
 echo ""
 sleep 30
 
@@ -3585,16 +3580,16 @@ for i in $(seq 1 $MAX_RETRIES); do
 
   # Verificar se o campo "Username" existe na resposta
   if echo "$RESPONSE" | grep -q "\"Username\":\"$user_portainer\""; then
-    echo "1/2 - [ OK ] - Conta de administrador criada com sucesso!"
+    echo "1/2 - [ OK ] - ¡Cuenta de administrador creada con éxito!"
     CONTA_CRIADA=true
     break
   else
-    echo "Tentando criar conta no Portainer $i/4."
+    echo "Intentando crear cuenta en Portainer $i/4."
     # Se for a última tentativa, exibe mensagem de erro final
     if [ $i -eq $MAX_RETRIES ]; then
-      echo "1/2 - [ OFF ] - Não foi possível criar a conta de administrador após $MAX_RETRIES tentativas."
-      echo "Erro retornado: $RESPONSE"
-      echo -e "\e[33mApós a conclusão da instalação, por favor, crie uma conta acessando o link do seu Portainer"
+      echo "1/2 - [ OFF ] - No se pudo crear la cuenta de administrador después de $MAX_RETRIES intentos."
+      echo "Error devuelto: $RESPONSE"
+      echo -e "\e[33mDespués de completar la instalación, por favor, cree una cuenta accediendo al enlace de su Portainer"
       CONTA_CRIADA=false
       sleep 10
     fi
@@ -3612,9 +3607,9 @@ if [ "$CONTA_CRIADA" = true ]; then
   
   # Verifica se o token foi gerado com sucesso
   if [ -n "$token" ] && [ "$token" != "null" ]; then
-    echo "2/2 - [ OK ] - Gerando primeiro token"
+    echo "2/2 - [ OK ] - Generando primer token"
   else
-    echo "2/2 - [ OFF ] - Falha ao gerar o token"
+    echo "2/2 - [ OFF ] - Error al generar el token"
     exit 1
   fi
 fi
@@ -3627,11 +3622,11 @@ if [ "$CONTA_CRIADA" = true ]; then
   cat > dados_portainer <<EOL
 [ PORTAINER ]
 
-Dominio do portainer: https://$url_portainer
+Enlace de Portainer: https://$url_portainer
 
 Usuario: $user_portainer
 
-Senha: $pass_portainer
+Contraseña: $pass_portainer
 
 Token: $token
 EOL
@@ -3639,11 +3634,11 @@ else
   cat > dados_portainer <<EOL
 [ PORTAINER ]
 
-Dominio do portainer: https://$url_portainer
+Enlace de Portainer: https://$url_portainer
 
-Usuario: Precisa criar dentro do portainer
+Usuario: Debe crearse dentro de Portainer
 
-Senha: Precisa criar dentro do portainer
+Contraseña: Debe crearse dentro de Portainer
 EOL
 fi
 
@@ -3663,27 +3658,22 @@ guarde_os_dados_msg
 echo -e "\e[32m[ PORTAINER ]\e[0m"
 echo ""
 
-echo -e "\e[97mDominio do portainer:\e[33m https://$url_portainer\e[0m"
+echo -e "\e[97mEnlace de Portainer:\e[33m https://$url_portainer\e[0m"
 echo ""
 
 if [ "$CONTA_CRIADA" = true ]; then
   echo -e "\e[97mUsuario:\e[33m $user_portainer\e[0m"
   echo ""
-  echo -e "\e[97mSenha:\e[33m $pass_portainer\e[0m"
+  echo -e "\e[97mContraseña:\e[33m $pass_portainer\e[0m"
 else
-  echo -e "\e[97mUsuario:\e[33m Precisa criar dentro do portainer\e[0m"
+  echo -e "\e[97mUsuario:\e[33m Debe crearse dentro de Portainer\e[0m"
   echo ""
-  echo -e "\e[97mSenha:\e[33m Precisa criar dentro do portainer\e[0m"
+  echo -e "\e[97mContraseña:\e[33m Debe crearse dentro de Portainer\e[0m"
   echo ""
-  echo -e "\e[97mObservação:\e[33m Você tem menos de 5 minutos para criar uma conta no Portainer, caso\e[0m"
-  echo -e "\e[33mexceda esse tempo, você precisara de voltar no menu anterior (digitando: Y)\e[0m"
-  echo -e "\e[33me no menu de ferramentas digitar: \e[97mportainer.restart\e[0m"
+  echo -e "\e[97mObservación:\e[33m Tiene menos de 5 minutos para crear una cuenta en Portainer, si\e[0m"
+  echo -e "\e[33mexcede este tiempo, deberá volver al menú anterior (escribiendo: Y)\e[0m"
+  echo -e "\e[33my en el menú de herramientas escribir: \e[97mportainer.restart\e[0m"
 fi
-#echo ""
-
-#echo -e "\e[97mObservação:\e[33m Você tem menos de 5 minutos para criar uma conta no Portainer, caso\e[0m"
-#echo -e "\e[33mexceda esse tempo, você precisara de voltar no menu anterior (digitando: Y)\e[0m"
-#echo -e "\e[33me no menu de ferramentas digitar: \e[97mportainer.restart\e[0m"
 
 ## Creditos do instalador
 creditos_msg
@@ -4769,165 +4759,165 @@ requisitar_outra_instalacao
 
 ferramenta_chatwoot() {
 
-## Verifica os recursos
+## Verifica los recursos
 recursos 2 2 && continue || return
 
-## Limpa o terminal
+## Limpia el terminal
 clear
 
-## Ativa a função dados para pegar os dados da vps
+## Activa la función datos para obtener los datos de la VPS
 dados
 
-## Mostra o nome da aplicação
+## Muestra el nombre de la aplicación
 nome_chatwoot
 
-## Mostra mensagem para preencher informações
+## Muestra mensaje para completar información
 preencha_as_info
 
-## Inicia um Loop até os dados estarem certos
+## Inicia un bucle hasta que los datos estén correctos
 while true; do
 
-    ##Pergunta o Dominio para aplicação
-    echo -e "\e[97mPasso$amarelo 1/6\e[0m"
-    echo -en "\e[33mDigite o Dominio para o Chatwoot (ex: chatwoot.oriondesign.art.br): \e[0m" && read -r url_chatwoot
+    ## Pregunta el Dominio para la aplicación
+    echo -e "\e[97mPaso$amarelo 1/6\e[0m"
+    echo -en "\e[33mIngrese el Dominio para Chatwoot (ej: chatwoot.oriondesign.art.br): \e[0m" && read -r url_chatwoot
     echo ""
     
-    ## Pega o nome do dominio para ser o nome da empresa
+    ## Obtiene el nombre del dominio para ser el nombre de la empresa
     nome_empresa_chatwoot="$nome_servidor"
     
-    ## Pergunta o email SMTP
-    echo -e "\e[97mPasso$amarelo 2/6\e[0m"
-    echo -en "\e[33mDigite o Email para SMTP (ex: contato@oriondesign.art.br): \e[0m" && read -r email_admin_chatwoot
+    ## Pregunta el email SMTP
+    echo -e "\e[97mPaso$amarelo 2/6\e[0m"
+    echo -en "\e[33mIngrese el Email para SMTP (ej: contacto@oriondesign.art.br): \e[0m" && read -r email_admin_chatwoot
     echo ""
 
-    ## Define o dominio SMTP com o dominio do email
+    ## Define el dominio SMTP con el dominio del email
     dominio_smtp_chatwoot=$(echo "$email_admin_chatwoot" | cut -d "@" -f 2)
 
-    ##Pergunta o usuário do Email SMTP
-    echo -e "\e[97mPasso$amarelo 3/6\e[0m"
-    echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@oriondesign.art.br): \e[0m" && read -r user_smtp_chatwoot
+    ## Pregunta el usuario del Email SMTP
+    echo -e "\e[97mPaso$amarelo 3/6\e[0m"
+    echo -e "$amarelo--> Si no tiene un usuario de email, use el mismo email"
+    echo -en "\e[33mIngrese el Usuario para SMTP (ej: oriondesign o contacto@oriondesign.art.br): \e[0m" && read -r user_smtp_chatwoot
     echo ""
     
-    ## Pergunta a senha do SMTP
-    echo -e "\e[97mPasso$amarelo 4/6\e[0m"
-    echo -e "$amarelo--> Sem caracteres especiais: \!#$ | Se estiver usando gmail use a senha de app"
-    echo -en "\e[33mDigite a Senha SMTP do Email (ex: @Senha123_): \e[0m" && read -r senha_email_chatwoot
+    ## Pregunta la contraseña del SMTP
+    echo -e "\e[97mPaso$amarelo 4/6\e[0m"
+    echo -e "$amarelo--> Sin caracteres especiales: \!#$ | Si usa gmail, use la contraseña de app"
+    echo -en "\e[33mIngrese la Contraseña SMTP del Email (ej: @Contraseña123_): \e[0m" && read -r senha_email_chatwoot
     echo ""
     
-    ## Pergunta o Host SMTP do email
-    echo -e "\e[97mPasso$amarelo 5/6\e[0m"
-    echo -en "\e[33mDigite o Host SMTP do Email (ex: smtp.hostinger.com): \e[0m" && read -r smtp_email_chatwoot
+    ## Pregunta el Host SMTP del email
+    echo -e "\e[97mPaso$amarelo 5/6\e[0m"
+    echo -en "\e[33mIngrese el Host SMTP del Email (ej: smtp.hostinger.com): \e[0m" && read -r smtp_email_chatwoot
     echo ""
     
-    ## Pergunta a porta SMTP do email
-    echo -e "\e[97mPasso$amarelo 6/6\e[0m"
-    echo -en "\e[33mDigite a porta SMTP do Email (ex: 465): \e[0m" && read -r porta_smtp_chatwoot
+    ## Pregunta el puerto SMTP del email
+    echo -e "\e[97mPaso$amarelo 6/6\e[0m"
+    echo -en "\e[33mIngrese el puerto SMTP del Email (ej: 465): \e[0m" && read -r porta_smtp_chatwoot
     
     
-    ## Verifica se a porta é 465, se sim deixa o ssl true, se não, deixa false 
+    ## Verifica si el puerto es 465, si es así deja SSL true, si no, false 
     if [ "$porta_smtp_chatwoot" -eq 465 ]; then
      sobre_ssl=true
     else
      sobre_ssl=false
     fi
     
-    ## Limpa o terminal
+    ## Limpia el terminal
     clear
     
-    ## Mostra o nome da aplicação
+    ## Muestra el nombre de la aplicación
     nome_chatwoot
     
-    ## Mostra mensagem para verificar as informações
+    ## Muestra mensaje para verificar la información
     conferindo_as_info
     
-    ## Informação sobre URL
-    echo -e "\e[33mDominio do Chatwoot:\e[97m $url_chatwoot\e[0m"
+    ## Información sobre URL
+    echo -e "\e[33mDominio de Chatwoot:\e[97m $url_chatwoot\e[0m"
     echo ""
 
-    ## Informação sobre Nome da Empresa
-    echo -e "\e[33mNome da Empresa:\e[97m $nome_empresa_chatwoot\e[0m"
+    ## Información sobre Nombre de la Empresa
+    echo -e "\e[33mNombre de la Empresa:\e[97m $nome_empresa_chatwoot\e[0m"
     echo ""
 
-    ## Informação sobre Email de SMTP
-    echo -e "\e[33mEmail do SMTP:\e[97m $email_admin_chatwoot\e[0m"
+    ## Información sobre Email de SMTP
+    echo -e "\e[33mEmail del SMTP:\e[97m $email_admin_chatwoot\e[0m"
     echo ""
 
-    ## Informação sobre Usuario do SMTP
-    echo -e "\e[33mUser do SMTP:\e[97m $user_smtp_chatwoot\e[0m"
+    ## Información sobre Usuario del SMTP
+    echo -e "\e[33mUsuario del SMTP:\e[97m $user_smtp_chatwoot\e[0m"
     echo ""
 
-    ## Informação sobre Senha de SMTP
-    echo -e "\e[33mSenha do SMTP:\e[97m $senha_email_chatwoot\e[0m"
+    ## Información sobre Contraseña de SMTP
+    echo -e "\e[33mContraseña del SMTP:\e[97m $senha_email_chatwoot\e[0m"
     echo ""
 
-    ## Informação sobre Host SMTP
+    ## Información sobre Host SMTP
     echo -e "\e[33mHost SMTP:\e[97m $smtp_email_chatwoot\e[0m"
     echo ""
 
-    ## Informação sobre Porta SMTP
-    echo -e "\e[33mPorta SMTP:\e[97m $porta_smtp_chatwoot\e[0m"
+    ## Información sobre Puerto SMTP
+    echo -e "\e[33mPuerto SMTP:\e[97m $porta_smtp_chatwoot\e[0m"
     echo ""
     echo ""
 
-    ## Pergunta se as respostas estão corretas
-    read -p "As respostas estão corretas? (Y/N): " confirmacao
+    ## Pregunta si las respuestas son correctas
+    read -p "¿Las respuestas son correctas? (Y/N): " confirmacao
     if [ "$confirmacao" = "Y" ] || [ "$confirmacao" = "y" ]; then
 
-        ## Digitou Y para confirmar que as informações estão corretas
+        ## Se ingresó Y para confirmar que la información es correcta
 
-        ## Limpar o terminal
+        ## Limpiar el terminal
         clear
 
-        ## Mostrar mensagem de Instalando
+        ## Mostrar mensaje de Instalando
         instalando_msg
 
-        ## Sai do Loop
+        ## Sale del bucle
         break
     else
 
-        ## Digitou N para dizer que as informações não estão corretas.
+        ## Se ingresó N para indicar que la información no es correcta
 
-        ## Limpar o terminal
+        ## Limpiar el terminal
         clear
 
-        ## Mostra o nome da ferramenta
+        ## Muestra el nombre de la herramienta
         nome_chatwoot
 
-        ## Mostra mensagem para preencher informações
+        ## Muestra mensaje para completar información
         preencha_as_info
 
-    ## Volta para o inicio do loop com as perguntas
+    ## Vuelve al inicio del bucle con las preguntas
     fi
 done
 
 
-## Mensagem de Passo
-echo -e "\e[97m• INICIANDO A INSTALAÇÃO DO CHATWOOT \e[33m[1/7]\e[0m"
+## Mensaje de Paso
+echo -e "\e[97m• INICIANDO LA INSTALACIÓN DE CHATWOOT \e[33m[1/7]\e[0m"
 echo ""
 sleep 1
 
 telemetria Chatwoot iniciado
 
-## Ativa a função dados para pegar os dados da vps
+## Activa la función datos para obtener los datos de la VPS
 dados
 
-## Mensagem de Passo
+## Mensaje de Paso
 echo -e "\e[97m• VERIFICANDO/INSTALANDO PGVECTOR \e[33m[2/7]\e[0m"
 echo ""
 sleep 1
 
-## Aqui vamos fazer uma verificação se já existe Postgres e redis instalado
-## Se tiver ele vai criar um banco de dados no postgres ou perguntar se deseja apagar o que já existe e criar outro
+## Aquí verificamos si ya existe Postgres y redis instalado
+## Si existe, creará una base de datos en postgres o preguntará si desea borrar la existente y crear otra
 
-## Verifica container postgres e cria banco no postgres
+## Verifica contenedor postgres y crea base de datos
 verificar_container_pgvector
 if [ $? -eq 0 ]; then
-    echo "1/3 - [ OK ] - Postgres já instalado"
+    echo "1/3 - [ OK ] - Postgres ya instalado"
     pegar_senha_pgvector > /dev/null 2>&1
-    echo "2/3 - [ OK ] - Copiando senha do Postgres"
+    echo "2/3 - [ OK ] - Copiando contraseña de Postgres"
     criar_banco_pgvector_da_stack "chatwoot${1:+_$1}"
-    echo "3/3 - [ OK ] - Criando banco de dados"
+    echo "3/3 - [ OK ] - Creando base de datos"
     echo ""
 else
     ferramenta_pgvector
@@ -4935,34 +4925,34 @@ else
     criar_banco_pgvector_da_stack "chatwoot${1:+_$1}"
 fi
 
-## Mensagem de Passo
+## Mensaje de Paso
 echo -e "\e[97m• VERIFICANDO/INSTALANDO REDIS \e[33m[3/7]\e[0m"
 echo ""
 sleep 1
 
-## Verifica/instala o Redis
+## Verifica/instala Redis
 verificar_container_redis
 if [ $? -eq 0 ]; then
-    echo "1/1 - [ OK ] - Redis já instalado"
+    echo "1/1 - [ OK ] - Redis ya instalado"
     echo ""
 else
     ferramenta_redis
 fi
 
-## Mensagem de Passo
+## Mensaje de Paso
 echo -e "\e[97m• INSTALANDO CHATWOOT \e[33m[4/7]\e[0m"
 echo ""
 sleep 1
 
-## Neste passo vamos estar criando a Stack yaml do Chatwoot na pasta /root/
-## Isso possibilitará que o usuario consiga edita-lo posteriormente
+## En este paso crearemos el archivo Stack yaml de Chatwoot en la carpeta /root/
+## Esto permitirá que el usuario pueda editarlo posteriormente
 
-## Depois vamos instalar o Chatwoot e verificar se esta tudo certo.
+## Luego instalaremos Chatwoot y verificaremos que todo esté correcto
 
-## Criando key aleatória
+## Creando clave aleatoria
 encryption_key=$(openssl rand -hex 16)
 
-## Criando a stack chatwoot.yaml
+## Creando el stack chatwoot.yaml
 cat > chatwoot${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
@@ -5191,42 +5181,32 @@ networks:
     name: $nome_rede_interna ## Nome da rede interna
 EOL
 if [ $? -eq 0 ]; then
-    echo "1/10 - [ OK ] - Criando Stack"
+    echo "1/10 - [ OK ] - Creando Stack"
 else
-    echo "1/10 - [ OFF ] - Criando Stack"
-    echo "Não foi possivel criar a stack do Chatwoot"
+    echo "1/10 - [ OFF ] - Creando Stack"
+    echo "No se pudo crear el stack de Chatwoot"
 fi
 STACK_NAME="chatwoot${1:+_$1}"
 stack_editavel #> /dev/null 2>&1
 
-#docker stack deploy --prune --resolve-image always -c chatwoot.yaml chatwoot > /dev/null 2>&1
-#if [ $? -eq 0 ]; then
-#    echo "2/2 - [ OK ] - Deploy Stack"
-#else
-#    echo "2/2 - [ OFF ] - Deploy Stack"
-#    echo "Não foi possivel subir a stack do Chatwoot"
-#fi
-
-## Mensagem de Passo
-echo -e "\e[97m• VERIFICANDO SERVIÇO \e[33m[5/7]\e[0m"
+## Mensaje de Paso
+echo -e "\e[97m• VERIFICANDO SERVICIO \e[33m[5/7]\e[0m"
 echo ""
 sleep 1
 
-## Baixando imagens:
+## Descargando imágenes:
 pull chatwoot/chatwoot:latest
 
-## Usa o serviço wait_chatwoot para verificar se o serviço esta online
+## Usa el servicio wait_chatwoot para verificar si el servicio está online
 wait_stack chatwoot${1:+_$1}_chatwoot${1:+_$1}_app chatwoot${1:+_$1}_chatwoot${1:+_$1}_sidekiq
 
 telemetria Chatwoot finalizado
-## Mensagem de Passo
-echo -e "\e[97m• MIGRANDO BANCO DE DADOS \e[33m[6/7]\e[0m"
+## Mensaje de Paso
+echo -e "\e[97m• MIGRANDO BASE DE DATOS \e[33m[6/7]\e[0m"
 echo ""
 sleep 1
 
-## Aqui vamos estar migrando o banco de dados usando o comando "bundle exec rails db:chatwoot_prepare"
-
-## Basicamente voce poderia entrar no banco de dados do chatwoot e executar o comando por lá tambem
+## Aquí migraremos la base de datos usando el comando "bundle exec rails db:chatwoot_prepare"
 
 container_name="chatwoot${1:+_$1}_chatwoot${1:+_$1}_app"
 
@@ -5246,25 +5226,25 @@ while [ $elapsed_time -lt $max_wait_time ]; do
 done
 
 if [ -z "$CONTAINER_ID" ]; then
-  echo "O contêiner não foi encontrado após $max_wait_time segundos."
+  echo "El contenedor no se encontró después de $max_wait_time segundos."
   exit 1
 fi
 
 docker exec -it "$CONTAINER_ID" bundle exec rails db:chatwoot_prepare > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "1/1 - [ OK ] - Executando no container: bundle exec rails db:chatwoot_prepare"
+    echo "1/1 - [ OK ] - Ejecutando en el contenedor: bundle exec rails db:chatwoot_prepare"
 else
-    echo "1/1 - [ OFF ] - Executando no container: bundle exec rails db:chatwoot_prepare"
-    echo "Não foi possivel migrar o banco de dados"
+    echo "1/1 - [ OFF ] - Ejecutando en el contenedor: bundle exec rails db:chatwoot_prepare"
+    echo "No se pudo migrar la base de datos"
 fi
 
 echo ""
-## Mensagem de Passo
-echo -e "\e[97m• ATIVANDO FUNÇÕES DO SUPER ADMIN \e[33m[7/7]\e[0m"
+## Mensaje de Paso
+echo -e "\e[97m• ACTIVANDO FUNCIONES DE SUPER ADMIN \e[33m[7/7]\e[0m"
 echo ""
 sleep 1
 
-##  Aqui vamos alterar um dado no postgres para liberar algumas funções ocultas no painel de super admin
+## Aquí modificaremos un dato en postgres para liberar algunas funciones ocultas en el panel de super admin
 wait_for_pgvector
 
 docker exec -i $CONTAINER_ID psql -U postgres <<EOF > /dev/null 2>&1
@@ -5273,25 +5253,25 @@ update installation_configs set locked = false;
 \q
 EOF
 if [ $? -eq 0 ]; then
-    echo "1/1 - [ OK ] - Desbloqueando tabela installation_configs no pgvector"
+    echo "1/1 - [ OK ] - Desbloqueando tabla installation_configs en pgvector"
 else
-    echo "1/1 - [ OFF ] - Desbloqueando tabela installation_configs no pgvector"
-    echo "Não foi possivel liberar as funções do super_admin"
+    echo "1/1 - [ OFF ] - Desbloqueando tabla installation_configs en pgvector"
+    echo "No se pudieron liberar las funciones de super_admin"
 fi
 
 echo ""
 
-## Salvando informações da instalação dentro de /dados_vps/
+## Guardando información de la instalación en /dados_vps/
 cd dados_vps
 
 cat > dados_chatwoot${1:+_$1} <<EOL
 [ CHATWOOT ]
 
-Dominio do Chatwoot: https://$url_chatwoot
+Dominio de Chatwoot: https://$url_chatwoot
 
-Usuario: Precisa criar dentro do Chatwoot
+Usuario: Debe crearse dentro de Chatwoot
 
-Senha: Precisa criar dentro do Chatwoot
+Contraseña: Debe crearse dentro de Chatwoot
 EOL
 
 cd
@@ -5300,28 +5280,28 @@ cd
 ## Espera 30 segundos
 wait_30_sec
 
-## Mensagem de finalizado
+## Mensaje de finalizado
 instalado_msg
 
-## Mensagem de Guarde os Dados
+## Mensaje de Guardar los Datos
 guarde_os_dados_msg
 
-## Dados da Aplicação:
+## Datos de la Aplicación:
 echo -e "\e[32m[ CHATWOOT ]\e[0m"
 echo ""
 
 echo -e "\e[97mDominio:\e[33m https://$url_chatwoot\e[0m"
 echo ""
 
-echo -e "\e[97mUsuario:\e[33m Precisa criar dentro do Chatwoot\e[0m"
+echo -e "\e[97mUsuario:\e[33m Debe crearse dentro de Chatwoot\e[0m"
 echo ""
 
-echo -e "\e[97mSenha:\e[33m Precisa criar dentro do Chatwoot\e[0m"
+echo -e "\e[97mContraseña:\e[33m Debe crearse dentro de Chatwoot\e[0m"
 
-## Creditos do instalador
+## Créditos del instalador
 creditos_msg
 
-## Pergunta se deseja instalar outra aplicação
+## Pregunta si desea instalar otra aplicación
 requisitar_outra_instalacao
 }
 
