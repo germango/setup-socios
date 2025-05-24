@@ -3361,7 +3361,7 @@ cat > traefik.yaml << EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   traefik:
     image: traefik:v2.11.2
@@ -3415,7 +3415,7 @@ services:
         - "traefik.http.routers.http-catchall.middlewares=redirect-https@docker"
         - "traefik.http.routers.http-catchall.priority=1"
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   vol_shared:
@@ -3476,7 +3476,7 @@ cat > portainer.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   agent:
     image: portainer/agent:latest ## Versão Agent do Portainer
@@ -3493,7 +3493,7 @@ services:
       placement:
         constraints: [node.platform.os == linux]
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   portainer:
     image: portainer/portainer-ce:latest ## Versão do Portainer
@@ -3521,7 +3521,7 @@ services:
         - "traefik.http.routers.portainer.entrypoints=websecure"
         - "traefik.http.routers.portainer.priority=1"
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   portainer_data:
@@ -3704,7 +3704,7 @@ cat > postgres.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   postgres:
     image: postgres:14 ## Versão do postgres
@@ -3735,7 +3735,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   postgres_data:
@@ -3833,7 +3833,7 @@ cat > postgres${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   postgres${1:+_$1}:
     image: postgres:14 ## Versão do postgres
@@ -3864,7 +3864,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   postgres${1:+_$1}_data:
@@ -3966,7 +3966,7 @@ cat > pgvector.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   pgvector:
     image: pgvector/pgvector:pg16 ## Versão do PgVector
@@ -3999,7 +3999,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   pgvector:
@@ -4098,7 +4098,7 @@ cat > pgvector${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   pgvector${1:+_$1}:
     image: pgvector/pgvector:pg16 ## Versão do PgVector
@@ -4131,7 +4131,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   pgvector${1:+_$1}:
@@ -4232,7 +4232,7 @@ cat > redis.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   redis:
     image: redis:latest  ## Versão do Redis
@@ -4263,7 +4263,7 @@ services:
           cpus: "1"
           memory: 2048M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   redis_data:
@@ -4356,7 +4356,7 @@ cat > redis${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   redis${1:+_$1}:
     image: redis:latest  ## Versão do Redis
@@ -4387,7 +4387,7 @@ services:
           cpus: "1"
           memory: 2048M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   redis${1:+_$1}_data:
@@ -4493,7 +4493,7 @@ cat > mysql.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   mysql:
     image: percona/percona-server:8.0 ## Versão do MySQL
@@ -4532,7 +4532,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   mysql_data:
@@ -4633,7 +4633,7 @@ cat > mysql${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   mysql${1:+_$1}:
     image: percona/percona-server:8.0 ## Versão do MySQL
@@ -4672,7 +4672,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   mysql${1:+_$1}_data:
@@ -4957,7 +4957,7 @@ cat > chatwoot${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   chatwoot${1:+_$1}_app:
     image: chatwoot/chatwoot:latest ## Versão do Chatwoot
@@ -5064,7 +5064,7 @@ services:
         - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https
         - traefik.http.routers.chatwoot${1:+_$1}_app.middlewares=sslheader@docker
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   chatwoot${1:+_$1}_sidekiq:
     image: chatwoot/chatwoot:latest ## Versão do Chatwoot
@@ -5159,7 +5159,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   chatwoot${1:+_$1}_storage:
@@ -5447,7 +5447,7 @@ cat > evolution${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   evolution${1:+_$1}:
     image: evoapicloud/evolution-api:latest ## Versão da Evolution API
@@ -5626,7 +5626,7 @@ services:
         - traefik.http.services.evolution${1:+_$1}.loadbalancer.server.port=8080
         - traefik.http.services.evolution${1:+_$1}.loadbalancer.passHostHeader=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   evolution${1:+_$1}_instances:
@@ -5852,7 +5852,7 @@ cat > evolution${1:+_$1}_lite.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   evolution${1:+_$1}_lite:
     image: atendai/evolution-api-lite:latest ## Versão da Evolution API
@@ -6015,7 +6015,7 @@ services:
         - traefik.http.services.evolution${1:+_$1}_lite.loadbalancer.server.port=8080
         - traefik.http.services.evolution${1:+_$1}_lite.loadbalancer.passHostHeader=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   evolution${1:+_$1}_lite_instances:
@@ -6211,7 +6211,7 @@ cat > evolution_v1${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   evolution_oriondesign${1:+_$1}:
     image: atendai/evolution-api:v1.8.3 ## Versão da Evolution API
@@ -6341,7 +6341,7 @@ services:
         - traefik.http.services.evolution_oriondesign${1:+_$1}.loadbalancer.server.port=8080
         - traefik.http.services.evolution_oriondesign${1:+_$1}.loadbalancer.passHostHeader=1
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   evolution_oriondesign${1:+_$1}_instances:
@@ -6573,7 +6573,7 @@ cat > evolution_v2${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   evolution${1:+_$1}:
     image: atendai/evolution-api:v2.1.2 ## Versão da Evolution API
@@ -6752,7 +6752,7 @@ services:
         - traefik.http.services.evolution_v2${1:+_$1}.loadbalancer.server.port=8080
         - traefik.http.services.evolution_v2${1:+_$1}.loadbalancer.passHostHeader=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   evolution${1:+_$1}_instances:
@@ -6962,7 +6962,7 @@ cat > minio${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   minio${1:+_$1}:
     image: quay.io/minio/minio:latest ## Versão do Minio
@@ -7004,7 +7004,7 @@ services:
         - traefik.http.services.minio_console${1:+_$1}.loadbalancer.passHostHeader=true
         - traefik.http.routers.minio_console${1:+_$1}.service=minio_console${1:+_$1}
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   minio${1:+_$1}_data:
@@ -7327,7 +7327,7 @@ cat > typebot${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   typebot${1:+_$1}_builder:
     image: baptistearno/typebot-builder:$versao_typebot ## Versão do Builder do Typebot
@@ -7397,7 +7397,7 @@ services:
         - traefik.http.services.typebot${1:+_$1}_builder.loadbalancer.passHostHeader=true
         - traefik.http.routers.typebot${1:+_$1}_builder.service=typebot${1:+_$1}_builder
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   typebot${1:+_$1}_viewer:
     image: baptistearno/typebot-viewer:$versao_typebot ## Versão do Viewer do Typebot
@@ -7467,7 +7467,7 @@ services:
         - traefik.http.services.typebot${1:+_$1}_viewer.loadbalancer.passHostHeader=true
         - traefik.http.routers.typebot${1:+_$1}_viewer.service=typebot${1:+_$1}_viewer
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -7737,7 +7737,7 @@ cat > n8n${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   n8n${1:+_$1}_editor:
     image: n8nio/n8n:latest ## Versão do N8N
@@ -7832,7 +7832,7 @@ services:
         - traefik.http.services.n8n${1:+_$1}_editor.loadbalancer.server.port=5678
         - traefik.http.services.n8n${1:+_$1}_editor.loadbalancer.passHostHeader=1
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   n8n${1:+_$1}_webhook:
     image: n8nio/n8n:latest ## Versão do N8N
@@ -7927,7 +7927,7 @@ services:
         - traefik.http.services.n8n${1:+_$1}_webhook.loadbalancer.server.port=5678
         - traefik.http.services.n8n${1:+_$1}_webhook.loadbalancer.passHostHeader=1
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   n8n${1:+_$1}_worker:
     image: n8nio/n8n:latest ## Versão do N8N
@@ -8013,7 +8013,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -8229,7 +8229,7 @@ cat > flowise${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   flowise${1:+_$1}:
     image: flowiseai/flowise:latest ## Versão do Flowise
@@ -8278,7 +8278,7 @@ services:
         - traefik.http.routers.flowise${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.flowise${1:+_$1}.tls.certresolver=letsencryptresolver
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   flowise${1:+_$1}_data:
@@ -8466,7 +8466,7 @@ cat > pgadmin${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:  
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   pgadmin${1:+_$1}:
     image: dpage/pgadmin4:latest ## Versão do PgAdmin 4
@@ -8501,7 +8501,7 @@ services:
         - traefik.http.routers.pgadmin${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.pgadmin${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   pgadmin${1:+_$1}_data:
@@ -8724,7 +8724,7 @@ cat > nocobase${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   nocobase${1:+_$1}:
     image: nocobase/nocobase:latest ## Versão do Nocobase
@@ -8776,7 +8776,7 @@ services:
         - traefik.http.routers.nocobase${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.nocobase${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   nocobase${1:+_$1}_storage:
@@ -8982,7 +8982,7 @@ cat > botpress${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   botpress${1:+_$1}:
     image: botpress/server:latest
@@ -9025,7 +9025,7 @@ services:
         - traefik.http.routers.botpress${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.botpress${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   botpress${1:+_$1}_data:
@@ -9253,7 +9253,7 @@ cat > wordpress_$nome_site_wordpress.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   wordpress_$nome_site_wordpress:
     image: wordpress:latest ## Versão do Wordpress
@@ -9299,7 +9299,7 @@ services:
         - traefik.http.services.wordpress_$nome_site_wordpress.loadbalancer.server.port=80
         - traefik.http.services.wordpress_$nome_site_wordpress.loadbalancer.passHostHeader=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   wordpress_$nome_site_wordpress:
@@ -9641,7 +9641,7 @@ cat > baserow${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   baserow${1:+_$1}:
     image: baserow/baserow:latest ## Versão do Baserow
@@ -9693,7 +9693,7 @@ services:
         - traefik.http.routers.baserow${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.baserow${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   baserow${1:+_$1}_data:
@@ -9878,7 +9878,7 @@ cat > mongodb${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   mongodb${1:+_$1}:
     image: mongo:latest
@@ -9912,7 +9912,7 @@ services:
           cpus: '1'
           memory: 2048M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   mongodb${1:+_$1}_data:
@@ -10116,7 +10116,7 @@ cat > rabbitmq${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   rabbitmq${1:+_$1}:
     image: rabbitmq:management
@@ -10158,7 +10158,7 @@ services:
         - traefik.http.routers.rabbitmq${1:+_$1}.service=rabbitmq${1:+_$1}
         - traefik.http.services.rabbitmq${1:+_$1}.loadbalancer.server.port=15672
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   rabbitmq${1:+_$1}_data:
@@ -10339,7 +10339,7 @@ cat > uptimekuma${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   uptimekuma${1:+_$1}:
     image: louislam/uptime-kuma:latest
@@ -10368,7 +10368,7 @@ services:
         - traefik.http.services.uptimekuma${1:+_$1}.loadBalancer.server.port=3001
         - traefik.http.routers.uptimekuma${1:+_$1}.service=uptimekuma${1:+_$1}
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   uptimekuma${1:+_$1}:
@@ -10617,7 +10617,7 @@ cat > calcom${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   calcom${1:+_$1}:
     image: calcom/cal.com:v4.7.8
@@ -10694,7 +10694,7 @@ services:
         - traefik.http.services.calcom${1:+_$1}_app.loadbalancer.server.port=3000
         - traefik.http.services.calcom${1:+_$1}_app.loadbalancer.passHostHeader=1
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 networks:
   $nome_rede_interna:
@@ -10918,7 +10918,7 @@ cat > mautic${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   mautic_web${1:+_$1}:
     image: mautic/mautic:latest ## Versão do Mautic
@@ -10973,7 +10973,7 @@ services:
         - traefik.http.routers.mautic${1:+_$1}.tls.certresolver=letsencryptresolver
         - traefik.http.services.mautic${1:+_$1}.loadbalancer.passHostHeader=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   mautic_worker${1:+_$1}:
     image: mautic/mautic:latest ## Versão do Mautic
@@ -11020,7 +11020,7 @@ services:
           cpus: "2"
           memory: 2048M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   mautic_cron${1:+_$1}:
     image: mautic/mautic:latest ## Versão do Mautic
@@ -11067,7 +11067,7 @@ services:
           cpus: "0.5"
           memory: 512M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   mautic${1:+_$1}_config:
@@ -11263,7 +11263,7 @@ cat > appsmith${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   appsmith${1:+_$1}:
     image: appsmith/appsmith-ee:latest
@@ -11300,7 +11300,7 @@ services:
         - traefik.http.services.appsmith${1:+_$1}.loadbalancer.server.port=80
         - traefik.http.services.appsmith${1:+_$1}.loadbalancer.passHostHeader=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   appsmith${1:+_$1}_data:
@@ -11495,7 +11495,7 @@ for ((i=0; i< $nodes_qdrant; i++)); do
 
   cat <<EOL >> qdrant.yaml
 
-  ## -------------------- SOCIOS DIGITALRES -------------------- ##
+  ## -------------------- SOCIOS DIGITALES -------------------- ##
 
   $node_name:
     image: qdrant/qdrant:latest ## Versão do Qdrant
@@ -11533,7 +11533,7 @@ EOL
 done
 
 cat <<EOL >> qdrant.yaml
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
 EOL
@@ -11777,7 +11777,7 @@ cat > woofedcrm${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   woofedcrm${1:+_$1}_web:
     image: douglara/woofedcrm:latest
@@ -11851,7 +11851,7 @@ services:
         - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https
         - traefik.http.routers.woofedcrm${1:+_$1}.middlewares=sslheader@docker
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   woofedcrm${1:+_$1}_sidekiq:
     image: douglara/woofedcrm:latest
@@ -11914,7 +11914,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   woofedcrm${1:+_$1}_job:
     image: douglara/woofedcrm:latest
@@ -11977,7 +11977,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   woofedcrm${1:+_$1}_data:
@@ -12300,7 +12300,7 @@ cat > formbricks${1:+_$1}.yaml <<-EOF
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   formbricks${1:+_$1}:
     image: formbricks/formbricks:latest
@@ -12393,7 +12393,7 @@ services:
         - traefik.http.routers.formbricks${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.formbricks${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   formbricks${1:+_$1}_data:
@@ -12594,7 +12594,7 @@ cat > nocodb${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   nocodb${1:+_$1}: 
     image: nocodb/nocodb:latest
@@ -12634,7 +12634,7 @@ services:
         - traefik.http.routers.nocodb${1:+_$1}.tls.certresolver=letsencryptresolver
         - com.centurylinklabs.watchtower.enable=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   nocodb${1:+_$1}_data:
@@ -12916,7 +12916,7 @@ cat > langfuse${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   langfuse${1:+_$1}_app:
     image: langfuse/langfuse:latest
@@ -12996,7 +12996,7 @@ services:
         - traefik.http.services.langfuse${1:+_$1}.loadbalancer.passHostHeader=true
         - traefik.http.services.langfuse${1:+_$1}.loadbalancer.server.port=3000
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   langfuse${1:+_$1}_worker:
     image: langfuse/langfuse-worker:latest
@@ -13068,7 +13068,7 @@ services:
             cpus: '1'
             memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 networks:
   $nome_rede_interna: ## Rede interna
@@ -13268,7 +13268,7 @@ cat > metabase${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   metabase${1:+_$1}:
     image: metabase/metabase:latest
@@ -13311,7 +13311,7 @@ services:
         - traefik.http.routers.metabase${1:+_$1}.tls=true
         - traefik.http.routers.metabase${1:+_$1}.tls.certresolver=letsencryptresolver
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   metabase${1:+_$1}_data:
@@ -13494,7 +13494,7 @@ cat > odoo${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   odoo${1:+_$1}_app:
     image: odoo:18.0
@@ -13526,7 +13526,7 @@ services:
         - traefik.http.routers.odoo${1:+_$1}_app.tls.certresolver=letsencryptresolver
         - traefik.http.services.odoo${1:+_$1}_app.loadbalancer.server.port=8069
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   odoo${1:+_$1}_db:
     image: postgres:15
@@ -13550,7 +13550,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   odoo${1:+_$1}_app_data:
@@ -13869,7 +13869,7 @@ cat > chatwoot_nestor${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
    chatwoot_nestor${1:+_$1}_app:
     image: sendingtk/chatwoot:latest ## Versão do Chatwoot Nestor
@@ -13977,7 +13977,7 @@ services:
         - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https
         - traefik.http.routers.chatwoot_nestor${1:+_$1}_app.middlewares=sslheader@docker
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
    chatwoot_nestor${1:+_$1}_sidekiq:
     image: sendingtk/chatwoot:latest ## Versão do Chatwoot Nestor
@@ -14073,7 +14073,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   chatwoot_nestor${1:+_$1}_storage:
@@ -14433,7 +14433,7 @@ cat > unoapi${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   unoapi${1:+_$1}:
     image: clairton/unoapi-cloud:latest
@@ -14505,7 +14505,7 @@ services:
         - traefik.http.services.unoapi${1:+_$1}.loadbalancer.passHostHeader=true
         - traefik.http.routers.unoapi${1:+_$1}.service=unoapi${1:+_$1}
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   unoapi${1:+_$1}_data:
@@ -14787,7 +14787,7 @@ cat > n8n_quepasa${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   n8n_quepasa${1:+_$1}_editor:
     image: deividms/n8n-quepasa:latest ## Versão do N8N
@@ -14901,7 +14901,7 @@ services:
         - traefik.http.services.n8n_quepasa${1:+_$1}_editor.loadbalancer.server.port=5678
         - traefik.http.services.n8n_quepasa${1:+_$1}_editor.loadbalancer.passHostHeader=1
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   n8n_quepasa${1:+_$1}_webhook:
     image: deividms/n8n-quepasa:latest ## Versão do N8N
@@ -15015,7 +15015,7 @@ services:
         - traefik.http.services.n8n_quepasa${1:+_$1}_webhook.loadbalancer.server.port=5678
         - traefik.http.services.n8n_quepasa${1:+_$1}_webhook.loadbalancer.passHostHeader=1
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   n8n_quepasa${1:+_$1}_worker:
     image: deividms/n8n-quepasa:latest ## Versão do N8N
@@ -15120,7 +15120,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 
 networks:
@@ -15331,7 +15331,7 @@ cat > quepasa${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   quepasa${1:+_$1}:
     image: deividms/quepasa:latest ## Imagem/versão do Quepasa
@@ -15438,7 +15438,7 @@ services:
         - traefik.http.services.quepasa${1:+_$1}.loadbalancer.server.port=31000
         - traefik.http.services.quepasa${1:+_$1}.loadbalancer.passHostHeader=true              
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   quepasa${1:+_$1}_volume:
@@ -15700,7 +15700,7 @@ cat > docuseal${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   docuseal${1:+_$1}:
     image: docuseal/docuseal:latest
@@ -15751,7 +15751,7 @@ services:
         - traefik.http.routers.docuseal${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.docuseal${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   docuseal${1:+_$1}_data:
@@ -16069,7 +16069,7 @@ cat > monitor.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   prometheus:
     image: prom/prometheus:latest
@@ -16098,7 +16098,7 @@ services:
         - traefik.http.routers.prometheus.entrypoints=websecure
         - traefik.http.routers.prometheus.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   grafana:
     image: grafana/grafana:latest
@@ -16132,7 +16132,7 @@ services:
         - traefik.http.routers.grafana.entrypoints=websecure
         - traefik.http.routers.grafana.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   node-exporter:
     image: prom/node-exporter:latest
@@ -16159,7 +16159,7 @@ services:
         - traefik.http.routers.node-exporter.entrypoints=websecure
         - traefik.http.routers.node-exporter.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   cadvisor:
     image: gcr.io/cadvisor/cadvisor
@@ -16193,7 +16193,7 @@ services:
         - traefik.http.routers.cadvisor.entrypoints=websecure
         - traefik.http.routers.cadvisor.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 networks:
   $nome_rede_interna:
@@ -16542,7 +16542,7 @@ cat > dify${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   dify${1:+_$1}_api:
     image: langgenius/dify-api:latest
@@ -16741,7 +16741,7 @@ services:
         - traefik.http.middlewares.corsMiddleware.headers.accessControlAllowMethods=GET,POST,PUT,DELETE,OPTIONS
         - traefik.http.middlewares.corsMiddleware.headers.accessControlAllowHeaders=Content-Type,Authorization
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   dify${1:+_$1}_worker:
     image: langgenius/dify-api:latest
@@ -16926,7 +16926,7 @@ services:
           cpus: "2"
           memory: 4096M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   dify${1:+_$1}_web:
     image: langgenius/dify-web:latest
@@ -16983,7 +16983,7 @@ services:
         - traefik.http.middlewares.corsMiddleware.headers.accessControlAllowMethods=GET,POST,PUT,DELETE,OPTIONS
         - traefik.http.middlewares.corsMiddleware.headers.accessControlAllowHeaders=Content-Type,Authorization
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   dify${1:+_$1}_sandbox:
     image: langgenius/dify-sandbox:0.2.11
@@ -17012,7 +17012,7 @@ services:
           cpus: "2"
           memory: 4096M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   dify${1:+_$1}_weaviate:
     image: semitechnologies/weaviate:1.19.0
@@ -17060,7 +17060,7 @@ services:
           cpus: "2"
           memory: 4096M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   dify${1:+_$1}_plugin_daemon:
     image: langgenius/dify-plugin-daemon:latest-local
@@ -17117,7 +17117,7 @@ services:
           cpus: "2"
           memory: 4096M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   dify${1:+_$1}_storage:
@@ -17313,7 +17313,7 @@ cat > ollama${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   ollama${1:+_$1}:
     image: ollama/ollama:latest
@@ -17346,7 +17346,7 @@ services:
         - traefik.http.services.ollama${1:+_$1}.loadbalancer.server.port=11434
         - traefik.http.services.ollama${1:+_$1}.loadbalancer.passHostHeader=1
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   openwebui${1:+_$1}:
     image: ghcr.io/open-webui/open-webui:main
@@ -17380,7 +17380,7 @@ services:
         - traefik.http.services.openwebui${1:+_$1}.loadbalancer.server.port=8080
         - traefik.http.services.openwebui${1:+_$1}.loadbalancer.passHostHeader=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   ollama${1:+_$1}_data:
@@ -17649,7 +17649,7 @@ cat > affine${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   affine${1:+_$1}:
     image: ghcr.io/toeverything/affine-graphql:stable-39476d1
@@ -17715,7 +17715,7 @@ services:
         - traefik.frontend.headers.STSPreload=true
         - traefik.frontend.headers.STSSeconds=31536000
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   affine${1:+_$1}_config:
@@ -18034,7 +18034,7 @@ cat > directus${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   directus${1:+_$1}:
     image: directus/directus:latest
@@ -18099,7 +18099,7 @@ services:
         - traefik.http.routers.directus${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.directus${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   directus${1:+_$1}_uploads:
@@ -18326,7 +18326,7 @@ cat > vaultwarden${1:+_$1}.yaml <<-EOF
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   vaultwarden${1:+_$1}:
     image: vaultwarden/server:latest
@@ -18377,7 +18377,7 @@ services:
         - "traefik.http.middlewares.compresstraefik.compress=true"
         - "traefik.docker.network=$nome_rede_interna"
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   vaultwarden${1:+_$1}_data:
@@ -18614,7 +18614,7 @@ cat > nextcloud${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   nextcloud${1:+_$1}:
     image: nextcloud:latest
@@ -18665,7 +18665,7 @@ services:
         - traefik.http.middlewares.nextcloud${1:+_$1}_redirectregex.redirectregex.regex=https://(.*)/.well-known/(?:card|cal)dav
         - traefik.http.middlewares.nextcloud${1:+_$1}_redirectregex.redirectregex.replacement=https://$$1/remote.php/dav
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   nextcloud${1:+_$1}_cron:
     image: nextcloud:latest
@@ -18681,7 +18681,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   nextcloud${1:+_$1}_data:
@@ -18882,7 +18882,7 @@ cat > strapi${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   strapi${1:+_$1}_app:
     image: strapi/strapi
@@ -18929,7 +18929,7 @@ services:
         - traefik.http.services.strapi${1:+_$1}.loadbalancer.server.port=1337
         - traefik.http.services.strapi${1:+_$1}.loadbalancer.passHostHeader=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   strapi${1:+_$1}_db:
     image: percona/percona-server:8.0
@@ -18962,7 +18962,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   #strapi${1:+_$1}_config:
@@ -19172,7 +19172,7 @@ cat > phpmyadmin${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   phpmyadmin${1:+_$1}:
     image: phpmyadmin/phpmyadmin:latest
@@ -19212,7 +19212,7 @@ services:
         - traefik.http.services.phpmyadmin${1:+_$1}.loadbalancer.server.port=80
         - traefik.http.routers.phpmyadmin${1:+_$1}.service=phpmyadmin${1:+_$1}
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 networks:
   $nome_rede_interna:
@@ -19850,7 +19850,7 @@ cat > supabase${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   studio${1:+_$1}:
     image: supabase/studio:20241014-c083b3b ## Versão do Supabase Studio
@@ -19898,7 +19898,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   kong${1:+_$1}:
     image: kong:2.8.1 ## Versão do Supabase Kong
@@ -19949,7 +19949,7 @@ services:
         - traefik.http.routers.kong${1:+_$1}.tls.certresolver=letsencryptresolver
         - traefik.http.routers.kong${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   auth${1:+_$1}:
     image: supabase/gotrue:v2.158.1 ## Versão do Supabase Auth
@@ -20007,7 +20007,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   rest${1:+_$1}:
     image: postgrest/postgrest:v12.2.0 ## Versão do Supabase Rest
@@ -20037,7 +20037,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   realtime${1:+_$1}:
     image: supabase/realtime:v2.30.34 ## Versão do Supabase Realtime
@@ -20076,7 +20076,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   storage${1:+_$1}:
     image: supabase/storage-api:v1.11.13 ## Versão do Supabase Storage
@@ -20122,7 +20122,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   imgproxy${1:+_$1}:
     image: darthsim/imgproxy:v3.8.0 ## Versão do Supabase Imgproxy
@@ -20147,7 +20147,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   meta${1:+_$1}:
     image: supabase/postgres-meta:v0.84.2 ## Versão do Meta 
@@ -20171,7 +20171,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   functions${1:+_$1}:
     image: supabase/edge-runtime:v1.59.0 ## Versão do Supabase Functions
@@ -20202,7 +20202,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   analytics${1:+_$1}:
     image: supabase/logflare:1.4.0 ## Versão do Supabase Analytics
@@ -20238,7 +20238,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   db${1:+_$1}:
     image: supabase/postgres:15.1.1.78 ## Versão do Supabase Db
@@ -20283,7 +20283,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   vector${1:+_$1}:
     image: timberio/vector:0.28.1-alpine ## Versão do Supabase Vector
@@ -20309,7 +20309,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   supavisor${1:+_$1}:
     image: supabase/supavisor:1.1.56 ## Versão do Supabase Supavisor
@@ -20365,7 +20365,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   supabase${1:+_$1}_db_config:
@@ -20575,7 +20575,7 @@ cat > ntfy${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   ntfy${1:+_$1}:
     image: binwiederhier/ntfy:latest
@@ -20613,7 +20613,7 @@ services:
         - traefik.http.routers.ntfy${1:+_$1}.middlewares=ntfy${1:+_$1}-auth
         - traefik.http.routers.ntfy${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   ntfy${1:+_$1}_cache:
@@ -20898,7 +20898,7 @@ cat > lowcoder${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   lowcoder${1:+_$1}_api:
     image: lowcoderorg/lowcoder-ce-api-service:latest
@@ -20961,7 +20961,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   lowcoder${1:+_$1}_node:
     image: lowcoderorg/lowcoder-ce-node-service:latest
@@ -20985,7 +20985,7 @@ services:
           cpus: "0.5"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   lowcoder${1:+_$1}_frontend:
     image: lowcoderorg/lowcoder-ce-frontend:latest
@@ -21019,7 +21019,7 @@ services:
         - traefik.http.routers.lowcoder${1:+_$1}.tls.certresolver=letsencryptresolver
         - traefik.http.routers.lowcoder${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   lowcoder${1:+_$1}_assets:
@@ -21253,7 +21253,7 @@ cat > langflow${1:+_$1}.yaml <<EOL
 version: "3.8"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   langflow${1:+_$1}:
     image: langflowai/langflow:1.1.3
@@ -21300,7 +21300,7 @@ services:
         - traefik.http.routers.langflow${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.langflow${1:+_$1}.tls.certresolver=letsencryptresolver
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   langflow${1:+_$1}_data:
@@ -21515,7 +21515,7 @@ cat > openproject${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   openproject${1:+_$1}:
     image: openproject/openproject:15
@@ -21574,7 +21574,7 @@ services:
         - traefik.http.services.openproject${1:+_$1}.loadbalancer.server.port=8080
         - traefik.http.services.openproject${1:+_$1}.loadbalancer.passHostHeader=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   openproject${1:+_$1}_pgdata:
@@ -21816,7 +21816,7 @@ cat > zep${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   zep${1:+_$1}_nlp:
     image: ghcr.io/getzep/zep-nlp-server:latest
@@ -21831,7 +21831,7 @@ services:
         constraints:
           - node.role == manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   zep${1:+_$1}_app:
     image: ghcr.io/getzep/zep:latest
@@ -21885,7 +21885,7 @@ services:
         - traefik.http.services.zep${1:+_$1}.loadbalancer.passHostHeader=true
         - traefik.http.routers.zep${1:+_$1}.service=zep${1:+_$1}
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
     
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -22193,7 +22193,7 @@ cat > humhub${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   humhub${1:+_$1}:
     image: mriedmann/humhub:latest
@@ -22258,7 +22258,7 @@ services:
         - traefik.http.services.humhub${1:+_$1}.loadbalancer.server.port=80
         - traefik.http.services.humhub${1:+_$1}.loadbalancer.passHostHeader=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   humhub${1:+_$1}_data:
@@ -22498,7 +22498,7 @@ cat > yourls${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   yourls${1:+_$1}:
     image: yourls:latest
@@ -22533,7 +22533,7 @@ services:
         - traefik.http.routers.yourls${1:+_$1}.service=yourls${1:+_$1}
         - traefik.http.services.yourls${1:+_$1}.loadbalancer.server.port=80
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -22775,7 +22775,7 @@ cat > twentycrm${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   twentycrm${1:+_$1}_server:
     image: twentycrm/twenty:latest
@@ -22823,7 +22823,7 @@ services:
         - traefik.http.routers.twentycrm${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.twentycrm${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   twentycrm${1:+_$1}_worker:
     image: twentycrm/twenty:latest
@@ -22862,7 +22862,7 @@ services:
           memory: 1024M
  
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   twentycrm${1:+_$1}_db:
     image: twentycrm/twenty-postgres-spilo:latest
@@ -22891,7 +22891,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   twentycrm${1:+_$1}_data:
@@ -23105,7 +23105,7 @@ cat > mattermost${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   mattermost${1:+_$1}:
     image: mattermost/mattermost-team-edition:latest
@@ -23149,7 +23149,7 @@ services:
         - traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https
         - traefik.http.routers.mattermost${1:+_$1}.middlewares=sslheader@docker
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   mattermost${1:+_$1}_data:
@@ -23450,7 +23450,7 @@ cat > outline${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   outline${1:+_$1}_app:
     image: outlinewiki/outline:latest
@@ -23528,7 +23528,7 @@ services:
         - traefik.http.routers.outline${1:+_$1}_app.service=outline${1:+_$1}_app
         - traefik.http.services.outline${1:+_$1}_app.loadbalancer.server.port=3000
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   outline${1:+_$1}_uploads:
@@ -23707,7 +23707,7 @@ cat > focalboard${1:+_$1}.yaml <<EOL
 version: "3.8"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   focalboard${1:+_$1}:
     image: mattermost/focalboard:latest
@@ -23740,7 +23740,7 @@ services:
         - traefik.http.routers.focalboard${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.focalboard${1:+_$1}.tls.certresolver=letsencryptresolver
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   focalboard${1:+_$1}_data:
@@ -23939,7 +23939,7 @@ cat > glpi${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   glpi${1:+_$1}:
     image: diouxx/glpi:latest
@@ -23974,7 +23974,7 @@ services:
         - traefik.http.routers.glpi${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.glpi${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   glpi${1:+_$1}_glpi:
@@ -24183,7 +24183,7 @@ cat > anythingllm${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   anythingllm${1:+_$1}:
     image: mintplexlabs/anythingllm:latest
@@ -24226,7 +24226,7 @@ services:
         - traefik.http.routers.anythingllm${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.anythingllm${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   anythingllm${1:+_$1}_storage:
@@ -24412,7 +24412,7 @@ cat > excalidraw${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   excalidraw${1:+_$1}:
     image: excalidraw/excalidraw:latest
@@ -24446,7 +24446,7 @@ services:
         - traefik.http.routers.excalidraw${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.excalidraw${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 
 volumes:
@@ -24667,7 +24667,7 @@ cat > easyappointments${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   easyapointments${1:+_$1}:
     image: alextselegidis/easyappointments:latest
@@ -24719,7 +24719,7 @@ services:
         - traefik.http.routers.easyapointments${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.easyapointments${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   easyapointments${1:+_$1}_data:
@@ -25026,7 +25026,7 @@ cat > documenso${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   documenso${1:+_$1}:
     image: documenso/documenso:latest
@@ -25101,7 +25101,7 @@ services:
         - traefik.http.routers.documenso${1:+_$1}.tls=true
     
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   documenso${1:+_$1}_cert:
@@ -25376,7 +25376,7 @@ cat > moodle${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   moodle${1:+_$1}_app:
     image: bitnami/moodle:latest
@@ -25435,7 +25435,7 @@ services:
         - traefik.http.routers.moodle${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.moodle${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   moodle${1:+_$1}_mariadb:
     image: bitnami/mariadb:latest
@@ -25467,7 +25467,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   moodle${1:+_$1}_app_apache_conf:
@@ -25757,7 +25757,7 @@ cat > tooljet${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   tooljet${1:+_$1}_app:
     image: tooljet/tooljet:ee-lts-latest
@@ -25838,7 +25838,7 @@ services:
         - traefik.http.routers.tooljet${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.tooljet${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   tooljet${1:+_$1}_postgrest:
     image: postgrest/postgrest:v12.0.2
@@ -25865,7 +25865,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   tooljet${1:+_$1}_chroma:
     image: chromadb/chroma:latest
@@ -25890,7 +25890,7 @@ services:
           cpus: "1"
           memory: 1024M      
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   tooljet_chromadb${1:+_$1}:
@@ -26094,7 +26094,7 @@ cat > stirlingpdf${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   stirlingpdf${1:+_$1}:
     image: frooodle/s-pdf:latest ## Versão da aplicação
@@ -26143,7 +26143,7 @@ services:
         - traefik.http.routers.stirlingpdf${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.stirlingpdf${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   stirlingpdf${1:+_$1}_data:
@@ -26348,7 +26348,7 @@ cat > clickhouse${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   clickhouse${1:+_$1}:
     image: clickhouse/clickhouse-server:23.8.8.20-alpine
@@ -26385,7 +26385,7 @@ services:
         - traefik.http.routers.clickhouse${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.clickhouse${1:+_$1}.tls=true        
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   clickhouse${1:+_$1}_data:
@@ -26574,7 +26574,7 @@ cat > redisinsight${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   redisinsight${1:+_$1}:
     image: redislabs/redisinsight:latest
@@ -26613,7 +26613,7 @@ services:
         - traefik.http.routers.redisinsight${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.redisinsight${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   redisinsight${1:+_$1}_data:
@@ -26808,7 +26808,7 @@ cat > traccar${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   traccar${1:+_$1}:
     image: traccar/traccar:latest
@@ -26843,7 +26843,7 @@ services:
         - traefik.http.routers.traccar${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.traccar${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   traccar${1:+_$1}_db:
     image: mysql:8.0
@@ -26871,7 +26871,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   traccar${1:+_$1}_data:
@@ -27075,7 +27075,7 @@ cat > firecrawl${1:+_$1}.yaml <<EOL
 version: "3.8"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   firecrawl${1:+_$1}_api:
     image: oriondesign/firecrawl-api:latest
@@ -27136,7 +27136,7 @@ services:
         - traefik.http.routers.firecrawl${1:+_$1}_api.entrypoints=websecure
         - traefik.http.routers.firecrawl${1:+_$1}_api.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   firecrawl${1:+_$1}_worker:
     image: oriondesign/firecrawl-api:latest
@@ -27189,7 +27189,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   firecrawl${1:+_$1}_playwright:
     image: oriondesign/firecrawl-playwright-service:latest
@@ -27215,7 +27215,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -27410,7 +27410,7 @@ cat > wuzapi${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
  wuzapi${1:+_$1}:
   image: setupautomatizado/wuzapi-server:latest
@@ -27454,7 +27454,7 @@ services:
         - traefik.http.routers.wuzapi${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.wuzapi${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   wuzapi${1:+_$1}_dbdata:
@@ -27697,7 +27697,7 @@ cat > krayincrm${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   krayincrm${1:+_$1}_app:
     image: francisbreit/crmk:v2.0.5-fr
@@ -27776,7 +27776,7 @@ services:
         - traefik.http.routers.krayincrm${1:+_$1}_app.entrypoints=websecure
         - traefik.http.routers.krayincrm${1:+_$1}_app.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   krayin${1:+_$1}_db:
     image: percona/percona-server:latest
@@ -27811,7 +27811,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   krayin${1:+_$1}_redis:
     image: redis:latest
@@ -27841,7 +27841,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   krayincrm${1:+_$1}_data:
@@ -28188,7 +28188,7 @@ cat > planka${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   planka${1:+_$1}:
     image: ghcr.io/plankanban/planka:latest
@@ -28256,7 +28256,7 @@ services:
         - traefik.http.routers.planka${1:+_$1}.tls=true
 
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   planka${1:+_$1}_avatars:
@@ -28448,7 +28448,7 @@ cat > wppconnect${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   wppconnect${1:+_$1}_api:
     image: wppconnect/server-cli:latest
@@ -28475,7 +28475,7 @@ services:
         - traefik.http.services.wppconnect${1:+_$1}_api.loadbalancer.server.port=21465
         - traefik.http.services.wppconnect${1:+_$1}_api.loadbalancer.passHostHeader=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   wppconnect${1:+_$1}_config:
@@ -28649,7 +28649,7 @@ cat > browserless${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   browserless${1:+_$1}:
     image: browserless/chrome:latest
@@ -28685,7 +28685,7 @@ services:
         - traefik.http.routers.browserless${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.browserless${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -28889,7 +28889,7 @@ cat > keycloak${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   keycloak${1:+_$1}:
     image: quay.io/keycloak/keycloak:latest
@@ -28939,7 +28939,7 @@ services:
         - traefik.http.routers.keycloak${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.keycloak${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   keycloak${1:+_$1}_data:
@@ -29132,7 +29132,7 @@ cat > erpnext${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   erpnext${1:+_$1}_frontend:
     image: frappe/erpnext:v15.49.3
@@ -29175,7 +29175,7 @@ services:
         - traefik.http.routers.erpnext${1:+_$1}_frontend.entrypoints=websecure
         - traefik.http.routers.erpnext${1:+_$1}_frontend.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   erpnext${1:+_$1}_backend:
     image: frappe/erpnext:v15.49.3
@@ -29207,7 +29207,7 @@ services:
           cpus: "2"
           memory: 4096M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   erpnext${1:+_$1}_configurator:
     image: frappe/erpnext:v15.49.3
@@ -29246,7 +29246,7 @@ services:
           cpus: "2"
           memory: 4096M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
       
   erpnext${1:+_$1}_websocket:
     image: frappe/erpnext:v15.49.3
@@ -29270,7 +29270,7 @@ services:
           cpus: "2"
           memory: 4096M
             
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   erpnext${1:+_$1}_db:
     image: mariadb:10.6
@@ -29298,7 +29298,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   erpnext${1:+_$1}_cache:
     image: redis:latest
@@ -29325,7 +29325,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   erpnext${1:+_$1}_queue:
     image: redis:latest
@@ -29352,7 +29352,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   erpnext${1:+_$1}_socketio:
     image: redis:latest
@@ -29379,7 +29379,7 @@ services:
           cpus: "1"
           memory: 1024M
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   erpnext${1:+_$1}_sites:
@@ -29595,7 +29595,7 @@ cat > bolt${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   bolt${1:+_$1}:
     image: docker.io/hipnologo/bolt.diy:latest
@@ -29645,7 +29645,7 @@ services:
         - traefik.http.routers.bolt${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.bolt${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   bolt${1:+_$1}_data:
@@ -29814,7 +29814,7 @@ cat > wisemapping${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   wisemapping${1:+_$1}:
     image: wisemapping/wisemapping:latest
@@ -29844,7 +29844,7 @@ services:
         - traefik.http.routers.wisemapping${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.wisemapping${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
@@ -30142,7 +30142,7 @@ cat > evoai${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   evoai${1:+_$1}_api:
     image: evoapicloud/evo-ai:latest ## Versão da imagem
@@ -30214,7 +30214,7 @@ services:
         - traefik.http.services.evoai${1:+_$1}_api.loadbalancer.server.port=8000
         - traefik.http.services.evoai${1:+_$1}_api.loadbalancer.passHostHeader=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   evoai${1:+_$1}_frontend:
     image: evoapicloud/evo-ai-frontend:latest ## Versão da imagem
@@ -30241,7 +30241,7 @@ services:
         - traefik.http.services.evoai${1:+_$1}_frontend.loadbalancer.server.port=3000
         - traefik.http.services.evoai${1:+_$1}_frontend.loadbalancer.passHostHeader=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   evoai${1:+_$1}_logs:
@@ -30525,7 +30525,7 @@ cat > passbolt${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   passbolt${1:+_$1}:
     image: passbolt/passbolt:latest ## Versão da aplicação
@@ -30576,7 +30576,7 @@ services:
         - traefik.http.routers.passbolt${1:+_$1}.entrypoints=websecure
         - traefik.http.routers.passbolt${1:+_$1}.tls=true
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   passbolt${1:+_$1}_data:
@@ -30794,7 +30794,7 @@ cat > transcrevezap${1:+_$1}.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   transcrevezap${1:+_$1}:
     image: impacteai/transcrevezap:latest
@@ -30845,7 +30845,7 @@ services:
         - traefik.http.services.transcrevezap${1:+_$1}_manager.loadbalancer.server.port=8501
         - traefik.http.routers.transcrevezap${1:+_$1}_manager.service=transcrevezap${1:+_$1}_manager
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   redis_transcrevezap${1:+_$1}:
     image: redis:6
@@ -30863,7 +30863,7 @@ services:
     networks:
       - $nome_rede_interna
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 volumes:
   redis_transcrevezap${1:+_$1}_data:
@@ -31039,7 +31039,7 @@ cat > n8n${1:+_$1}_mcp.yaml <<EOL
 version: "3.7"
 services:
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
   n8n${1:+_$1}_mcp:
     image: n8nio/n8n:latest ## Versão do N8N
@@ -31136,7 +31136,7 @@ services:
         - traefik.http.services.n8n${1:+_$1}_mcp.loadbalancer.server.port=5678
         - traefik.http.services.n8n${1:+_$1}_mcp.loadbalancer.passHostHeader=1
 
-## -------------------- SOCIOS DIGITALRES -------------------- ##
+## -------------------- SOCIOS DIGITALES -------------------- ##
 
 networks:
   $nome_rede_interna: ## Nome da rede interna
