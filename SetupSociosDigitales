@@ -2535,7 +2535,7 @@ wait_30_sec() {
 #    done
 #}
 wait_stack() {
-    echo "Este processo pode demorar um pouco. Se levar mais de 5 minutos, cancele, pois algo deu errado."
+    echo "Este proceso puede tardar un poco. Si lleva más de 5 minutos, cancélelo, pues algo salió mal."
     declare -A services_status
 
     # Inicializa o status de todos os serviços como "pendente"
@@ -2549,7 +2549,7 @@ wait_stack() {
         for service in "${!services_status[@]}"; do
             if docker service ls --filter "name=$service" | grep -q "1/1"; then
                 if [ "${services_status["$service"]}" != "ativo" ]; then
-                    echo -e "🟢 O serviço \e[32m$service\e[0m está online."
+                    echo -e "🟢 El servicio \e[32m$service\e[0m está online."
                     services_status["$service"]="ativo"
                 fi
             else
