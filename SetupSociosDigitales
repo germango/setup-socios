@@ -30699,23 +30699,23 @@ preencha_as_info
 while true; do
 
     ##Pergunta o Dominio para a ferramenta
-    echo -e "\e[97mPasso$amarelo 1/4\e[0m"
-    echo -en "\e[33mDigite o dominio para a API do TranscreveZap (ex: apitranscreve.oriondesign.art.br): \e[0m" && read -r api_transcrevezap
+    echo -e "\e[97mPaso$amarelo 1/4\e[0m"
+    echo -en "\e[33mIngrese el dominio para la API de TranscreveZap (ej: apitranscreve.oriondesign.art.br): \e[0m" && read -r api_transcrevezap
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
-    echo -e "\e[97mPasso$amarelo 2/4\e[0m"
-    echo -en "\e[33mDigite o dominio para o Manager do TranscreveZap (ex: transcrevezap.oriondesign.art.br): \e[0m" && read -r url_transcrevezap
+    echo -e "\e[97mPaso$amarelo 2/4\e[0m"
+    echo -en "\e[33mIngrese el dominio para el Manager de TranscreveZap (ej: transcrevezap.oriondesign.art.br): \e[0m" && read -r url_transcrevezap
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
-    echo -e "\e[97mPasso$amarelo 3/4\e[0m"
-    echo -en "\e[33mDigite um usuario para o TranscreveZap (ex: OrionDesign): \e[0m" && read -r user_transcrevezap
+    echo -e "\e[97mPaso$amarelo 3/4\e[0m"
+    echo -en "\e[33mIngrese un usuario para TranscreveZap (ej: OrionDesign): \e[0m" && read -r user_transcrevezap
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
-    echo -e "\e[97mPasso$amarelo 4/4\e[0m"
-    echo -en "\e[33mDigite uma senha para o TranscreveZap (ex: @Senha123_): \e[0m" && read -r pass_transcrevezap
+    echo -e "\e[97mPaso$amarelo 4/4\e[0m"
+    echo -en "\e[33mIngrese una contraseña para TranscreveZap (ej: @Senha123_): \e[0m" && read -r pass_transcrevezap
     echo ""
     
     ## Limpa o terminal
@@ -30728,23 +30728,23 @@ while true; do
     conferindo_as_info
     
     ## Informação sobre URL do transcrevezap
-    echo -e "\e[33mDominio da API TranscreveZap:\e[97m $api_transcrevezap\e[0m"
+    echo -e "\e[33mDominio de la API TranscreveZap:\e[97m $api_transcrevezap\e[0m"
     echo ""
 
     ## Informação sobre URL do transcrevezap
-    echo -e "\e[33mDominio do Manager do TranscreveZap:\e[97m $url_transcrevezap\e[0m"
+    echo -e "\e[33mDominio del Manager de TranscreveZap:\e[97m $url_transcrevezap\e[0m"
     echo ""
 
     ## Informação sobre URL do transcrevezap
-    echo -e "\e[33mUsuario do TranscreveZap:\e[97m $user_transcrevezap\e[0m"
+    echo -e "\e[33mUsuario de TranscreveZap:\e[97m $user_transcrevezap\e[0m"
     echo ""
 
     ## Informação sobre URL do transcrevezap
-    echo -e "\e[33mSenha do TranscreveZap:\e[97m $pass_transcrevezap\e[0m"
+    echo -e "\e[33mContraseña de TranscreveZap:\e[97m $pass_transcrevezap\e[0m"
     echo ""
     
     ## Pergunta se as respostas estão corretas
-    read -p "As respostas estão corretas? (Y/N): " confirmacao
+    read -p "¿Las respuestas son correctas? (Y/N): " confirmacao
     if [ "$confirmacao" = "Y" ] || [ "$confirmacao" = "y" ]; then
 
         ## Digitou Y para confirmar que as informações estão corretas
@@ -30775,7 +30775,7 @@ while true; do
 done
 
 ## Mensagem de Passo
-echo -e "\e[97m• INICIANDO A INSTALAÇÃO DO TRANSCREVEZAP \e[33m[1/3]\e[0m"
+echo -e "\e[97m• INICIANDO LA INSTALACIÓN DE TRANSCREVEZAP \e[33m[1/3]\e[0m"
 echo ""
 sleep 1
 
@@ -30893,7 +30893,7 @@ stack_editavel # > /dev/null 2>&1
 #fi
 
 ## Mensagem de Passo
-echo -e "\e[97m• VERIFICANDO SERVIÇO \e[33m[3/3]\e[0m"
+echo -e "\e[97m• VERIFICANDO SERVICIO \e[33m[3/3]\e[0m"
 echo ""
 sleep 1
 
@@ -30934,16 +30934,16 @@ guarde_os_dados_msg
 echo -e "\e[32m[ TRANSCREVEZAP ]\e[0m"
 echo ""
 
-echo -e "\e[33mLink do Manager:\e[97m https://$url_transcrevezap\e[0m"
+echo -e "\e[33mEnlace del Manager:\e[97m https://$url_transcrevezap\e[0m"
 echo ""
 
-echo -e "\e[33mLink da API:\e[97m https://$api_transcrevezap\e[0m"
+echo -e "\e[33mEnlace de la API:\e[97m https://$api_transcrevezap\e[0m"
 echo ""
 
 echo -e "\e[33mUsuario:\e[97m $user_transcrevezap\e[0m"
 echo ""
 
-echo -e "\e[33mSenha:\e[97m $pass_transcrevezap\e[0m"
+echo -e "\e[33mContraseña:\e[97m $pass_transcrevezap\e[0m"
 
 ## Creditos do instalador
 creditos_msg
