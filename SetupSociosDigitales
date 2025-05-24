@@ -3080,13 +3080,13 @@ while true; do
     ## Pergunta o Nome do Servidor
     echo -e "\e[97mPaso$amarelo 4/6\e[0m"
     echo -e "$amarelo--> No puede contener espacios y/o caracteres especiales"
-    echo -en "\e[33mElija un nombre para su servidor (ej: OrionDesign): \e[0m" && read -r nome_servidor
+    echo -en "\e[33mElija un nombre para su servidor (ej: SociosDesign): \e[0m" && read -r nome_servidor
     echo ""
     
     ## Pergunta o nome da Rede Interna
     echo -e "\e[97mPaso$amarelo 5/6\e[0m"
     echo -e "$amarelo--> No puede contener espacios y/o caracteres especiales."
-    echo -en "\e[33mIngrese un nombre para su red interna (ej: OrionNet): \e[0m" && read -r nome_rede_interna
+    echo -en "\e[33mIngrese un nombre para su red interna (ej: SociosNet): \e[0m" && read -r nome_rede_interna
     echo ""
     
     ## Pergunta o Email para informações sobre o certificado
@@ -6877,7 +6877,7 @@ while true; do
     ##Pergunta o Usuario para o Minio
     echo -e "\e[97mPaso$amarelo 3/4\e[0m"
     echo -e "$amarelo--> Evite caracteres especiales: \!#$ y/o espacios"
-    echo -en "\e[33mIngrese un usuario para MinIO (ej: OrionDesign): \e[0m" && read -r user_minio
+    echo -en "\e[33mIngrese un usuario para MinIO (ej: SociosDesign): \e[0m" && read -r user_minio
     echo ""
     
     ##Pergunta a Senha para o Minio
@@ -8615,7 +8615,7 @@ while true; do
     
     ##Pergunta um Usuario para a ferramenta
     echo -e "\e[97mPaso$amarelo 3/4\e[0m"
-    echo -en "\e[33mIngrese un nombre de usuario para Nocobase (ej: OrionDesign): \e[0m" && read -r user_nocobase
+    echo -en "\e[33mIngrese un nombre de usuario para Nocobase (ej: SociosDesign): \e[0m" && read -r user_nocobase
     echo ""
     
     ##Pergunta a Senha para a ferramenta
@@ -10039,7 +10039,7 @@ while true; do
     
     echo -e "\e[97mPaso$amarelo 2/2\e[0m"
     echo -e "$amarelo--> Evita los caracteres especiales: @\!#$ y/o espacios"
-    echo -en "\e[33mIntroduzca el nombre de usuario (ej: OrionDesign): \e[0m" && read -r user_rabbitmq
+    echo -en "\e[33mIntroduzca el nombre de usuario (ej: SociosDesign): \e[0m" && read -r user_rabbitmq
     echo ""
     
     ## Gera a senha aleatória
@@ -10809,7 +10809,7 @@ while true; do
     ## Pergunta o usuario da ferramenta
     echo -e "\e[97mPaso$amarelo 2/4\e[0m"
     echo -e "$amarelo--> Sin caracteres especiales: \!#$ y/o espacios"
-    echo -en "\e[33mIngrese un usuario (ej: OrionDesign): \e[0m" && read -r user_mautic
+    echo -en "\e[33mIngrese un usuario (ej: SociosDesign): \e[0m" && read -r user_mautic
     echo ""
 
     ## Pergunta o email da ferramenta
@@ -19419,7 +19419,7 @@ while true; do
 
     ## Pregunta el Dominio del Viewer
     echo -e "\e[97mPaso$amarelo 2/5\e[0m"
-    echo -en "\e[33mIngrese el Usuario para Supabase (ej: OrionDesign): \e[0m" && read -r user_supabase
+    echo -en "\e[33mIngrese el Usuario para Supabase (ej: SociosDesign): \e[0m" && read -r user_supabase
     echo ""
 
     ## Pregunta la versión de la herramienta
@@ -30710,7 +30710,7 @@ while true; do
 
     ##Pergunta o Dominio para a ferramenta
     echo -e "\e[97mPaso$amarelo 3/4\e[0m"
-    echo -en "\e[33mIngrese un usuario para TranscreveZap (ej: OrionDesign): \e[0m" && read -r user_transcrevezap
+    echo -en "\e[33mIngrese un usuario para TranscreveZap (ej: SociosDesign): \e[0m" && read -r user_transcrevezap
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
