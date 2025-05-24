@@ -12507,8 +12507,8 @@ preencha_as_info
 while true; do
 
     ##Pergunta o Dominio para a ferramenta
-    echo -e "\e[97mPasso$amarelo 1/1\e[0m"
-    echo -en "\e[33mDigite o dominio para o NocoDB (ex: nocodb.oriondesign.art.br): \e[0m" && read -r url_nocodb
+    echo -e "\e[97mPaso$amarelo 1/1\e[0m"
+    echo -en "\e[33mIngrese el dominio para NocoDB (ej: nocodb.oriondesign.art.br): \e[0m" && read -r url_nocodb
     echo ""
     
     ## Limpa o terminal
@@ -12521,11 +12521,11 @@ while true; do
     conferindo_as_info
     
     ##Informação do Dominio
-    echo -e "\e[33mDominio para o NocoDB:\e[97m $url_nocodb\e[0m"
+    echo -e "\e[33mDominio para NocoDB:\e[97m $url_nocodb\e[0m"
     echo ""
     
      ## Pergunta se as respostas estão corretas
-    read -p "As respostas estão corretas? (Y/N): " confirmacao
+    read -p "¿Las respuestas son correctas? (Y/N): " confirmacao
     if [ "$confirmacao" = "Y" ] || [ "$confirmacao" = "y" ]; then
 
         ## Digitou Y para confirmar que as informações estão corretas
@@ -12556,7 +12556,7 @@ while true; do
 done
 
 ## Mensagem de Passo
-echo -e "\e[97m• INICIANDO A INSTALAÇÃO DO NOCODB \e[33m[1/4]\e[0m"
+echo -e "\e[97m• INICIANDO LA INSTALACIÓN DE NOCODB \e[33m[1/4]\e[0m"
 echo ""
 sleep 1
 
@@ -12572,11 +12572,11 @@ sleep 1
 ## Já sabe né ksk
 verificar_container_postgres
 if [ $? -eq 0 ]; then
-    echo "1/3 - [ OK ] - Postgres já instalado"
+    echo "1/3 - [ OK ] - Postgres ya instalado"
     pegar_senha_postgres > /dev/null 2>&1
-    echo "2/3 - [ OK ] - Copiando senha do Postgres"
+    echo "2/3 - [ OK ] - Copiando contraseña de Postgres"
     criar_banco_postgres_da_stack "nocodb${1:+_$1}"
-    echo "3/3 - [ OK ] - Criando banco de dados"
+    echo "3/3 - [ OK ] - Creando base de datos"
     echo ""
 else
     ferramenta_postgres
@@ -12647,10 +12647,10 @@ networks:
     external: true
 EOL
 if [ $? -eq 0 ]; then
-    echo "1/10 - [ OK ] - Criando Stack"
+    echo "1/10 - [ OK ] - Creando Stack"
 else
-    echo "1/10 - [ OFF ] - Criando Stack"
-    echo "Não foi possivel criar a stack do NocoDB"
+    echo "1/10 - [ OFF ] - Creando Stack"
+    echo "No fue posible crear la stack de NocoDB"
 fi
 STACK_NAME="nocodb${1:+_$1}"
 stack_editavel # > /dev/null 2>&1
@@ -12663,7 +12663,7 @@ stack_editavel # > /dev/null 2>&1
 #fi
 
 ## Mensagem de Passo
-echo -e "\e[97m• VERIFICANDO SERVIÇO \e[33m[4/4]\e[0m"
+echo -e "\e[97m• VERIFICANDO SERVICIO \e[33m[4/4]\e[0m"
 echo ""
 sleep 1
 
@@ -12684,7 +12684,7 @@ Dominio do NocoDB: https://$url_nocodb
 
 Usuario: Precisa criar no primeiro acesso do NocoDB
 
-Senha: Precisa criar no primeiro acesso do NocoDB
+Contraseña: Precisa criar no primeiro acesso do NocoDB
 
 EOL
 
@@ -12707,10 +12707,10 @@ echo ""
 echo -e "\e[33mDominio:\e[97m https://$url_nocodb\e[0m"
 echo ""
 
-echo -e "\e[33mUsuario:\e[97m Precisa criar no primeiro acesso do NocoDB\e[0m"
+echo -e "\e[33mUsuario:\e[97m Debe crearse en el primer acceso de NocoDB\e[0m"
 echo ""
 
-echo -e "\e[33mSenha:\e[97m Precisa criar no primeiro acesso do NocoDB\e[0m"
+echo -e "\e[33mContraseña:\e[97m Debe crearse en el primer acceso de NocoDB\e[0m"
 
 ## Creditos do instalador
 creditos_msg
