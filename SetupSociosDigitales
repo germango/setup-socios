@@ -4079,7 +4079,7 @@ clear
 instalando_msg
 
 ## Mensagem de Passo
-echo -e "\e[97m• INICIANDO A INSTALAÇÃO DO PGVECTOR \e[33m[1/3]\e[0m"
+echo -e "\e[97m• INICIANDO LA INSTALACIÓN DE PGVECTOR \e[33m[1/3]\e[0m"
 echo ""
 sleep 1
 
@@ -4144,16 +4144,16 @@ networks:
     name: $nome_rede_interna ## Nome da rede interna
 EOL
 if [ $? -eq 0 ]; then
-    echo "1/10 - [ OK ] - Criando Stack"
+    echo "1/10 - [ OK ] - Creando Stack"
 else
-    echo "1/10 - [ OFF ] - Criando Stack"
-    echo "Não foi possivel criar a stack do PgVector"
+    echo "1/10 - [ OFF ] - Creando Stack"
+    echo "No fue posible crear la stack de PgVector"
 fi
 STACK_NAME="pgvector${1:+_$1}"
 stack_editavel #> /dev/null 2>&1
 
 ## Mensagem de Passo
-echo -e "\e[97m• VERIFICANDO SERVIÇO \e[33m[3/3]\e[0m"
+echo -e "\e[97m• VERIFICANDO SERVICIO \e[33m[3/3]\e[0m"
 echo ""
 sleep 1
 
@@ -4194,13 +4194,13 @@ guarde_os_dados_msg
 echo -e "\e[32m[ PGVECTOR ]\e[0m"
 echo ""
 
-echo -e "\e[97mDominio do PgVector:\e[33m postgres://pgvector${1:+_$1}:5432\e[0m"
+echo -e "\e[97mDominio del PgVector:\e[33m postgres://pgvector${1:+_$1}:5432\e[0m"
 echo ""
 
 echo -e "\e[97mUsuario:\e[33m postgres\e[0m"
 echo ""
 
-echo -e "\e[97mSenha:\e[33m $senha_pgvector\e[0m"
+echo -e "\e[97mContraseña:\e[33m $senha_pgvector\e[0m"
 
 ## Creditos do instalador
 creditos_msg
