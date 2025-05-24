@@ -31756,7 +31756,7 @@ while true; do
     nome_menu
     menu_instalador
 
-    read -p "Ingrese el NÚMERO de la opción deseada o 'COMANDO' oculto: " opcion
+    read -p "Ingrese el NÚMERO de la opción deseada o 'COMANDO' oculto: " opcao
 
     set -- $opcao
     opcao1=$1
