@@ -9139,14 +9139,14 @@ preencha_as_info
 while true; do
 
     ## Pergunta o Dominio para a ferramenta
-    echo -e "\e[97mPasso$amarelo 1/2\e[0m"
-    echo -en "\e[33mDigite o dominio para o Wordpress (ex: oriondesign.art.br ou loja.oriondesign.art.br): \e[0m" && read -r url_wordpress
+    echo -e "\e[97mPaso$amarelo 1/2\e[0m"
+    echo -en "\e[33mIntroduzca el dominio para Wordpress (ej: oriondesign.art.br o tienda.oriondesign.art.br): \e[0m" && read -r url_wordpress
     echo ""
     
     ## Pergunta o nome do site
-    echo -e "\e[97mPasso$amarelo 2/2\e[0m"
-    echo -e "$amarelo--> Use apenas letras minusculas, sem espaço ou caracteres especiais"
-    echo -en "\e[33mDigite o nome do Site (ex: lojaorion): \e[0m" && read -r nome_site_wordpress
+    echo -e "\e[97mPaso$amarelo 2/2\e[0m"
+    echo -e "$amarelo--> Use solo letras minúsculas, sin espacios o caracteres especiales"
+    echo -en "\e[33mIntroduzca el nombre del Sitio (ej: tiendaorion): \e[0m" && read -r nome_site_wordpress
     echo ""  
 
     ## Limpa o terminal
@@ -9159,16 +9159,16 @@ while true; do
     conferindo_as_info
     
     ## Informação sobre URL do Wordpress
-    echo -e "\e[33mDominio do Wordpress:\e[97m $url_wordpress\e[0m"
+    echo -e "\e[33mDominio de Wordpress:\e[97m $url_wordpress\e[0m"
     echo ""
     
     ## Informação sobre Nome do site
-    echo -e "\e[33mNome do Site:\e[97m $nome_site_wordpress\e[0m"
+    echo -e "\e[33mNombre del Sitio:\e[97m $nome_site_wordpress\e[0m"
     echo ""
     
 
     ## Pergunta se as respostas estão corretas
-    read -p "As respostas estão corretas? (Y/N): " confirmacao
+    read -p "¿Las respuestas son correctas? (Y/N): " confirmacao
     if [ "$confirmacao" = "Y" ] || [ "$confirmacao" = "y" ]; then
 
         ## Digitou Y para confirmar que as informações estão corretas
@@ -9199,7 +9199,7 @@ while true; do
 done
 
 ## Mensagem de Passo
-echo -e "\e[97m• INICIANDO A INSTALAÇÃO DO WORDPRESS \e[33m[1/7]\e[0m"
+echo -e "\e[97m• INICIANDO LA INSTALACIÓN DE WORDPRESS \e[33m[1/7]\e[0m"
 echo ""
 sleep 1
 
@@ -9216,11 +9216,11 @@ sleep 1
 ## Cria banco de dados do site no mysql
 verificar_container_mysql
     if [ $? -eq 0 ]; then
-        echo "1/3 - [ OK ] - MySQL já instalado"
+        echo "1/3 - [ OK ] - MySQL ya instalado"
         pegar_senha_mysql > /dev/null 2>&1
-        echo "2/3 - [ OK ] - Copiando senha do MySQL"
+        echo "2/3 - [ OK ] - Copiando contraseña de MySQL"
         criar_banco_mysql_da_stack "$nome_site_wordpress"
-        echo "3/3 - [ OK ] - Criando banco de dados"
+        echo "3/3 - [ OK ] - Creando base de datos"
         echo ""
     else
         ferramenta_mysql
@@ -9236,7 +9236,7 @@ sleep 1
 ## Verifica/instala o Redis
 verificar_container_redis
 if [ $? -eq 0 ]; then
-    echo "1/1 - [ OK ] - Redis já instalado"
+    echo "1/1 - [ OK ] - Redis ya instalado"
     echo ""
 else
     ferramenta_redis
@@ -9315,10 +9315,10 @@ networks:
     external: true
 EOL
 if [ $? -eq 0 ]; then
-    echo "1/10 - [ OK ] - Criando Stack"
+    echo "1/10 - [ OK ] - Creando Stack"
 else
-    echo "1/10 - [ OFF ] - Criando Stack"
-    echo "Não foi possivel criar a stack do Wordpress"
+    echo "1/10 - [ OFF ] - Creando Stack"
+    echo "No fue posible crear la stack de Wordpress"
 fi
 STACK_NAME="wordpress_$nome_site_wordpress"
 stack_editavel # > /dev/null 2>&1
@@ -9331,7 +9331,7 @@ stack_editavel # > /dev/null 2>&1
 #fi
 
 ## Mensagem de Passo
-echo -e "\e[97m• VERIFICANDO SERVIÇO \e[33m[5/7]\e[0m"
+echo -e "\e[97m• VERIFICANDO SERVICIO \e[33m[5/7]\e[0m"
 echo ""
 sleep 1
 
@@ -9349,58 +9349,58 @@ sleep 1
 ## Editando o PHP.INI
 cp /var/lib/docker/volumes/wordpress_${nome_site_wordpress}_php/_data/php.ini-production /var/lib/docker/volumes/wordpress_${nome_site_wordpress}_php/_data/php.ini
 if [ $? -eq 0 ]; then
-    echo "1/7 - [ OK ] - Copiando arquivo php.ini"
+    echo "1/7 - [ OK ] - Copiando archivo php.ini"
 else
-    echo "1/7 - [ OFF ] - Copiando arquivo php.ini"
+    echo "1/7 - [ OFF ] - Copiando archivo php.ini"
 fi
 caminho_php_ini="/var/lib/docker/volumes/wordpress_${nome_site_wordpress}_php/_data/php.ini"
 
 sed -i "s/^upload_max_filesize =.*/upload_max_filesize = 1024M/" "$caminho_php_ini"
 if [ $? -eq 0 ]; then
-    echo "2/7 - [ OK ] - Modificando upload_max_filesize para 1024M"
+    echo "2/7 - [ OK ] - Modificando upload_max_filesize a 1024M"
 else
-    echo "2/7 - [ OFF ] - Modificando upload_max_filesize para 1024M"
+    echo "2/7 - [ OFF ] - Modificando upload_max_filesize a 1024M"
 fi
 sed -i "s/^max_execution_time =.*/max_execution_time = 450/" "$caminho_php_ini"
 if [ $? -eq 0 ]; then
-    echo "3/7 - [ OK ] - Modificando max_execution_time para 450"
+    echo "3/7 - [ OK ] - Modificando max_execution_time a 450"
 else
-    echo "3/7 - [ OFF ] - Modificando max_execution_time para 450"
+    echo "3/7 - [ OFF ] - Modificando max_execution_time a 450"
 fi
 sed -i "s/^memory_limit =.*/memory_limit = 1024M/" "$caminho_php_ini"
 if [ $? -eq 0 ]; then
-    echo "4/7 - [ OK ] - Modificando memory_limit para 1024M"
+    echo "4/7 - [ OK ] - Modificando memory_limit a 1024M"
 else
-    echo "4/7 - [ OFF ] - Modificando memory_limit para 1024M"
+    echo "4/7 - [ OFF ] - Modificando memory_limit a 1024M"
 fi
 cd
 
 caminho_wp_config="/var/lib/docker/volumes/wordpress_$nome_site_wordpress/_data/wp-config.php"
 if [ $? -eq 0 ]; then
-    echo "5/7 - [ OK ] - Pegando arquivo wp-config.php"
+    echo "5/7 - [ OK ] - Obteniendo archivo wp-config.php"
 else
-    echo "5/7 - [ OFF ] - Pegando arquivo wp-config.php"
+    echo "5/7 - [ OFF ] - Obteniendo archivo wp-config.php"
 fi
 sed -i "/\/\* Add any custom values between this line and the \"stop editing\" line. \*\//i\\
 define( 'WP_REDIS_HOST', 'redis' );\n\
 define( 'WP_REDIS_PORT', 6379 );\n" "$caminho_wp_config"
 
 if [ $? -eq 0 ]; then
-    echo "6/7 - [ OK ] - Adicionando configurações do Redis no wp-config.php"
+    echo "6/7 - [ OK ] - Añadiendo configuraciones de Redis en wp-config.php"
 else
-    echo "6/7 - [ OFF ] - Adicionando configurações do Redis no wp-config.php"
+    echo "6/7 - [ OFF ] - Añadiendo configuraciones de Redis en wp-config.php"
 fi
 
 docker service update --force wordpress_${nome_site_wordpress}_wordpress_$nome_site_wordpress > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "7/7 - [ OK ] - Aplicando atualização no php.ini"
+    echo "7/7 - [ OK ] - Aplicando actualización en php.ini"
 else
-    echo "7/7 - [ OK ] - Aplicando atualização no php.ini"
+    echo "7/7 - [ OK ] - Aplicando actualización en php.ini"
 fi
 echo ""
 
 ## Mensagem de Passo
-echo -e "\e[97m• VERIFICANDO SERVIÇO \e[33m[7/7]\e[0m"
+echo -e "\e[97m• VERIFICANDO SERVICIO \e[33m[7/7]\e[0m"
 echo ""
 sleep 1
 
@@ -9414,11 +9414,11 @@ cd dados_vps
 cat > wordpress_$nome_do_servico_wordpress <<EOL
 [ WORDPRESS ]
 
-Dominio do Wordpress: https://$url_wordpress
+Dominio de Wordpress: https://$url_wordpress
 
-Arquivos do site: /var/lib/docker/volumes/wordpress_$nome_site_wordpress/_data
+Archivos del sitio: /var/lib/docker/volumes/wordpress_$nome_site_wordpress/_data
 
-Arquivos do php: /var/lib/docker/volumes/wordpress_${nome_site_wordpress}_php/_data
+Archivos de php: /var/lib/docker/volumes/wordpress_${nome_site_wordpress}_php/_data
 EOL
 
 cd
@@ -9440,10 +9440,10 @@ echo ""
 echo -e "\e[33mDominio:\e[97m https://$url_wordpress\e[0m"
 echo ""
 
-echo -e "\e[33mArquivos do site:\e[97m /var/lib/docker/volumes/wordpress_$nome_site_wordpress/_data\e[0m"
+echo -e "\e[33mArchivos del sitio:\e[97m /var/lib/docker/volumes/wordpress_$nome_site_wordpress/_data\e[0m"
 echo ""
 
-echo -e "\e[33mArquivos do php:\e[97m /var/lib/docker/volumes/wordpress_${nome_site_wordpress}_php/_data\e[0m"
+echo -e "\e[33mArchivos de php:\e[97m /var/lib/docker/volumes/wordpress_${nome_site_wordpress}_php/_data\e[0m"
 
 ## Creditos do instalador
 creditos_msg
