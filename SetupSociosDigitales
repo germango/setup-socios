@@ -9482,35 +9482,35 @@ preencha_as_info
 while true; do
 
     ##Pergunta o Dominio para a ferramenta
-    echo -e "\e[97mPasso$amarelo 1/6\e[0m"
-    echo -en "\e[33mDigite o dominio para o Baserow (ex: baserow.oriondesign.art.br): \e[0m" && read -r url_baserow
+    echo -e "\e[97mPaso$amarelo 1/6\e[0m"
+    echo -en "\e[33mIngrese el dominio para Baserow (ej: baserow.oriondesign.art.br): \e[0m" && read -r url_baserow
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
-    echo -e "\e[97mPasso$amarelo 2/6\e[0m"
-    echo -en "\e[33mDigite o Email para SMTP (ex: contato@oriondesign.art.br): \e[0m" && read -r mail_baserow
+    echo -e "\e[97mPaso$amarelo 2/6\e[0m"
+    echo -en "\e[33mIngrese el correo para SMTP (ej: contacto@oriondesign.art.br): \e[0m" && read -r mail_baserow
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
-    echo -e "\e[97mPasso$amarelo 3/6\e[0m"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@oriondesign.art.br): \e[0m" && read -r user_baserow
+    echo -e "\e[97mPaso$amarelo 3/6\e[0m"
+    echo -en "\e[33mIngrese el usuario para SMTP (ej: oriondesign o contacto@oriondesign.art.br): \e[0m" && read -r user_baserow
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
-    echo -e "\e[97mPasso$amarelo 4/6\e[0m"
-    echo -e "$amarelo--> Sem caracteres especiais: \!#$ | Se estiver usando gmail use a senha de app"
-    echo -en "\e[33mDigite a Senha SMTP do Email (ex: @Senha123_): \e[0m" && read -r pass_baserow
+    echo -e "\e[97mPaso$amarelo 4/6\e[0m"
+    echo -e "$amarelo--> Sin caracteres especiales: \!#$ | Si está usando Gmail, utilice la contraseña de aplicación"
+    echo -en "\e[33mIngrese la contraseña SMTP del correo (ej: @Contraseña123_): \e[0m" && read -r pass_baserow
     echo ""
 
 
     ##Pergunta o Dominio para a ferramenta
-    echo -e "\e[97mPasso$amarelo 5/6\e[0m"
-    echo -en "\e[33mDigite o Host SMTP do Email (ex: smtp.hostinger.com): \e[0m" && read -r host_baserow
+    echo -e "\e[97mPaso$amarelo 5/6\e[0m"
+    echo -en "\e[33mIngrese el host SMTP del correo (ej: smtp.hostinger.com): \e[0m" && read -r host_baserow
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
-    echo -e "\e[97mPasso$amarelo 6/6\e[0m"
-    echo -en "\e[33mDigite a Porta SMTP do Email (ex: 465): \e[0m" && read -r porta_baserow
+    echo -e "\e[97mPaso$amarelo 6/6\e[0m"
+    echo -en "\e[33mIngrese el puerto SMTP del correo (ej: 465): \e[0m" && read -r porta_baserow
     echo ""
 
 
@@ -9531,31 +9531,31 @@ while true; do
     conferindo_as_info
     
     ##Informação do Dominio
-    echo -e "\e[33mDominio para o Baserow:\e[97m $url_baserow\e[0m"
+    echo -e "\e[33mDominio para Baserow:\e[97m $url_baserow\e[0m"
     echo ""
 
     ##Informação do Dominio
-    echo -e "\e[33mEmail do SMTP:\e[97m $mail_baserow\e[0m"
+    echo -e "\e[33mCorreo SMTP:\e[97m $mail_baserow\e[0m"
     echo ""
 
     ##Informação do Dominio
-    echo -e "\e[33mUsuário do SMTP:\e[97m $user_baserow\e[0m"
+    echo -e "\e[33mUsuario SMTP:\e[97m $user_baserow\e[0m"
     echo ""
 
     ##Informação do Dominio
-    echo -e "\e[33mSenha do SMTP:\e[97m $pass_baserow\e[0m"
+    echo -e "\e[33mContraseña SMTP:\e[97m $pass_baserow\e[0m"
     echo ""
 
     ##Informação do Dominio
-    echo -e "\e[33mHost do SMTP:\e[97m $host_baserow\e[0m"
+    echo -e "\e[33mHost SMTP:\e[97m $host_baserow\e[0m"
     echo ""
 
     ##Informação do Dominio
-    echo -e "\e[33mPorta do SMTP:\e[97m $porta_baserow\e[0m"
+    echo -e "\e[33mPuerto SMTP:\e[97m $porta_baserow\e[0m"
     echo ""
     
      ## Pergunta se as respostas estão corretas
-    read -p "As respostas estão corretas? (Y/N): " confirmacao
+    read -p "¿Las respuestas son correctas? (Y/N): " confirmacao
     if [ "$confirmacao" = "Y" ] || [ "$confirmacao" = "y" ]; then
 
         ## Digitou Y para confirmar que as informações estão corretas
@@ -9586,7 +9586,7 @@ while true; do
 done
 
 ## Mensagem de Passo
-echo -e "\e[97m• INICIANDO A INSTALAÇÃO DO BASEROW \e[33m[1/5]\e[0m"
+echo -e "\e[97m• INICIANDO LA INSTALACIÓN DE BASEROW \e[33m[1/5]\e[0m"
 echo ""
 sleep 1
 
@@ -9605,11 +9605,11 @@ sleep 1
 ## Verifica container postgres e cria banco no postgres
 verificar_container_postgres
 if [ $? -eq 0 ]; then
-    echo "1/3 - [ OK ] - Postgres já instalado"
+    echo "1/3 - [ OK ] - Postgres ya instalado"
     pegar_senha_postgres > /dev/null 2>&1
-    echo "2/3 - [ OK ] - Copiando senha do Postgres"
+    echo "2/3 - [ OK ] - Copiando contraseña de Postgres"
     criar_banco_postgres_da_stack "baserow${1:+_$1}"
-    echo "3/3 - [ OK ] - Criando banco de dados"
+    echo "3/3 - [ OK ] - Creando base de datos"
     echo ""
 else
     ferramenta_postgres
@@ -9625,7 +9625,7 @@ sleep 1
 ## Verifica/instala o Redis
 verificar_container_redis
 if [ $? -eq 0 ]; then
-    echo "1/1 - [ OK ] - Redis já instalado"
+    echo "1/1 - [ OK ] - Redis ya instalado"
     echo ""
 else
     ferramenta_redis
@@ -9707,17 +9707,17 @@ networks:
 
 EOL
 if [ $? -eq 0 ]; then
-    echo "1/10 - [ OK ] - Criando Stack"
+    echo "1/10 - [ OK ] - Creando stack"
 else
-    echo "1/10 - [ OFF ] - Criando Stack"
-    echo "Não foi possivel criar a stack do Baserow"
+    echo "1/10 - [ OFF ] - Creando stack"
+    echo "No se pudo crear la stack de Baserow"
 fi
 
 STACK_NAME="baserow${1:+_$1}"
 stack_editavel # > /dev/null 2>&1
 
 ## Mensagem de Passo
-echo -e "\e[97m• VERIFICANDO SERVIÇO \e[33m[5/5]\e[0m"
+echo -e "\e[97m• VERIFICANDO SERVICIO \e[33m[5/5]\e[0m"
 echo ""
 sleep 1
 
@@ -9735,11 +9735,11 @@ cd dados_vps
 cat > dados_baserow${1:+_$1} <<EOL
 [ BASEROW ]
 
-Dominio do Baserow: https://$url_baserow
+Dominio de Baserow: https://$url_baserow
 
-Usuario: Precisa criar no primeiro acesso do Baserow
+Usuario: Debe crear en el primer acceso de Baserow
 
-Senha: Precisa criar no primeiro acesso do Baserow
+Contraseña: Debe crear en el primer acceso de Baserow
 
 EOL
 
@@ -9762,10 +9762,10 @@ echo ""
 echo -e "\e[33mDominio:\e[97m https://$url_baserow\e[0m"
 echo ""
 
-echo -e "\e[33mUsuario:\e[97m Precisa criar no primeiro acesso do Baserow\e[0m"
+echo -e "\e[33mUsuario:\e[97m Debe crear en el primer acceso de Baserow\e[0m"
 echo ""
 
-echo -e "\e[33mSenha:\e[97m Precisa criar no primeiro acesso do Baserow\e[0m"
+echo -e "\e[33mContraseña:\e[97m Debe crear en el primer acceso de Baserow\e[0m"
 echo ""
 
 ## Creditos do instalador
