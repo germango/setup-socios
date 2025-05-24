@@ -1793,21 +1793,21 @@ recursos() {
 ##                                         SOCIOS DIGITALES DESIGN                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
-stack_editavel(){
+stack_editable(){
 
     ## Instalar jq
     sudo apt install jq -y > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo "2/10 - [ OK ] - Instalando JQ Método 1/2"
     else
-        echo "2/10 - [ OFF ] - Erro ao instalar JQ Método 1/2"
+        echo "2/10 - [ OFF ] - Error al instalar JQ Método 1/2"
     fi
 
     sudo apt-get install -y jq > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         echo "3/10 - [ OK ] - Instalando JQ Método 2/2"
     else
-        echo "3/10 - [ OFF ] - Erro ao instalar JQ Método 2/2"
+        echo "3/10 - [ OFF ] - Error al instalar JQ Método 2/2"
     fi
 
     ## Definindo o diretório do arquivo dados_portainer
@@ -1815,7 +1815,7 @@ stack_editavel(){
 
     ## Verifica se o arquivo existe
     if [ ! -f "$arquivo" ]; then
-        echo "Arquivo não encontrado: $arquivo"
+        echo "Archivo no encontrado: $arquivo"
         sleep 2
 
         ## Cria o arquivo caso não exista
@@ -1828,9 +1828,9 @@ stack_editavel(){
     ## Pega o usuario do portainer
     USUARIO=$(grep "Usuario: " /root/dados_vps/dados_portainer | awk -F "Usuario: " '{print $2}')
     if [ $? -eq 0 ]; then
-        echo -e "4/10 - [ OK ] - Pegando usuario do portainer: $bege$USUARIO$reset"
+        echo -e "4/10 - [ OK ] - Obteniendo usuario del portainer: $bege$USUARIO$reset"
     else
-        echo "4/10 - [ OFF ] - Erro ao pegar usuario do portainer"
+        echo "4/10 - [ OFF ] - Error al obtener usuario del portainer"
     fi
 
 
@@ -1838,17 +1838,17 @@ stack_editavel(){
     SENHA=$(grep "Senha: " /root/dados_vps/dados_portainer | awk -F "Senha: " '{print $2}')
     esconder_senha "$SENHA"
     if [ $? -eq 0 ]; then
-        echo -e "5/10 - [ OK ] - Pegando a senha do portainer: $bege$SENHAOCULTA$reset"
+        echo -e "5/10 - [ OK ] - Obteniendo contraseña del portainer: $bege$SENHAOCULTA$reset"
     else
-        echo "5/10 - [ OFF ] - Erro ao pegar senha do portainer"
+        echo "5/10 - [ OFF ] - Error al obtener contraseña del portainer"
     fi
 
     ## Pega a URL do portainer
     PORTAINER_URL=$(grep "Dominio do portainer: " /root/dados_vps/dados_portainer | awk -F "Dominio do portainer: " '{print $2}')
     if [ $? -eq 0 ]; then
-        echo -e "6/10 - [ OK ] - Pegando dominio do Portainer: $bege$PORTAINER_URL$reset"
+        echo -e "6/10 - [ OK ] - Obteniendo dominio del Portainer: $bege$PORTAINER_URL$reset"
     else
-        echo "6/10 - [ OFF ] - Erro ao pegar dominio do Portainer"
+        echo "6/10 - [ OFF ] - Error al obtener dominio del Portainer"
     fi
 
     ## Usa o token do portainer
@@ -1870,8 +1870,8 @@ stack_editavel(){
         if [ "$Tentativa_atual" -ge "$Maximo_de_tentativas" ]; then
             clear
             erro_msg
-            echo "7/10 - [ OFF ] - Erro: Falha ao obter token após $Maximo_de_tentativas tentativas."
-            echo "Verifique suas credenciais do Portainer para conseguirmos realizar o deploy."
+            echo "7/10 - [ OFF ] - Error: Fallo al obtener token después de $Maximo_de_tentativas intentos."
+            echo "Verifique sus credenciales del Portainer para que podamos realizar el deploy."
             sleep 5
             criar_arquivo
             return
@@ -1884,19 +1884,19 @@ stack_editavel(){
         fi
     
         ## Aguarda alguns segundos antes de tentar novamente
-        echo -e "Tentando gerar token do portainer. Tentativa atual $bege$Tentativa_atual/5$reset"
+        echo -e "Intentando generar token del portainer. Intento actual $bege$Tentativa_atual/5$reset"
         sleep 5
     done
     
     if [ $? -eq 0 ]; then
         esconder_senha "$TOKEN"
-        echo -e "7/10 - [ OK ] - Pegando token do Portainer: $bege$SENHAOCULTA$reset"
+        echo -e "7/10 - [ OK ] - Obteniendo token del Portainer: $bege$SENHAOCULTA$reset"
     fi
     
 
     ### Verifica se o token veio vazio
     #if [ -z "$TOKEN" ] || [ "$TOKEN" == "null" ]; then
-    #    echo "Erro: Falha ao obter token. Preencha com suas credenciais do portainer a seguir."
+    #    echo "Error: Fallo al obtener token. Complete con sus credenciales del portainer a continuación."
     #    sleep 5
     #    criar_arquivo
     #    #exit 1
@@ -1908,9 +1908,9 @@ stack_editavel(){
     ## Pegando o id do portainer
     ENDPOINT_ID=$(curl -k -s -X GET -H "Authorization: Bearer $TOKEN" https://$PORTAINER_URL/api/endpoints | jq -r '.[] | select(.Name == "primary") | .Id')
     if [ $? -eq 0 ]; then
-        echo -e "8/10 - [ OK ] - Pegando ID do Portainer: $bege$ENDPOINT_ID$reset"
+        echo -e "8/10 - [ OK ] - Obteniendo ID del Portainer: $bege$ENDPOINT_ID$reset"
     else
-        echo "8/10 - [ OFF ] - Erro ao pegar ID do Portainer"
+        echo "8/10 - [ OFF ] - Error al obtener ID del Portainer"
     fi
 
     ## Definindo id 1 do Portainer
@@ -1919,15 +1919,15 @@ stack_editavel(){
     ## Pegando o ID do Swarm
     SWARM_ID=$(curl -k -s -X GET -H "Authorization: Bearer $TOKEN" "https://$PORTAINER_URL/api/endpoints/$ENDPOINT_ID/docker/swarm" | jq -r .ID)
     if [ $? -eq 0 ]; then
-        echo -e "9/10 - [ OK ] - Pegando ID do Swarm: $bege$SWARM_ID$reset"
+        echo -e "9/10 - [ OK ] - Obteniendo ID del Swarm: $bege$SWARM_ID$reset"
     else
-        echo "9/10 - [ OFF ] - Erro ao pegar ID do Swarm"
+        echo "9/10 - [ OFF ] - Error al obtener ID del Swarm"
     fi
 
     ## Testa o Swarm
     SWARM_STATUS=$(docker info --format '{{.Swarm.LocalNodeState}}')
     if [ "$SWARM_STATUS" != "active" ]; then
-        echo "Erro: Docker Swarm não está ativo."
+        echo "Error: Docker Swarm no está activo."
         exit 1
     fi
 
@@ -1949,15 +1949,15 @@ stack_editavel(){
     if [ "$http_code" -eq 200 ]; then
         # Verifica o conteúdo da resposta para garantir que o deploy foi bem-sucedido
         if echo "$response_body" | grep -q "\"Id\""; then
-            echo -e "10/10 - [ OK ] - Deploy da stack $bege$STACK_NAME$reset feito com sucesso!"
+            echo -e "10/10 - [ OK ] - Deploy de la stack $bege$STACK_NAME$reset realizado con éxito!"
         else
-            echo -e "10/10 - [ OFF ] - Erro, resposta inesperada do servidor ao tentar efetuar deploy da stack $bege$STACK_NAME$reset."
-            echo "Resposta do servidor: $(echo "$response_body" | jq .)"
+            echo -e "10/10 - [ OFF ] - Error, respuesta inesperada del servidor al intentar realizar deploy de la stack $bege$STACK_NAME$reset."
+            echo "Respuesta del servidor: $(echo "$response_body" | jq .)"
         fi
     else
-        echo "10/10 - [ OFF ] - Erro ao efetuar deploy. Resposta HTTP: $http_code"
-        echo "Mensagem de erro: $(cat "$erro_output")"
-        echo "Detalhes: $(echo "$response_body" | jq .)"
+        echo "10/10 - [ OFF ] - Error al realizar deploy. Respuesta HTTP: $http_code"
+        echo "Mensaje de error: $(cat "$erro_output")"
+        echo "Detalles: $(echo "$response_body" | jq .)"
     fi
 
     echo ""
