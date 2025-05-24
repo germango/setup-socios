@@ -96,7 +96,7 @@ nome_verificando(){
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 desc_ver(){
-echo -e "                            Este script recomenda o uso do Ubuntu$amarelo 20.04$branco.$reset"
+echo -e "                            Este script recomienda el uso de Ubuntu$amarelo 20.04$branco.$reset"
 echo ""
 } 
 
@@ -106,28 +106,28 @@ echo ""
 
 clear
 nome_verificando
-echo "Aguarde enquanto verificamos algumas informações."
+echo "Espere mientras verificamos alguna información."
 sleep 1
 
-# Verifica se está usando Ubuntu 20.04
+# Verifica si está usando Ubuntu 20.04
 if ! grep -q 'Ubuntu 20.04' /etc/os-release; then
     nome_aviso
     desc_ver
-    #echo "Este script recomenda o uso do Ubuntu 20.04."
+    #echo "Este script recomienda el uso de Ubuntu 20.04."
     sleep 5
     clear
     nome_verificando
 fi
 
-# Verifica se o usuário é root
+# Verifica si el usuario es root
 if [ "$(id -u)" -ne 0 ]; then
-    echo "Este script precisa ser executado como root. Executando sudo su..."
+    echo "Este script necesita ser ejecutado como root. Ejecutando sudo su..."
     sudo su
 fi
 
-# Verifica se o usuário está no diretório /root/
+# Verifica si el usuario está en el directorio /root/
 if [ "$PWD" != "/root" ]; then
-    echo "Mudando para o diretório /root/"
+    echo "Cambiando al directorio /root/"
     cd /root || exit
 fi
 
@@ -138,12 +138,12 @@ fi
 
 nome_iniciando 
 
-## Fazendo upgrade
+## Haciendo upgrade
 sudo apt upgrade -y > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "1/14 - [ OK ] - Fazendo Upgrade"
+    echo "1/14 - [ OK ] - Haciendo Upgrade"
 else
-    echo "1/14 - [ OFF ] - Fazendo Upgrade"
+    echo "1/14 - [ OFF ] - Haciendo Upgrade"
 fi
 
 echo ""
@@ -238,22 +238,22 @@ fi
 
 echo ""
 
-## Fazendo update
+## Haciendo update
 sudo apt update > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "11/14 - [ OK ] - Fazendo Update"
+    echo "11/14 - [ OK ] - Haciendo Update"
 else
-    echo "11/14 - [ OFF ] - Fazendo Update"
+    echo "11/14 - [ OFF ] - Haciendo Update"
 fi
 
 echo ""
 
-## Fazendo upgrade
+## Haciendo upgrade
 sudo apt upgrade -y > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    echo "12/14 - [ OK ] - Fazendo Upgrade"
+    echo "12/14 - [ OK ] - Haciendo Upgrade"
 else
-    echo "12/14 - [ OFF ] - Fazendo Upgrade"
+    echo "12/14 - [ OFF ] - Haciendo Upgrade"
 fi
 
 echo ""
@@ -268,22 +268,22 @@ fi
 
 echo ""
 
-# Verifica se o arquivo SetupOrion já existe
-if [ -e "SetupOrion" ]; then
+# Verifica si el archivo SetupSociosDigitales ya existe
+if [ -e "SetupSociosDigitales" ]; then
     echo ""
-    rm SetupOrion
+    rm SetupSociosDigitales
 fi
 
-# Baixa o script
-curl -sSL https://raw.githubusercontent.com/oriondesign2015/SetupOrion/main/SetupOrion -o SetupOrion
+# Descarga el script
+curl -sSL https://raw.githubusercontent.com/sociosdigitalespro/setup-socios/refs/heads/main/SetupSociosDigitales -o SetupSociosDigitales
 if [ $? -eq 0 ]; then
-    echo "14/14 - [ OK ] - Baixando o script"
-    # Executa o script baixado
-    chmod +x SetupOrion
-    ./SetupOrion
+    echo "14/14 - [ OK ] - Descargando el script"
+    # Ejecuta el script descargado
+    chmod +x SetupSociosDigitales
+    ./SetupSociosDigitales
 else
-    echo "14/14 - [ OFF ] - Baixando o script"
-    echo "Encerrando o setup"
+    echo "14/14 - [ OFF ] - Descargando el script"
+    echo "Finalizando el setup"
     sleep 5
 fi
 
@@ -296,4 +296,4 @@ sudo apt update
 sudo apt upgrade -y
 
 clear
-rm SetupOrion
+rm SetupSociosDigitales
