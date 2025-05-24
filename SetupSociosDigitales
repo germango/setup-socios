@@ -2605,7 +2605,7 @@ pull() {
 }
 
 requisitar_outra_instalacao(){
-    read -p "Deseja instalar outra aplicação? (Y/N): " choice
+    read -p "¿Desea instalar otra aplicación? (Y/N): " choice
     if [ "$choice" = "Y" ] || [ "$choice" = "y" ]; then
         return
     else
@@ -3011,7 +3011,7 @@ fi
 
 creditos_msg
 
-read -p "Deseja instalar outra aplicação? (Y/N): " choice
+read -p "¿Desea instalar otra aplicación? (Y/N): " choice
     if [ "$choice" = "Y" ] || [ "$choice" = "y" ]; then
         return
     else
