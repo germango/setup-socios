@@ -1793,7 +1793,7 @@ recursos() {
 ##                                         SOCIOS DIGITALES DESIGN                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
-stack_editable(){
+stack_editavel(){
 
     ## Instalar jq
     sudo apt install jq -y > /dev/null 2>&1
