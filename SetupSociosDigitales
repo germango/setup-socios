@@ -4962,7 +4962,6 @@ services:
   chatwoot${1:+_$1}_app:
     image: chatwoot/chatwoot:latest ## Versão do Chatwoot
     command: bundle exec rails s -p 3000 -b 0.0.0.0
-    entrypoint: docker/entrypoints/rails.sh
 
     volumes:
       - chatwoot${1:+_$1}_storage:/app/storage ## Arquivos de conversa
