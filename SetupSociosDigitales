@@ -1694,8 +1694,8 @@ menu_comandos(){
 
   ## Chatwoot
   echo -e "> ${verde}Comandos de Chatwoot:${reset}"
-  echo -e "${branco} • ${amarelo}chatwoot.mail${reset} - ${branco}Cambia los Emails de Chatwoot a la versión de Orion${reset}"
-  echo -e "${branco} • ${amarelo}chatwoot.n.mail${reset} - ${branco}Cambia los Emails de Chatwoot Mega a la versión de Orion${reset}"
+  echo -e "${branco} • ${amarelo}chatwoot.mail${reset} - ${branco}Cambia los Emails de Chatwoot a la versión de Socios${reset}"
+  echo -e "${branco} • ${amarelo}chatwoot.n.mail${reset} - ${branco}Cambia los Emails de Chatwoot Mega a la versión de Socios${reset}"
   echo ""
 
   ## Ferramentas
