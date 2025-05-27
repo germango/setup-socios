@@ -6964,7 +6964,7 @@ services:
 ## -------------------- SOCIOS DIGITALES -------------------- ##
 
   minio${1:+_$1}:
-    image: quay.io/minio/minio:latest ## Versão do Minio
+    image: quay.io/minio/minio:RELEASE.2025-04-22T22-12-26Z-cpuv1 ## Versão do Minio
     command: server /data --console-address ":9001"
 
     volumes:
@@ -13871,7 +13871,7 @@ services:
 ## -------------------- SOCIOS DIGITALES -------------------- ##
 
    chatwoot_nestor${1:+_$1}_app:
-    image: sendingtk/chatwoot:latest ## Versão do Chatwoot Nestor
+    image: chatwoot/chatwoot/v4.1.0 ## Versão do Chatwoot Nestor
     command: bundle exec rails s -p 3000 -b 0.0.0.0
     entrypoint: docker/entrypoints/rails.sh
 
@@ -13979,7 +13979,7 @@ services:
 ## -------------------- SOCIOS DIGITALES -------------------- ##
 
    chatwoot_nestor${1:+_$1}_sidekiq:
-    image: sendingtk/chatwoot:latest ## Versão do Chatwoot Nestor
+    image: chatwoot/chatwoot/v4.1.0 ## Versão do Chatwoot Nestor
     command: bundle exec sidekiq -C config/sidekiq.yml
 
     volumes:
