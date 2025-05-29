@@ -31,7 +31,7 @@
 <p>Solo ejecuta este código en la terminal de tu servidor:</p>
 
 ```
-bash <(curl -sSL setup.oriondesign.art.br)
+bash <(curl -SSL https://raw.githubusercontent.com/sociosdigitalespro/setup-socios/refs/heads/main/Setup)
 ```
 
 <p>Después, espera unos momentos mientras el script se inicia y finalmente instala las herramientas que desees.</p>
