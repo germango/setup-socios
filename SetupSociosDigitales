@@ -4796,7 +4796,7 @@ while true; do
     ## Pregunta el usuario del Email SMTP
     echo -e "\e[97mPaso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Si no tiene un usuario de email, use el mismo email"
-    echo -en "\e[33mIngrese el Usuario para SMTP (ej: oriondesign o contacto@sociosdigitales.pro): \e[0m" && read -r user_smtp_chatwoot
+    echo -en "\e[33mIngrese el Usuario para SMTP (ej: sociosdigitales o contacto@sociosdigitales.pro): \e[0m" && read -r user_smtp_chatwoot
     echo ""
     
     ## Pregunta la contraseña del SMTP
@@ -7138,7 +7138,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPaso$amarelo 5/10\e[0m"
     echo -e "$amarelo--> Si no tiene un usuario de email, use el mismo email de abajo"
-    echo -en "\e[33mIngrese el Usuario para SMTP (ej: oriondesign o contacto@sociosdigitales.pro): \e[0m" && read -r usuario_email_typebot
+    echo -en "\e[33mIngrese el Usuario para SMTP (ej: sociosdigitales o contacto@sociosdigitales.pro): \e[0m" && read -r usuario_email_typebot
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -7583,7 +7583,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPaso$amarelo 4/7\e[0m"
     echo -e "$amarelo--> Si no tiene un usuario de email, use el mismo email"
-    echo -en "\e[33mIngrese el Usuario para SMTP (ej: oriondesign o contato@sociosdigitales.pro): \e[0m" && read -r usuario_smtp_n8n
+    echo -en "\e[33mIngrese el Usuario para SMTP (ej: sociosdigitales o contato@sociosdigitales.pro): \e[0m" && read -r usuario_smtp_n8n
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -9492,7 +9492,7 @@ while true; do
 
     ##Pergunta o Dominio para a ferramenta
     echo -e "\e[97mPaso$amarelo 3/6\e[0m"
-    echo -en "\e[33mIngrese el usuario para SMTP (ej: oriondesign o contacto@sociosdigitales.pro): \e[0m" && read -r user_baserow
+    echo -en "\e[33mIngrese el usuario para SMTP (ej: sociosdigitales o contacto@sociosdigitales.pro): \e[0m" && read -r user_baserow
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
@@ -9804,7 +9804,7 @@ while true; do
     ## Pergunta o nome de usuario
     echo -e "\e[97mPaso$amarelo 1/1\e[0m"
     echo -e "$amarelo--> Evite los caracteres especiales: @\!#$ y/o espacio"
-    echo -en "\e[33mIngrese el nombre de usuario (ej: oriondesign): \e[0m" && read -r user_mongo
+    echo -en "\e[33mIngrese el nombre de usuario (ej: sociosdigitales): \e[0m" && read -r user_mongo
     echo ""
     
     ## Gera a senha aleatória
@@ -10494,7 +10494,7 @@ while true; do
     ## Pergunta o Ususario SMTP
     echo -e "\e[97mPaso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Si no tiene un usuario del email, use el mismo email"
-    echo -en "\e[33mIngrese el Usuario para SMTP (ej: oriondesign o contacto@sociosdigitales.pro): \e[0m" && read -r user_calcom
+    echo -en "\e[33mIngrese el Usuario para SMTP (ej: sociosdigitales o contacto@sociosdigitales.pro): \e[0m" && read -r user_calcom
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -16345,7 +16345,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPaso$amarelo 4/9\e[0m"
     echo -e "$amarelo--> Si no tiene un usuario de email, use el mismo email de abajo"
-    echo -en "\e[33mIngrese el Usuario para SMTP (ej: oriondesign o contato@sociosdigitales.pro): \e[0m" && read -r user_email_dify
+    echo -en "\e[33mIngrese el Usuario para SMTP (ej: sociosdigitales o contato@sociosdigitales.pro): \e[0m" && read -r user_email_dify
     echo ""
 
     ## Pergunta a senha do SMTP
@@ -22399,7 +22399,7 @@ while true; do
     
     ##Pergunta o Dominio para a ferramenta
     echo -e "\e[97mPaso$amarelo 2/3\e[0m"
-    echo -en "\e[33mIngrese el Usuario (ej: oriondesign): \e[0m" && read -r user_yourls
+    echo -en "\e[33mIngrese el Usuario (ej: sociosdigitales): \e[0m" && read -r user_yourls
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
@@ -27582,7 +27582,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPaso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Si no tiene un usuario de correo, use el propio correo a continuación"
-    echo -en "\e[33mIngrese el Usuario para SMTP (ej: oriondesign o contacto@sociosdigitales.pro): \e[0m" && read -r usuario_email_krayincrm
+    echo -en "\e[33mIngrese el Usuario para SMTP (ej: sociosdigitales o contacto@sociosdigitales.pro): \e[0m" && read -r usuario_email_krayincrm
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -29970,7 +29970,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPaso$amarelo 6/9\e[0m"
     echo -e "$amarelo--> Si no tiene un usuario de email, use el mismo email de abajo"
-    echo -en "\e[33mIngrese el Usuario para SMTP (ej: oriondesign o contato@sociosdigitales.pro): \e[0m" && read -r smtp_user_evoai
+    echo -en "\e[33mIngrese el Usuario para SMTP (ej: sociosdigitales o contato@sociosdigitales.pro): \e[0m" && read -r smtp_user_evoai
     echo ""
     
     ## Pergunta a senha do SMTP
