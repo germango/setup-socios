@@ -10,7 +10,7 @@
   <a href="https://chat.sociosdigitales.pro/grupowa-e-templates">
     <img src="https://github.com/sociosdigitalespro/setup-socios/blob/main/assets/whatsapp.jpg" alt="Whatsapp Socios Digitales">
   </a>     
-  <a href="https://sociosdigitales.pro/setup-socios/">
+  <a href="https://www.youtube.com/playlist?list=PLL8K084wvtvFzQYFU232ly6-EYxGO17Mj">
     <img src="https://github.com/sociosdigitalespro/setup-socios/blob/main/assets/instalation.jpg" alt="Socios Digitales Playlist">
   </a>     
 </p>
@@ -35,6 +35,8 @@ bash <(curl -SSL https://raw.githubusercontent.com/sociosdigitalespro/setup-soci
 ```
 
 <p>Después, espera unos momentos mientras el script se inicia y finalmente instala las herramientas que desees.</p>
+
+AGRADECIMEINTOS A ORIONDESIGN POR LA CREACIÓN DE ESTE PROYECTO
 
 ---
 
