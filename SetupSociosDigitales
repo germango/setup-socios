@@ -6964,7 +6964,10 @@ services:
 ## -------------------- SOCIOS DIGITALES -------------------- ##
 
   minio${1:+_$1}:
-    image: quay.io/minio/minio:RELEASE.2025-04-22T22-12-26Z-cpuv1 ## Versão do Minio
+    image: 
+    
+    
+    /minio/minio:RELEASE.2025-04-22T22-12-26Z-cpuv1 ## Versão do Minio
     command: server /data --console-address ":9001"
 
     volumes:
@@ -9145,7 +9148,7 @@ while true; do
     ## Pergunta o nome do site
     echo -e "\e[97mPaso$amarelo 2/2\e[0m"
     echo -e "$amarelo--> Use solo letras minúsculas, sin espacios o caracteres especiales"
-    echo -en "\e[33mIntroduzca el nombre del Sitio (ej: tiendaorion): \e[0m" && read -r nome_site_wordpress
+    echo -en "\e[33mIntroduzca el nombre del Sitio (ej: tiendasocios): \e[0m" && read -r nome_site_wordpress
     echo ""  
 
     ## Limpa o terminal
