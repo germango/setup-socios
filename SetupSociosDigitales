@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 versao() {
@@ -10,7 +10,7 @@ echo -e "                                   \e[97mVersión de Socios Digitales: 
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Cores do Setup
@@ -23,13 +23,13 @@ vermelho="\e[91m"
 reset="\e[0m"
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 menu_instalador="1"
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 home_directory="$HOME"
@@ -42,7 +42,7 @@ dados() {
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Licença do Setup
@@ -137,7 +137,7 @@ creditos_msg() {
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Mensagens gerais
@@ -262,7 +262,7 @@ nome_credenciais() {
     info_credenciais
 }
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Titulos
@@ -1585,7 +1585,7 @@ echo ""
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Defasados
@@ -1621,7 +1621,7 @@ nome_finalizado() {
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Menu de opções
@@ -1722,7 +1722,7 @@ menu_comandos(){
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Verificar se stack já existe
@@ -1748,7 +1748,7 @@ verificar_stack() {
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 # Função para verificar recursos
@@ -1790,7 +1790,7 @@ recursos() {
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 stack_editavel(){
@@ -2160,7 +2160,7 @@ telemetria() {
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Verificadores
@@ -2630,7 +2630,7 @@ esconder_senha() {
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Pegar informações
@@ -2702,7 +2702,7 @@ pegar_link_s3() {
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Criadores de banco de dados Postgres
@@ -2855,7 +2855,7 @@ um novo banco de dados? (Y/N): " resposta
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 validar_senha() { 
@@ -2910,7 +2910,7 @@ validar_senha() {
 }
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Instalação das Ferramentas
@@ -2936,7 +2936,7 @@ echo ""
 
 echo -e "\e[97mPasso$amarelo 2/5\e[0m"
 echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-echo -en "\e[33mDigite o usuário de Email (ex: oriondesign ou contato@sociosdigitales.pro): \e[0m" && read -r user_teste
+echo -en "\e[33mDigite o usuário de Email (ex: sociospro o contacto@sociosdigitales.pro): \e[0m" && read -r user_teste
 echo ""
 
 echo -e "\e[97mPasso$amarelo 3/5\e[0m"
@@ -2990,8 +2990,8 @@ echo ""
 sudo apt-get update > /dev/null 2>&1
 sudo apt-get install swaks -y > /dev/null 2>&1
 
-msg="Se você está lendo isso, o seu SMTP está funcionando =D.
-By: OrionDesign"
+msg="Si usted esta leyendo esto, su SMPT está funcionando =D.
+By: SociosPro"
 
 if swaks --to "$email_teste" --from "$email_teste" --server "$host_teste" --port "$porta_teste" --auth LOGIN --auth-user "$user_teste" --auth-password "$senha_teste" --tls --body "$msg"; then
     sleep 2
@@ -3080,7 +3080,7 @@ while true; do
     ## Pergunta o Nome do Servidor
     echo -e "\e[97mPaso$amarelo 4/6\e[0m"
     echo -e "$amarelo--> No puede contener espacios y/o caracteres especiales"
-    echo -en "\e[33mElija un nombre para su servidor (ej: SociosDesign): \e[0m" && read -r nome_servidor
+    echo -en "\e[33mElija un nombre para su servidor (ej: SociosPro): \e[0m" && read -r nome_servidor
     echo ""
     
     ## Pergunta o nome da Rede Interna
@@ -5875,7 +5875,7 @@ services:
       ## 📱 Configuração do Cliente
       ## Pegue a versão em: https://wppconnect.io/pt-BR/whatsapp-versions/
       - CONFIG_SESSION_PHONE_VERSION=2.3000.1022594794
-      - CONFIG_SESSION_PHONE_CLIENT=OrionDesign
+      - CONFIG_SESSION_PHONE_CLIENT=SociosPro
       - CONFIG_SESSION_PHONE_NAME=Chrome
       
       ## 🗄️ Configuração do Banco de Dados
@@ -6234,7 +6234,7 @@ services:
       - AUTHENTICATION_EXPOSE_IN_FETCH_INSTANCES=true
 
     ## ⚙️ Configurações
-      - CONFIG_SESSION_PHONE_CLIENT=OrionDesign ## Nome que aparece no celular
+      - CONFIG_SESSION_PHONE_CLIENT=SociosPro ## Nome que aparece no celular
       - CONFIG_SESSION_PHONE_NAME=chrome
 
     ## 📱 Definir versão do Whatsapp Web
@@ -6595,7 +6595,7 @@ services:
       ## Configuração do Cliente
       ## Pegue a versão em: https://wppconnect.io/pt-BR/whatsapp-versions/
       - CONFIG_SESSION_PHONE_VERSION=2.3000.1022594794
-      - CONFIG_SESSION_PHONE_CLIENT=OrionDesign
+      - CONFIG_SESSION_PHONE_CLIENT=SociosPro
       - CONFIG_SESSION_PHONE_NAME=Chrome
       
       ## Configuração do Banco de Dados
@@ -6876,7 +6876,7 @@ while true; do
     ##Pergunta o Usuario para o Minio
     echo -e "\e[97mPaso$amarelo 3/4\e[0m"
     echo -e "$amarelo--> Evite caracteres especiales: \!#$ y/o espacios"
-    echo -en "\e[33mIngrese un usuario para MinIO (ej: SociosDesign): \e[0m" && read -r user_minio
+    echo -en "\e[33mIngrese un usuario para MinIO (ej: SociosPro): \e[0m" && read -r user_minio
     echo ""
     
     ##Pergunta a Senha para o Minio
@@ -8617,7 +8617,7 @@ while true; do
     
     ##Pergunta um Usuario para a ferramenta
     echo -e "\e[97mPaso$amarelo 3/4\e[0m"
-    echo -en "\e[33mIngrese un nombre de usuario para Nocobase (ej: SociosDesign): \e[0m" && read -r user_nocobase
+    echo -en "\e[33mIngrese un nombre de usuario para Nocobase (ej: SociosPro): \e[0m" && read -r user_nocobase
     echo ""
     
     ##Pergunta a Senha para a ferramenta
@@ -10041,7 +10041,7 @@ while true; do
     
     echo -e "\e[97mPaso$amarelo 2/2\e[0m"
     echo -e "$amarelo--> Evita los caracteres especiales: @\!#$ y/o espacios"
-    echo -en "\e[33mIntroduzca el nombre de usuario (ej: SociosDesign): \e[0m" && read -r user_rabbitmq
+    echo -en "\e[33mIntroduzca el nombre de usuario (ej: SociosPro): \e[0m" && read -r user_rabbitmq
     echo ""
     
     ## Gera a senha aleatória
@@ -10811,7 +10811,7 @@ while true; do
     ## Pergunta o usuario da ferramenta
     echo -e "\e[97mPaso$amarelo 2/4\e[0m"
     echo -e "$amarelo--> Sin caracteres especiales: \!#$ y/o espacios"
-    echo -en "\e[33mIngrese un usuario (ej: SociosDesign): \e[0m" && read -r user_mautic
+    echo -en "\e[33mIngrese un usuario (ej: SociosPro): \e[0m" && read -r user_mautic
     echo ""
 
     ## Pergunta o email da ferramenta
@@ -11654,7 +11654,7 @@ while true; do
     ## Pergunta o nome do Usuario do Motor
     echo -e "\e[97mPasso$amarelo 2/3\e[0m"
     echo -e "$amarelo--> Evite os caracteres especiais: @\!#$ e/ou espaço"
-    echo -en "\e[33mDigite o User do MOTOR (ex: oriondesign): \e[0m" && read -r email_admin_woofed
+    echo -en "\e[33mDigite o User do MOTOR (ex: orionpro): \e[0m" && read -r email_admin_woofed
     echo ""
 
     ## Pergunta o nome do Senha do Motor
@@ -12170,7 +12170,7 @@ while true; do
     ## Pergunta o User SMTP
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuario do SMTP (ex: oriondesign ou contato@sociosdigitales.pro): \e[0m" && read -r user_smtp_formbricks
+    echo -en "\e[33mDigite o Usuario do SMTP (ex: sociospro o contacto@sociosdigitales.pro): \e[0m" && read -r user_smtp_formbricks
     echo ""
     
     ## Pergunta a Senha SMTP
@@ -13710,7 +13710,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@sociosdigitales.pro): \e[0m" && read -r user_smtp_chatwoot
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: sociospro o contacto@sociosdigitales.pro): \e[0m" && read -r user_smtp_chatwoot
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -15573,7 +15573,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@sociosdigitales.pro): \e[0m" && read -r user_smtp_docuseal
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: sociospro o contacto@sociosdigitales.pro): \e[0m" && read -r user_smtp_docuseal
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
@@ -19421,7 +19421,7 @@ while true; do
 
     ## Pregunta el Dominio del Viewer
     echo -e "\e[97mPaso$amarelo 2/5\e[0m"
-    echo -en "\e[33mIngrese el Usuario para Supabase (ej: SociosDesign): \e[0m" && read -r user_supabase
+    echo -en "\e[33mIngrese el Usuario para Supabase (ej: SociosPro): \e[0m" && read -r user_supabase
     echo ""
 
     ## Pregunta la versión de la herramienta
@@ -20490,7 +20490,7 @@ while true; do
 
     ##Pergunta o Dominio para aplicação
     echo -e "\e[97mPasso$amarelo 2/3\e[0m"
-    echo -en "\e[33mDigite o Usuario (ex: oriondesign): \e[0m" && read -r user_ntfy
+    echo -en "\e[33mDigite o Usuario (ex: sociospro): \e[0m" && read -r user_ntfy
     echo ""
 
     ##Pergunta o Dominio para aplicação
@@ -20744,7 +20744,7 @@ while true; do
 
     ##Pergunta o Dominio para aplicação
     echo -e "\e[97mPasso$amarelo 2/8\e[0m"
-    echo -en "\e[33mDigite o User do MongoDB (ex: oriondesign): \e[0m" && read -r user_mongodb_lowcoder
+    echo -en "\e[33mDigite o User do MongoDB (ex: sociospro): \e[0m" && read -r user_mongodb_lowcoder
     echo ""
 
     ##Pergunta o Dominio para aplicação
@@ -20760,7 +20760,7 @@ while true; do
     ## Pergunta o Ususario SMTP
     echo -e "\e[97mPasso$amarelo 5/8\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuario para SMTP (ex: oriondesign ou contato@sociosdigitales.pro): \e[0m" && read -r user_smtp_lowcoder
+    echo -en "\e[33mDigite o Usuario para SMTP (ex: sociospro o contacto@sociosdigitales.pro): \e[0m" && read -r user_smtp_lowcoder
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -22016,12 +22016,12 @@ while true; do
     ## Pergunta o usuario da ferramenta
     echo -e "\e[97mPasso$amarelo 3/10\e[0m"
     echo -e "$amarelo--> Sem caracteres especiais: \!#$ e/ou espaços"
-    echo -en "\e[33mDigite um Usuario Admin (ex: OrionDesign): \e[0m" && read -r user_humhub
+    echo -en "\e[33mDigite um Usuario Admin (ex: SociosPro): \e[0m" && read -r user_humhub
     echo ""
 
     ## Pergunta o email da ferramenta
     echo -e "\e[97mPasso$amarelo 4/10\e[0m"
-    echo -en "\e[33mDigite o Email do Admin: (ex: contato@sociosdigitales.pro): \e[0m" && read -r email_humhub
+    echo -en "\e[33mDigite o Email do Admin: (ex: contacto@sociosdigitales.pro): \e[0m" && read -r email_humhub
     echo ""
     
     ## Pergunta o senha da ferramenta
@@ -22032,13 +22032,13 @@ while true; do
 
     ## Pergunta o Email SMTP
     echo -e "\e[97mPasso$amarelo 6/10\e[0m"
-    echo -en "\e[33mDigite um Email para o SMTP (ex: contato@sociosdigitales.pro): \e[0m" && read -r email_smtp_humhub
+    echo -en "\e[33mDigite um Email para o SMTP (ex: contacto@sociosdigitales.pro): \e[0m" && read -r email_smtp_humhub
     echo ""
 
     ## Pergunta o User SMTP
     echo -e "\e[97mPasso$amarelo 7/10\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuario do SMTP (ex: oriondesign ou contato@sociosdigitales.pro): \e[0m" && read -r user_smtp_humhub
+    echo -en "\e[33mDigite o Usuario do SMTP (ex: sociospro o contacto@sociosdigitales.pro): \e[0m" && read -r user_smtp_humhub
     echo ""
     
     ## Pergunta a Senha SMTP
@@ -22656,7 +22656,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@sociosdigitales.pro): \e[0m" && read -r user_smtp_twentycrm
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: sociospro o contacto@sociosdigitales.pro): \e[0m" && read -r user_smtp_twentycrm
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -23299,7 +23299,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 5/8\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@sociosdigitales.pro): \e[0m" && read -r usuario_email_outline
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: sociospro o contacto@sociosdigitales.pro): \e[0m" && read -r usuario_email_outline
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -24846,7 +24846,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 3/8\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@sociosdigitales.pro): \e[0m" && read -r usuario_email_documenso
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: sociospro o contacto@sociosdigitales.pro): \e[0m" && read -r usuario_email_documenso
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -25223,12 +25223,12 @@ while true; do
 
     ##Pergunta o Dominio para a ferramenta
     echo -e "\e[97mPasso$amarelo 2/10\e[0m"
-    echo -en "\e[33mDigite o nome para o projeto (ex: OrionDesign): \e[0m" && read -r project_name_moodle
+    echo -en "\e[33mDigite o nome para o projeto (ex: SociosPro): \e[0m" && read -r project_name_moodle
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
     echo -e "\e[97mPasso$amarelo 3/10\e[0m"
-    echo -en "\e[33mDigite um Nome de Usuario (ex: oriondesign): \e[0m" && read -r user_moodle
+    echo -en "\e[33mDigite um Nome de Usuario (ex: sociospro): \e[0m" && read -r user_moodle
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
@@ -25240,18 +25240,18 @@ while true; do
     ##Pergunta o Dominio para a ferramenta
     echo -e "\e[97mPasso$amarelo 5/10\e[0m"
     echo -e "$amarelo--> Sem caracteres especiais: \!#$"
-    echo -en "\e[33mDigite um Email para o Usuario (ex: contato@sociosdigitales.pro): \e[0m" && read -r mail_moodle
+    echo -en "\e[33mDigite um Email para o Usuario (ex: contacto@sociosdigitales.pro): \e[0m" && read -r mail_moodle
     echo ""
 
     ##Pergunta o Email SMTP
     echo -e "\e[97mPasso$amarelo 6/10\e[0m"
-    echo -en "\e[33mDigite o Email para SMTP (ex: contato@sociosdigitales.pro): \e[0m" && read -r email_smtp_moodle
+    echo -en "\e[33mDigite o Email para SMTP (ex: contacto@sociosdigitales.pro): \e[0m" && read -r email_smtp_moodle
     echo ""
 
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 7/10\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@sociosdigitales.pro): \e[0m" && read -r usuario_smtp_moodle
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: sociospro o contacto@sociosdigitales.pro): \e[0m" && read -r usuario_smtp_moodle
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -25610,7 +25610,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@sociosdigitales.pro): \e[0m" && read -r usuario_smtp_tooljet
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: sociospro o contacto@sociosdigitales.pro): \e[0m" && read -r usuario_smtp_tooljet
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -28027,7 +28027,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 7/10\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@sociosdigitales.pro): \e[0m" && read -r usuario_email_planka
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: sociospro o contacto@sociosdigitales.pro): \e[0m" && read -r usuario_email_planka
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -30384,7 +30384,7 @@ while true; do
     ##Pergunta o usuário do Email SMTP
     echo -e "\e[97mPasso$amarelo 3/6\e[0m"
     echo -e "$amarelo--> Caso não tiver um usuario do email, use o proprio email abaixo"
-    echo -en "\e[33mDigite o Usuário para SMTP (ex: oriondesign ou contato@sociosdigitales.pro): \e[0m" && read -r smtp_user_passbolt
+    echo -en "\e[33mDigite o Usuário para SMTP (ex: sociospro o contacto@sociosdigitales.pro): \e[0m" && read -r smtp_user_passbolt
     echo ""
     
     ## Pergunta a senha do SMTP
@@ -30712,7 +30712,7 @@ while true; do
 
     ##Pergunta o Dominio para a ferramenta
     echo -e "\e[97mPaso$amarelo 3/4\e[0m"
-    echo -en "\e[33mIngrese un usuario para TranscreveZap (ej: SociosDesign): \e[0m" && read -r user_transcrevezap
+    echo -en "\e[33mIngrese un usuario para TranscreveZap (ej: SociosPro): \e[0m" && read -r user_transcrevezap
     echo ""
 
     ##Pergunta o Dominio para a ferramenta
@@ -31202,7 +31202,7 @@ requisitar_outra_instalacao
 ## Ignore esta parte, só para facilitar minha identificação com esta parte "XXOOXX"
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Comandos extras
@@ -31739,7 +31739,7 @@ limpar() {
 
 
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
-##                                         SOCIOS DIGITALES DESIGN                                        ##
+##                                         SOCIOS DIGITALES PRO                                        ##
 ## // ## // ## // ## // ## // ## // ## // ## //## // ## // ## // ## // ## // ## // ## // ## // ##
 
 ## Iniciando instalador
