@@ -6964,10 +6964,7 @@ services:
 ## -------------------- SOCIOS DIGITALES -------------------- ##
 
   minio${1:+_$1}:
-    image: 
-    
-    
-    /minio/minio:RELEASE.2025-04-22T22-12-26Z-cpuv1 ## Versão do Minio
+    image: /minio/minio:RELEASE.2025-04-22T22-12-26Z-cpuv1 ## Versão do Minio
     command: server /data --console-address ":9001"
 
     volumes:
