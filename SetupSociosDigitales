@@ -27715,7 +27715,7 @@ services:
       - krayin_CADDY_ADDRESSES=:80
 
     ## Configurações Globais da Aplicação
-      - APP_NAME=Krayin CRM - Orion
+      - APP_NAME=Krayin CRM - Socios
       - APP_LOCALE=pt_BR
       - APP_CURRENCY=BRL
       - APP_TIMEZONE=America/Sao_Paulo
