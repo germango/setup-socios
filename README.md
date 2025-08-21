@@ -19,9 +19,9 @@
 
 <h3>📌 Observaciones y Recomendaciones</h3>
 
-- Recomiendo usar la VPS de **RocketCloud**. NO recomendamos ni fomentamos el uso de otras VPS.
+- Recomiendo usar los VPS de **Contabo** por su economía o de **Hetzner** por su cobro vencido y por uso.
 - **El servidor debe estar vacío** para instalar las herramientas. Ejecutar el Setup con otras herramientas puede provocar pérdida de datos.
-- Se recomienda usar **Ubuntu 20.04**, con **mínimo 4GB y 2vCPU**. Es necesario analizar los requisitos de cada aplicación que instales.
+- Se recomienda usar **Ubuntu 20.04** pero funciona hasta en 24.04, con **mínimo 4GB y 2vCPU**. Es necesario analizar los requisitos de cada aplicación que instales.
 
 ---
 
